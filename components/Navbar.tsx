@@ -12,8 +12,8 @@ export default function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 relative">
+          <Link href="/" className="flex items-center gap-0">
+            <div className="w-20 h-20 relative">
               <Image
                 src="/icon.png"
                 alt="SocalShades Icon"

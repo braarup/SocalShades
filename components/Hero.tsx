@@ -25,8 +25,8 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-4 text-center">
         {/* Logo */}
-        <div className="mb-8">
-          <div className="w-48 md:w-64 lg:w-72 h-24 md:h-32 lg:h-36 mx-auto mb-6 relative">
+        <div className="mb-2">
+          <div className="w-full max-w-[768px] h-64 md:h-80 lg:h-96 mx-auto mb-0 relative">
             <Image
               src="/logo.png"
               alt="SocalShades Logo"
