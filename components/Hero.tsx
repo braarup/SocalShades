@@ -26,9 +26,9 @@ export default function Hero() {
       <div className="relative z-10 max-w-6xl mx-auto px-4 text-center">
         {/* Logo */}
         <div className="mb-8">
-          <div className="w-80 h-40 mx-auto mb-6 relative">
+          <div className="w-48 md:w-64 lg:w-72 h-24 md:h-32 lg:h-36 mx-auto mb-6 relative">
             <Image
-              src="/logo.jpg"
+              src="/logo.png"
               alt="SocalShades Logo"
               fill
               style={{ objectFit: 'contain' }}
