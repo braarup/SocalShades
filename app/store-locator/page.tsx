@@ -63,7 +63,7 @@ const stores = [
 
 export default function StoreLocator() {
   const [searchTerm, setSearchTerm] = useState('')
-  const [selectedStore, setSelectedStore] = useState(null)
+  const [selectedStore, setSelectedStore] = useState<typeof stores[0] | null>(null)
   
   const filteredStores = stores.filter(store =>
     store.name.toLowerCase().includes(searchTerm.toLowerCase()) ||

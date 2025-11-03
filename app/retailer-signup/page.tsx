@@ -16,7 +16,7 @@ export default function RetailerSignup() {
     yearsInBusiness: '',
     currentProducts: '',
     monthlyFootTraffic: '',
-    servicesInterested: [],
+    servicesInterested: [] as string[],
     additionalInfo: ''
   })
 
@@ -352,7 +352,7 @@ export default function RetailerSignup() {
                 {isSubmitting ? 'Submitting...' : 'Submit Application'}
               </button>
               <p className="text-muted text-sm mt-4">
-                * Required fields. We'll review your application and contact you within 24-48 hours.
+                * Required fields. We&apos;ll review your application and contact you within 24-48 hours.
               </p>
             </div>
           </div>

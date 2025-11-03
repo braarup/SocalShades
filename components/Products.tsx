@@ -39,8 +39,8 @@ export default function Products() {
             </p>
           </div>
           <div className="flex gap-2 flex-wrap">
-            <span className="badge-pill">Men's</span>
-            <span className="badge-pill">Women's</span>
+            <span className="badge-pill">Men&apos;s</span>
+            <span className="badge-pill">Women&apos;s</span>
             <span className="badge-pill">Polarized</span>
             <span className="badge-pill">Trendy</span>
           </div>
