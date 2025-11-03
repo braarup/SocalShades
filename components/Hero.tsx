@@ -26,8 +26,14 @@ export default function Hero() {
       <div className="relative z-10 max-w-6xl mx-auto px-4 text-center">
         {/* Logo */}
         <div className="mb-8">
-          <div className="w-60 h-32 mx-auto mb-6 bg-accent/10 rounded-2xl flex items-center justify-center">
-            <span className="text-accent text-4xl font-bold">So‑Cal Shades</span>
+          <div className="w-80 h-40 mx-auto mb-6 relative">
+            <Image
+              src="/logo.jpg"
+              alt="SocalShades Logo"
+              fill
+              style={{ objectFit: 'contain' }}
+              priority
+            />
           </div>
         </div>
         
