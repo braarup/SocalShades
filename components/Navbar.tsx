@@ -13,8 +13,13 @@ export default function Navbar() {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
-              <span className="text-ink font-bold">SC</span>
+            <div className="w-10 h-10 relative">
+              <Image
+                src="/icon.png"
+                alt="SocalShades Icon"
+                fill
+                style={{ objectFit: 'contain' }}
+              />
             </div>
             <span className="font-bold text-accent text-xl">So‑Cal Shades</span>
           </Link>
