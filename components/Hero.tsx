@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 export default function Hero() {
   return (
-    <header className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 md:pt-36 lg:pt-40">
+    <header className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 md:pt-28 lg:pt-32">
       {/* Background Image */}
       <div className="absolute inset-0 bg-black">
         <div 
@@ -23,10 +23,10 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-radial from-accent/25 via-transparent to-transparent" />
       
       {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-8">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-4">
         {/* Logo */}
-        <div className="mb-4 sm:mb-6 md:mb-8">
-          <div className="w-full max-w-[280px] sm:max-w-[400px] md:max-w-[550px] lg:max-w-[768px] h-32 sm:h-48 md:h-64 lg:h-80 mx-auto relative">
+        <div className="mb-2 sm:mb-3 md:mb-4">
+          <div className="w-full max-w-[400px] sm:max-w-[500px] md:max-w-[600px] lg:max-w-[700px] h-48 sm:h-60 md:h-72 lg:h-80 mx-auto relative">
             <Image
               src="/logo.png"
               alt="SocalShades Logo"

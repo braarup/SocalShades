@@ -72,14 +72,14 @@ export default function StoreLocator() {
   )
 
   return (
-    <div className="min-h-screen pt-20 pb-16 bg-bg">
-      <div className="container mx-auto px-4">
+    <div className="min-h-screen pt-28 md:pt-32 pb-16 bg-bg">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-6">
+        <div className="text-center mb-8 sm:mb-10 md:mb-12">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 sm:mb-6">
             Find <span className="text-accent">SocalShades</span> Retailers
           </h1>
-          <p className="text-lg text-muted max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg text-muted max-w-3xl mx-auto px-4">
             Locate stores near you that carry our premium sunglasses and accessories. 
             Visit these trusted retailers to see our products in person.
           </p>
