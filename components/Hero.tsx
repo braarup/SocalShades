@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 export default function Hero() {
   return (
-    <header className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <header className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 md:pt-36 lg:pt-40">
       {/* Background Image */}
       <div className="absolute inset-0 bg-black">
         <div 
@@ -23,10 +23,10 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-radial from-accent/25 via-transparent to-transparent" />
       
       {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-4 text-center">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-8">
         {/* Logo */}
-        <div className="mb-2">
-          <div className="w-full max-w-[768px] h-64 md:h-80 lg:h-96 mx-auto mb-0 relative">
+        <div className="mb-4 sm:mb-6 md:mb-8">
+          <div className="w-full max-w-[280px] sm:max-w-[400px] md:max-w-[550px] lg:max-w-[768px] h-32 sm:h-48 md:h-64 lg:h-80 mx-auto relative">
             <Image
               src="/logo.png"
               alt="SocalShades Logo"
@@ -38,23 +38,23 @@ export default function Hero() {
         </div>
         
         {/* Main Heading */}
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold mb-4 sm:mb-6 leading-tight px-2">
           More Than Shades.{' '}
           <span className="text-accent">We Build Storefronts That Sell.</span>
         </h1>
         
         {/* Subtitle */}
-        <p className="text-lg md:text-xl text-gray-200 max-w-4xl mx-auto mb-8 leading-relaxed">
+        <p className="text-base sm:text-lg md:text-xl text-gray-200 max-w-4xl mx-auto mb-6 sm:mb-8 leading-relaxed px-4">
           Affordable, high‑quality sunglasses are our flagship — and we pair them with custom displays, 
           shelving, and merchandising expertise to maximize your margins at the counter.
         </p>
         
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Link href="/products" className="btn-primary">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4">
+          <Link href="/products" className="btn-primary w-full sm:w-auto text-center">
             Shop Sunglasses Wholesale
           </Link>
-          <Link href="/services" className="btn-outline">
+          <Link href="/services" className="btn-outline w-full sm:w-auto text-center">
             See Storefront Solutions
           </Link>
         </div>

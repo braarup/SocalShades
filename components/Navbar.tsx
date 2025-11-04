@@ -9,11 +9,11 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-bg/85 backdrop-blur-md border-b border-zinc-800">
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center py-4">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center py-3 sm:py-4">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-0">
-            <div className="w-20 h-20 relative">
+            <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 relative flex-shrink-0">
               <Image
                 src="/icon.png"
                 alt="SocalShades Icon"
@@ -21,7 +21,7 @@ export default function Navbar() {
                 style={{ objectFit: 'contain' }}
               />
             </div>
-            <span className="font-bold text-accent text-xl">So‑Cal Shades</span>
+            <span className="font-bold text-accent text-base sm:text-lg md:text-xl">So‑Cal Shades</span>
           </Link>
 
           {/* Desktop Navigation */}
