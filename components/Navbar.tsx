@@ -21,7 +21,7 @@ export default function Navbar() {
                 style={{ objectFit: 'contain' }}
               />
             </div>
-            <span className="font-bold text-accent text-base sm:text-lg md:text-xl">So‑Cal Shades</span>
+            <span className="font-bold text-accent text-base sm:text-lg md:text-xl">SoCal Shades</span>
           </Link>
 
           {/* Desktop Navigation */}
