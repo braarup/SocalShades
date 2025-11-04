@@ -8,11 +8,11 @@ export default function TrustBar() {
             <div className="text-muted text-sm">Retail merchandising experience</div>
           </div>
           <div>
-            <div className="text-2xl md:text-3xl font-bold text-accent-2 mb-1">Up to 300%</div>
+            <div className="text-2xl md:text-3xl font-bold text-accent-2 mb-1">Up to 50%</div>
             <div className="text-muted text-sm">Typical sunglasses margins</div>
           </div>
           <div>
-            <div className="text-2xl md:text-3xl font-bold text-accent-2 mb-1">800+ stores</div>
+            <div className="text-2xl md:text-3xl font-bold text-accent-2 mb-1">1800+ stores</div>
             <div className="text-muted text-sm">Partnered across the West</div>
           </div>
           <div>

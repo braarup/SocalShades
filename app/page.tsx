@@ -11,9 +11,9 @@ export default function Home() {
     <>
       <Hero />
       <TrustBar />
+      <Services />
       <Products />
       <BeyondShades />
-      <Services />
       <Testimonials />
       <CTABanner />
     </>
