@@ -41,7 +41,7 @@ export async function POST(request: NextRequest) {
     // Send email to SocalShades team
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
-      to: process.env.BUSINESS_EMAIL || 'info@socalshades.com',
+      to: process.env.BUSINESS_EMAIL || 'braarup@gmail.com',
       subject: `New Retailer Application - ${body.businessName}`,
       text: emailContent,
       html: emailContent.replace(/\n/g, '<br>'),
@@ -61,7 +61,7 @@ We've received your retailer application for ${body.businessName}. Our team will
 In the meantime, if you have any questions, feel free to reach out to us directly.
 
 Best regards,
-The So‑Cal Shades Team`,
+The SoCal Shades Team`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #ff4fa3;">Thank you for your interest!</h2>

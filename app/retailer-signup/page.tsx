@@ -86,7 +86,7 @@ export default function RetailerSignup() {
         {/* Header */}
         <div className="text-center mb-8 sm:mb-10 md:mb-12">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 sm:mb-6">
-            Partner with <span className="text-accent">So‑Cal Shades</span>
+            Partner with <span className="text-accent">SoCal Shades</span>
           </h1>
           <p className="text-base sm:text-lg text-muted max-w-3xl mx-auto px-4">
             Join hundreds of successful retailers who have boosted their counter sales with our premium sunglasses, 
