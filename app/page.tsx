@@ -5,6 +5,7 @@ import BeyondShades from '@/components/BeyondShades'
 import Services from '@/components/Services'
 import Testimonials from '@/components/Testimonials'
 import CTABanner from '@/components/CTABanner'
+import PromoModal from '@/components/PromoModal'
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <BeyondShades />
       <Testimonials />
       <CTABanner />
+      <PromoModal />
     </>
   )
 }
