@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
           <div>
             <p className="text-muted text-sm">
-              © {new Date().getFullYear()} So‑Cal Shades Wholesale. All rights reserved.
+              © {new Date().getFullYear()} SoCal Shades Wholesale. All rights reserved.
             </p>
           </div>
           <div className="flex flex-wrap gap-6 text-sm md:justify-end">

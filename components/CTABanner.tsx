@@ -8,7 +8,7 @@ export default function CTABanner() {
           <div>
             <h3 className="text-2xl md:text-3xl font-bold mb-2">Ready to boost counter sales?</h3>
             <p className="text-muted">
-              Partner with So‑Cal Shades for products, displays, and a storefront that sells.
+              Partner with SoCal Shades for products, displays, and a storefront that sells.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3">
