@@ -7,6 +7,8 @@ import Image from 'next/image'
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
+  const closeMenu = () => setIsOpen(false)
+
   return (
     <nav className="fixed top-0 w-full z-50 bg-bg/85 backdrop-blur-md border-b border-zinc-800">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -68,26 +70,26 @@ export default function Navbar() {
         {isOpen && (
           <div className="lg:hidden pb-4 border-t border-zinc-800 mt-4">
             <div className="flex flex-col space-y-3 pt-4">
-              <Link href="/products" className="text-muted hover:text-text transition-colors">
+              <Link href="/products" className="text-muted hover:text-text transition-colors" onClick={closeMenu}>
                 Sunglasses
               </Link>
-              <Link href="/beyond-shades" className="text-muted hover:text-text transition-colors">
+              <Link href="/beyond-shades" className="text-muted hover:text-text transition-colors" onClick={closeMenu}>
                 Beyond Shades
               </Link>
-              <Link href="/storefront-services" className="text-muted hover:text-text transition-colors">
+              <Link href="/storefront-services" className="text-muted hover:text-text transition-colors" onClick={closeMenu}>
                 Storefront Services
               </Link>
-              <Link href="/store-locator" className="text-muted hover:text-text transition-colors">
+              <Link href="/store-locator" className="text-muted hover:text-text transition-colors" onClick={closeMenu}>
                 Store Locator
               </Link>
-              <Link href="/contact" className="text-muted hover:text-text transition-colors">
+              <Link href="/contact" className="text-muted hover:text-text transition-colors" onClick={closeMenu}>
                 Contact
               </Link>
               <div className="flex flex-col space-y-2 pt-3">
-                <Link href="/retailer-signup" className="btn-outline text-center">
+                <Link href="/retailer-signup" className="btn-outline text-center" onClick={closeMenu}>
                   Become a Retailer
                 </Link>
-                <Link href="/wholesale-account" className="btn-primary text-center">
+                <Link href="/wholesale-account" className="btn-primary text-center" onClick={closeMenu}>
                   Wholesale Account
                 </Link>
               </div>
