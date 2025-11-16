@@ -54,7 +54,7 @@ export default function Hero() {
           <Link href="/products" className="btn-primary w-full sm:w-auto text-center">
             Shop Sunglasses Wholesale
           </Link>
-          <Link href="/services" className="btn-outline w-full sm:w-auto text-center">
+          <Link href="/storefront-services" className="btn-outline w-full sm:w-auto text-center">
             See Storefront Solutions
           </Link>
         </div>
