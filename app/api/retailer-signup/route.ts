@@ -54,7 +54,7 @@ export async function POST(request: NextRequest) {
       subject: 'SocalShades Retailer Application Received',
       text: `Dear ${body.contactName},
 
-Thank you for your interest in partnering with So‑Cal Shades Wholesale!
+Thank you for your interest in partnering with SoCal Shades Wholesale!
 
 We've received your retailer application for ${body.businessName}. Our team will review your information and contact you within 24-48 hours to discuss next steps.
 
