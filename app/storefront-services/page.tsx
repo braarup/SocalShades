@@ -251,9 +251,6 @@ export default function StorefrontServices() {
             <Link href="/retailer-signup" className="btn-primary text-lg px-8 py-4">
               Get Started Today
             </Link>
-            <Link href="/contact" className="btn-outline text-lg px-8 py-4">
-              Learn More
-            </Link>
           </div>
         </div>
       </div>
