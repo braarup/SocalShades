@@ -63,9 +63,9 @@ export default function Products() {
               <Link
                 key={index}
                 href="/sunglasses"
-                className="product-card flex h-full items-center px-4 py-3 sm:px-5 sm:py-4"
+                className="product-card flex flex-col h-full px-4 py-4 sm:px-5 sm:py-5"
               >
-                <div className="w-18 h-18 sm:w-22 sm:h-22 flex-shrink-0 rounded-lg overflow-hidden border border-zinc-800 bg-zinc-900">
+                <div className="w-full aspect-[4/3] rounded-lg overflow-hidden border border-zinc-800 bg-zinc-900 mb-3 sm:mb-4">
                   <Image
                     src={product.image}
                     alt={product.name}
@@ -74,16 +74,16 @@ export default function Products() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="ml-3 sm:ml-4 flex flex-col justify-center pr-1 sm:pr-3">
-                  <div className="flex items-center justify-between gap-2 mb-0.5">
-                    <h3 className="font-semibold text-sm sm:text-base truncate max-w-[7.5rem] sm:max-w-[9rem] md:max-w-[10rem]">
+                <div className="flex flex-col justify-center pr-1 sm:pr-3">
+                  <div className="flex items-center justify-between gap-2 mb-1">
+                    <h3 className="font-semibold text-sm sm:text-base truncate">
                       {product.name}
                     </h3>
                     <span className="badge-pill text-[0.6rem] sm:text-[0.65rem] px-2 py-0.5 whitespace-nowrap">
                       {product.badge}
                     </span>
                   </div>
-                  <p className="text-muted text-xs sm:text-sm line-clamp-2 leading-snug">
+                  <p className="text-muted text-xs sm:text-sm line-clamp-2 leading-snug mt-0.5">
                     {product.description}
                   </p>
                 </div>
