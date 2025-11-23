@@ -5,19 +5,19 @@ const services = [
     title: 'Mobile Accessories',
     description: 'Chargers, cables, car mounts — the essentials customers forget and buy on impulse.',
     image: '/mobile-01.png',
-    href: '/products/mobile'
+    href: '/mobile'
   },
   {
     title: 'Supplements',
     description: 'Energy shots and wellness packs that move quickly at the counter.',
     image: '/supplements-01.png',
-    href: '/products/beyond'
+    href: '/beyond'
   },
   {
     title: 'Lighters & Impulse',
     description: 'High‑turn items placed for visibility to increase add‑on sales.',
     image: '/lighters-01.png',
-    href: '/products/beyond'
+    href: '/beyond'
   }
 ]
 
