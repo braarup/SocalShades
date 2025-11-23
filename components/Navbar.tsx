@@ -50,8 +50,8 @@ export default function Navbar() {
             <Link href="/retailer-signup" className="btn-outline">
               Open an Account
             </Link>
-            <Link href="/wholesale-account" className="btn-primary">
-              Wholesale Account
+            <Link href="/contact" className="btn-primary">
+              Contact Us
             </Link>
           </div>
 
