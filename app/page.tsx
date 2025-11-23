@@ -6,6 +6,7 @@ import Services from '@/components/Services'
 import Testimonials from '@/components/Testimonials'
 import CTABanner from '@/components/CTABanner'
 import PromoModal from '@/components/PromoModal'
+import FastChargeDisplayModal from '@/components/FastChargeDisplayModal'
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Testimonials />
       <CTABanner />
       <PromoModal />
+      <FastChargeDisplayModal />
     </>
   )
 }
