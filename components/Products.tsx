@@ -3,28 +3,22 @@ import Image from 'next/image'
 
 const products = [
   {
-    name: 'Matte Wayfarer',
-    description: 'Our #1 seller. Universal fit.',
-    badge: 'Polarized',
-    image: 'https://images.unsplash.com/photo-1572635196237-14b3f281503f?q=80&w=400'
+    name: 'Regular Collection',
+    description: 'Everyday best-sellers at easy price points your customers love.',
+    badge: 'Regular',
+    image: '/sunglasses-regular.png'
   },
   {
-    name: 'Classic Aviator',
-    description: 'All‑day comfort. High turnover.',
-    badge: "Men's",
-    image: 'https://images.unsplash.com/photo-1511499767150-a48a237f0083?q=80&w=400'
+    name: 'Premium Collection',
+    description: 'Upgraded lenses and finishes for shoppers who want more.',
+    badge: 'Premium',
+    image: '/sunglasses-premium.png'
   },
   {
-    name: 'Round Trend',
-    description: 'Fashion‑forward. Great impulse buy.',
-    badge: 'Trendy',
-    image: 'https://images.unsplash.com/photo-1574258495973-f010dfbb5371?q=80&w=400'
-  },
-  {
-    name: 'Sport Wrap',
-    description: 'Outdoor favorite. High margin.',
-    badge: 'Polarized',
-    image: 'https://images.unsplash.com/photo-1556306535-0f09a537f0a3?q=80&w=400'
+    name: '10-Piece Rack Program',
+    description: 'Compact, high-impact rack that keeps your top movers front and center.',
+    badge: '10-Piece Rack',
+    image: '/sunglasses-rack.png'
   }
 ]
 
@@ -63,9 +57,9 @@ export default function Products() {
             </div>
           </div>
 
-          {/* Right: 6 product tiles (3 across, 2 high) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 xl:gap-5">
-            {products.concat(products).slice(0, 6).map((product, index) => (
+          {/* Right: 3 product tiles */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 xl:gap-5">
+            {products.map((product, index) => (
               <Link
                 key={index}
                 href="/sunglasses"
