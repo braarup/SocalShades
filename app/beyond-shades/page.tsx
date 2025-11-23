@@ -1,8 +1,12 @@
+"use client"
+
 import Link from 'next/link'
+import FastChargeDisplayModal from '@/components/FastChargeDisplayModal'
 
 export default function BeyondShadesPage() {
   return (
     <main className="min-h-screen bg-bg">
+      <FastChargeDisplayModal defaultOpen />
       {/* Hero Section */}
       <section className="relative pt-28 md:pt-32 lg:pt-36 pb-16 md:pb-20 bg-gradient-to-b from-zinc-900 to-bg">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

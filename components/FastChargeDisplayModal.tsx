@@ -4,8 +4,8 @@ import { useEffect, useState, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function FastChargeDisplayModal() {
-  const [isVisible, setIsVisible] = useState(false)
+export default function FastChargeDisplayModal({ defaultOpen = false }: { defaultOpen?: boolean }) {
+  const [isVisible, setIsVisible] = useState(defaultOpen)
   const [activeImage, setActiveImage] = useState<0 | 1>(0)
   const hasTriggeredRef = useRef(false)
   const observerRef = useRef<IntersectionObserver | null>(null)
