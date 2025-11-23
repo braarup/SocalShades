@@ -73,7 +73,7 @@ export default function FastChargeDisplayModal() {
           {/* Left: main rotating image */}
           <div className="relative min-h-[260px] sm:min-h-[320px] md:min-h-[380px] bg-zinc-900">
             <Image
-              src={activeImage === 0 ? '/fastcharging-01.png' : '/fastcharging-02.png'}
+              src={activeImage === 0 ? '/FastCharging-01.png' : '/FastCharging-02.png'}
               alt="Super fast charging display"
               fill
               className="object-cover"
