@@ -1,18 +1,23 @@
+import Link from 'next/link'
+
 const services = [
   {
     title: 'Mobile Accessories',
     description: 'Chargers, cables, car mounts — the essentials customers forget and buy on impulse.',
-    image: '/mobile-01.png'
+    image: '/mobile-01.png',
+    href: '/products/mobile'
   },
   {
     title: 'Supplements',
     description: 'Energy shots and wellness packs that move quickly at the counter.',
-    image: '/supplements-01.png'
+    image: '/supplements-01.png',
+    href: '/products/beyond'
   },
   {
     title: 'Lighters & Impulse',
     description: 'High‑turn items placed for visibility to increase add‑on sales.',
-    image: '/lighters-01.png'
+    image: '/lighters-01.png',
+    href: '/products/beyond'
   }
 ]
 
@@ -31,14 +36,18 @@ export default function BeyondShades() {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div key={index} className="icon-tile">
+            <Link
+              key={index}
+              href={service.href}
+              className="icon-tile block"
+            >
               <div 
                 className="w-16 h-16 mb-6 bg-cover bg-center rounded-lg"
                 style={{ backgroundImage: `url(${service.image})` }}
               />
               <h3 className="text-xl font-bold mb-3">{service.title}</h3>
               <p className="text-muted">{service.description}</p>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
