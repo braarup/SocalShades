@@ -41,9 +41,9 @@ export default function Products() {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 items-stretch">
+        <div className="grid lg:grid-cols-[1.2fr,1.8fr] gap-8 items-stretch">
           {/* Left: main display with two images */}
-          <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900">
+          <div className="relative w-full aspect-[3/2] max-w-xl mx-auto lg:mx-0 rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900">
             <Image
               src={products[0].image}
               alt={products[0].name}
@@ -64,28 +64,34 @@ export default function Products() {
           </div>
 
           {/* Right: 6 product tiles (3 across, 2 high) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3 xl:gap-4">
             {products.concat(products).slice(0, 6).map((product, index) => (
               <Link
                 key={index}
                 href="/sunglasses"
-                className="product-card flex h-full"
+                className="product-card flex h-full items-center px-3 py-3 sm:px-4 sm:py-4"
               >
-                <div className="w-20 h-20 sm:w-24 sm:h-24 flex-shrink-0 rounded-lg overflow-hidden border border-zinc-800 bg-zinc-900">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 rounded-lg overflow-hidden border border-zinc-800 bg-zinc-900">
                   <Image
                     src={product.image}
                     alt={product.name}
-                    width={96}
-                    height={96}
+                    width={80}
+                    height={80}
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="ml-4 flex flex-col justify-center py-2 pr-2">
-                  <div className="flex items-center justify-between gap-2 mb-1">
-                    <h3 className="font-semibold text-sm sm:text-base truncate">{product.name}</h3>
-                    <span className="badge-pill text-[0.65rem] px-2 py-0.5 whitespace-nowrap">{product.badge}</span>
+                <div className="ml-3 sm:ml-4 flex flex-col justify-center pr-1 sm:pr-2">
+                  <div className="flex items-center justify-between gap-2 mb-0.5">
+                    <h3 className="font-semibold text-xs sm:text-sm md:text-base truncate max-w-[7rem] sm:max-w-[8rem] md:max-w-[9rem]">
+                      {product.name}
+                    </h3>
+                    <span className="badge-pill text-[0.6rem] sm:text-[0.65rem] px-2 py-0.5 whitespace-nowrap">
+                      {product.badge}
+                    </span>
                   </div>
-                  <p className="text-muted text-xs sm:text-sm line-clamp-2">{product.description}</p>
+                  <p className="text-muted text-[0.7rem] sm:text-xs md:text-sm line-clamp-2 leading-snug">
+                    {product.description}
+                  </p>
                 </div>
               </Link>
             ))}
