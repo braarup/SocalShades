@@ -59,8 +59,8 @@ export default function Products() {
                   <span className="badge-pill">{product.badge}</span>
                 </div>
                 <p className="text-muted text-sm mb-4">{product.description}</p>
-                <Link href="/wholesale-account" className="btn-primary w-full text-center block">
-                  Order in Bulk
+                <Link href="/sunglasses" className="btn-primary w-full text-center block">
+                  Click Here
                 </Link>
               </div>
             </div>

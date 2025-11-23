@@ -12,7 +12,7 @@ export default function CTABanner() {
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3">
-            <Link href="/wholesale-account" className="btn-primary">
+            <Link href="/retailer-signup" className="btn-primary">
               Open an Account
             </Link>
             <Link href="/contact" className="btn-outline">
