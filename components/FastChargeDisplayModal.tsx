@@ -51,27 +51,27 @@ export default function FastChargeDisplayModal({ defaultOpen = false }: { defaul
   if (!isVisible) return null
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
-      <div className="bg-bg border border-accent/40 rounded-2xl shadow-2xl max-w-5xl w-full mx-4 overflow-hidden">
-        <div className="flex justify-between items-center px-6 py-4 border-b border-zinc-800 bg-zinc-950/80">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm px-3">
+      <div className="bg-bg border border-accent/40 rounded-2xl shadow-2xl max-w-5xl w-full max-h-[90vh] overflow-hidden flex flex-col">
+        <div className="flex justify-between items-center px-4 sm:px-6 py-3 sm:py-4 border-b border-zinc-800 bg-zinc-950/80">
           <div>
-            <p className="text-xs uppercase tracking-[0.2em] text-accent mb-1">New Program</p>
-            <h2 className="text-xl sm:text-2xl font-bold text-text">
+            <p className="text-[0.65rem] sm:text-xs uppercase tracking-[0.2em] text-accent mb-1">New Program</p>
+            <h2 className="text-lg sm:text-2xl font-bold text-text">
               Super Super Fast Charging Display
             </h2>
           </div>
           <button
             onClick={close}
-            className="text-muted hover:text-text transition-colors ml-4"
+            className="text-muted hover:text-text transition-colors ml-3 sm:ml-4 text-lg sm:text-xl"
             aria-label="Close pop-up"
           >
             ✕
           </button>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-0">
+        <div className="grid md:grid-cols-2 gap-0 flex-1 overflow-y-auto">
           {/* Left: main rotating image */}
-          <div className="relative min-h-[260px] sm:min-h-[320px] md:min-h-[380px] bg-zinc-900">
+          <div className="relative h-56 sm:h-72 md:h-full bg-zinc-900">
             <Image
               src={activeImage === 0 ? '/FastCharging-01.png' : '/FastCharging-02.png'}
               alt="Super fast charging display"
@@ -95,22 +95,22 @@ export default function FastChargeDisplayModal({ defaultOpen = false }: { defaul
           </div>
 
           {/* Right: grid of categories */}
-          <div className="p-6 sm:p-8 flex flex-col h-full bg-zinc-950/70">
-            <p className="text-sm font-semibold text-accent mb-2">
+          <div className="p-4 sm:p-6 flex flex-col h-full bg-zinc-950/70">
+            <p className="text-xs sm:text-sm font-semibold text-accent mb-1.5 sm:mb-2">
               Super-Fast Mobile Accessories Program
             </p>
-            <h3 className="text-2xl font-bold mb-2 text-text">
+            <h3 className="text-lg sm:text-2xl font-bold mb-1.5 sm:mb-2 text-text">
               30W Wall & 55W Car Chargers
             </h3>
-            <p className="text-sm text-muted mb-5">
+            <p className="text-xs sm:text-sm text-muted mb-3 sm:mb-4">
               Draw attention to your fastest-charging accessories with a dedicated, high-impact countertop display.
             </p>
 
-            <div className="grid grid-cols-2 gap-3 mb-6">
+            <div className="grid grid-cols-2 gap-2 sm:gap-3 mb-4 sm:mb-6">
               {['Category 1', 'Category 2', 'Category 3', 'Category 4'].map((label) => (
                 <div
                   key={label}
-                  className="aspect-video rounded-lg border border-zinc-800 bg-zinc-900/70 flex items-center justify-center text-xs sm:text-sm font-semibold text-muted"
+                  className="aspect-video rounded-lg border border-zinc-800 bg-zinc-900/70 flex items-center justify-center text-[0.65rem] sm:text-xs font-semibold text-muted"
                 >
                   {label}
                 </div>
@@ -120,7 +120,7 @@ export default function FastChargeDisplayModal({ defaultOpen = false }: { defaul
             <div className="mt-auto flex flex-col sm:flex-row sm:items-center gap-3">
               <Link
                 href="/retailer-signup"
-                className="btn-primary w-full sm:w-auto text-center"
+                className="btn-primary w-full sm:w-auto text-center text-sm sm:text-base"
               >
                 Order Your Display!
               </Link>
