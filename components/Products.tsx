@@ -41,12 +41,12 @@ export default function Products() {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-[1.2fr,1.8fr] gap-8 items-stretch">
+        <div className="grid lg:grid-cols-[1.1fr,1.9fr] gap-8 items-stretch">
           {/* Left: main display with two images */}
-          <div className="relative w-full aspect-[3/2] max-w-xl mx-auto lg:mx-0 rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900">
+          <div className="relative w-full aspect-[4/3] max-w-lg mx-auto lg:mx-0 rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900">
             <Image
-              src={products[0].image}
-              alt={products[0].name}
+              src="/rack-display-01.png"
+              alt="SoCal Shades sunglass display"
               fill
               className="object-cover"
               sizes="(min-width: 1024px) 50vw, 100vw"
@@ -54,8 +54,8 @@ export default function Products() {
             />
             <div className="absolute inset-0 opacity-0 animate-fadeSlide">
               <Image
-                src={products[1].image}
-                alt={products[1].name}
+                src="/rack-display-02.png"
+                alt="SoCal Shades sunglass display alternate"
                 fill
                 className="object-cover"
                 sizes="(min-width: 1024px) 50vw, 100vw"
@@ -64,32 +64,32 @@ export default function Products() {
           </div>
 
           {/* Right: 6 product tiles (3 across, 2 high) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3 xl:gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 xl:gap-5">
             {products.concat(products).slice(0, 6).map((product, index) => (
               <Link
                 key={index}
                 href="/sunglasses"
-                className="product-card flex h-full items-center px-3 py-3 sm:px-4 sm:py-4"
+                className="product-card flex h-full items-center px-4 py-3 sm:px-5 sm:py-4"
               >
-                <div className="w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 rounded-lg overflow-hidden border border-zinc-800 bg-zinc-900">
+                <div className="w-18 h-18 sm:w-22 sm:h-22 flex-shrink-0 rounded-lg overflow-hidden border border-zinc-800 bg-zinc-900">
                   <Image
                     src={product.image}
                     alt={product.name}
-                    width={80}
-                    height={80}
+                    width={96}
+                    height={96}
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="ml-3 sm:ml-4 flex flex-col justify-center pr-1 sm:pr-2">
+                <div className="ml-3 sm:ml-4 flex flex-col justify-center pr-1 sm:pr-3">
                   <div className="flex items-center justify-between gap-2 mb-0.5">
-                    <h3 className="font-semibold text-xs sm:text-sm md:text-base truncate max-w-[7rem] sm:max-w-[8rem] md:max-w-[9rem]">
+                    <h3 className="font-semibold text-sm sm:text-base truncate max-w-[7.5rem] sm:max-w-[9rem] md:max-w-[10rem]">
                       {product.name}
                     </h3>
                     <span className="badge-pill text-[0.6rem] sm:text-[0.65rem] px-2 py-0.5 whitespace-nowrap">
                       {product.badge}
                     </span>
                   </div>
-                  <p className="text-muted text-[0.7rem] sm:text-xs md:text-sm line-clamp-2 leading-snug">
+                  <p className="text-muted text-xs sm:text-sm line-clamp-2 leading-snug">
                     {product.description}
                   </p>
                 </div>
