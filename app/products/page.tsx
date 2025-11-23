@@ -125,7 +125,7 @@ export default function ProductsPage() {
 
             <div className="grid md:grid-cols-2 gap-8">
               {/* Premium Collection */}
-              <div className="bg-gradient-to-br from-zinc-900 to-zinc-800 rounded-xl p-8 border border-zinc-700 hover:border-accent/50 transition-all">
+              <Link href="/sunglasses" className="bg-gradient-to-br from-zinc-900 to-zinc-800 rounded-xl p-8 border border-zinc-700 hover:border-accent/50 transition-all block">
                 <div className="text-accent text-sm font-bold uppercase tracking-wider mb-3">Premium Collection</div>
                 <h3 className="text-3xl font-bold mb-4">High-End Styles</h3>
                 <div className="text-4xl font-bold text-accent mb-6">$6/pair</div>
@@ -191,10 +191,10 @@ export default function ProductsPage() {
                 <div className="text-sm text-muted">
                   Perfect for fashion-forward shoppers and upscale retail environments
                 </div>
-              </div>
+              </Link>
 
               {/* Standard Collection */}
-              <div className="bg-gradient-to-br from-zinc-900 to-zinc-800 rounded-xl p-8 border border-zinc-700 hover:border-accent/50 transition-all">
+              <Link href="/sunglasses" className="bg-gradient-to-br from-zinc-900 to-zinc-800 rounded-xl p-8 border border-zinc-700 hover:border-accent/50 transition-all block">
                 <div className="text-accent text-sm font-bold uppercase tracking-wider mb-3">Standard Collection</div>
                 <h3 className="text-3xl font-bold mb-4">Classic Styles</h3>
                 <div className="text-4xl font-bold text-accent mb-6">$4/pair</div>
@@ -260,7 +260,7 @@ export default function ProductsPage() {
                 <div className="text-sm text-muted">
                   Ideal for high-volume sales and impulse purchases
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -281,7 +281,7 @@ export default function ProductsPage() {
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {/* Aviators */}
-              <div className="bg-zinc-800/50 rounded-lg p-6 border border-zinc-700 hover:border-accent/50 transition-all">
+              <Link href="/sunglasses" className="bg-zinc-800/50 rounded-lg p-6 border border-zinc-700 hover:border-accent/50 transition-all block">
                 <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mb-4">
                   <svg className="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -292,10 +292,10 @@ export default function ProductsPage() {
                 <p className="text-muted">
                   Timeless teardrop design. Available in classic metal and modern variations.
                 </p>
-              </div>
+              </Link>
 
               {/* Wayfarers */}
-              <div className="bg-zinc-800/50 rounded-lg p-6 border border-zinc-700 hover:border-accent/50 transition-all">
+              <Link href="/sunglasses" className="bg-zinc-800/50 rounded-lg p-6 border border-zinc-700 hover:border-accent/50 transition-all block">
                 <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mb-4">
                   <svg className="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -306,10 +306,10 @@ export default function ProductsPage() {
                 <p className="text-muted">
                   Bold, iconic shape that never goes out of style. Popular with all ages.
                 </p>
-              </div>
+              </Link>
 
               {/* Round */}
-              <div className="bg-zinc-800/50 rounded-lg p-6 border border-zinc-700 hover:border-accent/50 transition-all">
+              <Link href="/sunglasses" className="bg-zinc-800/50 rounded-lg p-6 border border-zinc-700 hover:border-accent/50 transition-all block">
                 <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mb-4">
                   <svg className="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -320,10 +320,10 @@ export default function ProductsPage() {
                 <p className="text-muted">
                   Vintage-inspired circles and ovals. Perfect for boho and retro looks.
                 </p>
-              </div>
+              </Link>
 
               {/* Cat Eye */}
-              <div className="bg-zinc-800/50 rounded-lg p-6 border border-zinc-700 hover:border-accent/50 transition-all">
+              <Link href="/sunglasses" className="bg-zinc-800/50 rounded-lg p-6 border border-zinc-700 hover:border-accent/50 transition-all block">
                 <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mb-4">
                   <svg className="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -334,10 +334,10 @@ export default function ProductsPage() {
                 <p className="text-muted">
                   Fashion-forward upswept frames. A favorite among style-conscious women.
                 </p>
-              </div>
+              </Link>
 
               {/* Sport/Wrap */}
-              <div className="bg-zinc-800/50 rounded-lg p-6 border border-zinc-700 hover:border-accent/50 transition-all">
+              <Link href="/sunglasses" className="bg-zinc-800/50 rounded-lg p-6 border border-zinc-700 hover:border-accent/50 transition-all block">
                 <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mb-4">
                   <svg className="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -348,10 +348,10 @@ export default function ProductsPage() {
                 <p className="text-muted">
                   Athletic performance styles. Lightweight with maximum coverage.
                 </p>
-              </div>
+              </Link>
 
               {/* Oversized */}
-              <div className="bg-zinc-800/50 rounded-lg p-6 border border-zinc-700 hover:border-accent/50 transition-all">
+              <Link href="/sunglasses" className="bg-zinc-800/50 rounded-lg p-6 border border-zinc-700 hover:border-accent/50 transition-all block">
                 <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mb-4">
                   <svg className="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -362,7 +362,7 @@ export default function ProductsPage() {
                 <p className="text-muted">
                   Bold statement pieces. Maximum sun protection and glamorous appeal.
                 </p>
-              </div>
+              </Link>
             </div>
           </div>
         </div>
