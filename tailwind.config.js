@@ -24,6 +24,18 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      keyframes: {
+        fadeSlide: {
+          '0%': { opacity: '0', transform: 'translateX(4%)' },
+          '10%': { opacity: '1', transform: 'translateX(0%)' },
+          '50%': { opacity: '1', transform: 'translateX(0%)' },
+          '60%': { opacity: '0', transform: 'translateX(-4%)' },
+          '100%': { opacity: '0', transform: 'translateX(-4%)' },
+        },
+      },
+      animation: {
+        fadeSlide: 'fadeSlide 10s ease-in-out infinite',
+      },
     },
   },
   plugins: [],

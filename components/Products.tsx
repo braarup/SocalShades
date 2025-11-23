@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 const products = [
   {
@@ -38,33 +39,57 @@ export default function Products() {
               Top movers, proven at the counter. Polarized, trendy, and everyday styles your customers pick up fast.
             </p>
           </div>
-          <div className="flex gap-2 flex-wrap">
-            <span className="badge-pill">Men&apos;s</span>
-            <span className="badge-pill">Women&apos;s</span>
-            <span className="badge-pill">Polarized</span>
-            <span className="badge-pill">Trendy</span>
-          </div>
         </div>
-        
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {products.map((product, index) => (
-            <Link key={index} href="/sunglasses" className="product-card h-full block">
-              <div 
-                className="w-full aspect-[4/3] bg-cover bg-center"
-                style={{ backgroundImage: `url(${product.image})` }}
+
+        <div className="grid lg:grid-cols-2 gap-8 items-stretch">
+          {/* Left: main display with two images */}
+          <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900">
+            <Image
+              src={products[0].image}
+              alt={products[0].name}
+              fill
+              className="object-cover"
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              priority
+            />
+            <div className="absolute inset-0 opacity-0 animate-fadeSlide">
+              <Image
+                src={products[1].image}
+                alt={products[1].name}
+                fill
+                className="object-cover"
+                sizes="(min-width: 1024px) 50vw, 100vw"
               />
-              <div className="p-6">
-                <div className="flex justify-between items-center mb-2">
-                  <h3 className="font-bold text-lg">{product.name}</h3>
-                  <span className="badge-pill">{product.badge}</span>
+            </div>
+          </div>
+
+          {/* Right: 6 stacked product tiles (2 columns x 3 rows) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
+            {products.concat(products).slice(0, 6).map((product, index) => (
+              <Link
+                key={index}
+                href="/sunglasses"
+                className="product-card flex h-full"
+              >
+                <div className="w-20 h-20 sm:w-24 sm:h-24 flex-shrink-0 rounded-lg overflow-hidden border border-zinc-800 bg-zinc-900">
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    width={96}
+                    height={96}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <p className="text-muted text-sm mb-4">{product.description}</p>
-                <span className="btn-primary w-full text-center block">
-                  View Sunglasses
-                </span>
-              </div>
-            </Link>
-          ))}
+                <div className="ml-4 flex flex-col justify-center py-2 pr-2">
+                  <div className="flex items-center justify-between gap-2 mb-1">
+                    <h3 className="font-semibold text-sm sm:text-base truncate">{product.name}</h3>
+                    <span className="badge-pill text-[0.65rem] px-2 py-0.5 whitespace-nowrap">{product.badge}</span>
+                  </div>
+                  <p className="text-muted text-xs sm:text-sm line-clamp-2">{product.description}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </section>
