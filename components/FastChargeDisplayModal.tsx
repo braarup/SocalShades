@@ -41,7 +41,7 @@ export default function FastChargeDisplayModal({ defaultOpen = false }: { defaul
 
     const interval = setInterval(() => {
       setActiveImage((prev) => (prev === 0 ? 1 : 0))
-    }, 12000) // 12 seconds between swaps
+    }, 6000) // 6 seconds between swaps
 
     return () => clearInterval(interval)
   }, [isVisible])
