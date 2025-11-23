@@ -63,8 +63,8 @@ export default function Products() {
             </div>
           </div>
 
-          {/* Right: 6 stacked product tiles (2 columns x 3 rows) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
+          {/* Right: 6 product tiles (3 across, 2 high) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
             {products.concat(products).slice(0, 6).map((product, index) => (
               <Link
                 key={index}
