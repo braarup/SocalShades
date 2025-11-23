@@ -48,7 +48,7 @@ export default function Products() {
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map((product, index) => (
-            <div key={index} className="product-card h-full">
+            <Link key={index} href="/sunglasses" className="product-card h-full block">
               <div 
                 className="w-full aspect-[4/3] bg-cover bg-center"
                 style={{ backgroundImage: `url(${product.image})` }}
@@ -59,11 +59,11 @@ export default function Products() {
                   <span className="badge-pill">{product.badge}</span>
                 </div>
                 <p className="text-muted text-sm mb-4">{product.description}</p>
-                <Link href="/sunglasses" className="btn-primary w-full text-center block">
-                  Click Here
-                </Link>
+                <span className="btn-primary w-full text-center block">
+                  View Sunglasses
+                </span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

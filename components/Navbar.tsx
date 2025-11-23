@@ -89,8 +89,8 @@ export default function Navbar() {
                 <Link href="/retailer-signup" className="btn-outline text-center" onClick={closeMenu}>
                   Become a Retailer
                 </Link>
-                <Link href="/wholesale-account" className="btn-primary text-center" onClick={closeMenu}>
-                  Wholesale Account
+                <Link href="/contact" className="btn-primary text-center" onClick={closeMenu}>
+                  Contact Us
                 </Link>
               </div>
             </div>

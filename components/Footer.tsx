@@ -17,7 +17,7 @@ export default function Footer() {
             <Link href="/beyond-shades" className="text-muted hover:text-text transition-colors">
               Beyond Shades
             </Link>
-            <Link href="/services" className="text-muted hover:text-text transition-colors">
+            <Link href="/storefront-services" className="text-muted hover:text-text transition-colors">
               Storefront Services
             </Link>
             <Link href="/store-locator" className="text-muted hover:text-text transition-colors">
