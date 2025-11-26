@@ -6,7 +6,9 @@ const products = [
     name: 'Regular Collection',
     description: 'Everyday best-sellers at easy price points your customers love.',
     badge: 'Regular',
-    image: '/sunglasses-regular.png'
+    image: '/sunglasses-regular.png',
+    shopUrl:
+      'https://admin.shopify.com/store/brandons-store-123472/products?selectedView=all&contextualState=VIEWING&countryCode=US&channelId=58926825659&channelPublicationId=143594225851'
   },
   {
     name: 'Premium Collection',
@@ -23,6 +25,8 @@ const products = [
 ]
 
 export default function Products() {
+  const shopifyUrl = process.env.NEXT_PUBLIC_SHOPIFY_STORE_URL || 'https://your-shop-name.myshopify.com'
+
   return (
     <section id="products" className="py-16 bg-bg">
       <div className="container mx-auto px-4">
@@ -95,13 +99,16 @@ export default function Products() {
                     {product.description}
                   </p>
                 </div>
-                <div className="mt-3">
+                <div className="mt-3 space-y-1">
                   <Link
-                    href="/store" // future online store
+                    href={product.shopUrl || shopifyUrl}
                     className="btn-outline w-full text-center text-xs sm:text-sm"
                   >
                     Buy Now
                   </Link>
+                  <p className="text-[0.65rem] sm:text-xs text-muted text-center">
+                    You&apos;ll be redirected to our secure Shopify store.
+                  </p>
                 </div>
               </Link>
             ))}

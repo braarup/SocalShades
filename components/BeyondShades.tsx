@@ -41,6 +41,8 @@ const services = [
 ]
 
 export default function BeyondShades() {
+  const shopifyUrl = process.env.NEXT_PUBLIC_SHOPIFY_STORE_URL || 'https://your-shop-name.myshopify.com'
+
   return (
     <section id="beyond" className="py-16 bg-bg">
       <div className="container mx-auto px-4">
@@ -110,13 +112,16 @@ export default function BeyondShades() {
                     {service.description}
                   </p>
                 </div>
-                <div className="mt-1.5 sm:mt-2">
+                <div className="mt-1.5 sm:mt-2 space-y-0.5">
                   <Link
-                    href="/store" // future online store
+                    href={shopifyUrl}
                     className="btn-outline w-full text-center text-[0.65rem] sm:text-[0.7rem] py-1"
                   >
                     Buy Now
                   </Link>
+                  <p className="text-[0.6rem] sm:text-[0.65rem] text-muted text-center">
+                    You&apos;ll be redirected to our secure Shopify store.
+                  </p>
                 </div>
               </Link>
             ))}
