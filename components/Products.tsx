@@ -2,26 +2,46 @@ import Link from 'next/link'
 import Image from 'next/image'
 import RedirectConfirmModal from './RedirectConfirmModal'
 
+const heroImages = [
+  {
+    src: '/10Piece-01.png',
+    alt: 'SoCal Shades 10-piece display',
+    caption: 'Standard rack collection'
+  },
+  {
+    src: '/10Piece-02.png',
+    alt: 'SoCal Shades 10-piece display alternate',
+    caption: '10-piece rack collection'
+  },
+  {
+    src: '/Premium-01.png',
+    alt: 'SoCal Shades premium collection display',
+    caption: 'Premium rack collection.'
+  }
+]
+
 const products = [
   {
-    name: 'Regular Collection',
+    name: 'Standard Collection',
     description: 'Everyday best-sellers at easy price points your customers love.',
-    badge: 'Regular',
-    image: '/sunglasses-regular.png',
+    badge: 'Standard',
+    image: '/standardcollage-01.png',
     shopUrl:
-      'https://fy4nx3bj65eew5oj-69208539323.shopifypreview.com/products_preview?preview_key=5db6906d4f9447b800b04a3e6bcea249'
+      'https://brandons-store-123472.myshopify.com/collections/standard-sunglasses-collection'
   },
   {
     name: 'Premium Collection',
     description: 'Upgraded lenses and finishes for shoppers who want more.',
     badge: 'Premium',
-    image: '/sunglasses-premium.png'
+    image: '/premiumcollage-01.png',
+    shopUrl:
+      'https://brandons-store-123472.myshopify.com/collections/premium-sunglasses-collection-elevated-style-superior-quality'
   },
   {
     name: '10-Piece Rack Program',
     description: 'Compact, high-impact rack that keeps your top movers front and center.',
     badge: '10-Piece Rack',
-    image: '/sunglasses-rack.png'
+    image: '/10Piece-02.png'
   }
 ]
 
@@ -43,23 +63,30 @@ export default function Products() {
         <div className="grid lg:grid-cols-[1.1fr,1.9fr] gap-8 items-stretch">
           {/* Left: main display with two images */}
           <div className="relative w-full aspect-[4/3] max-w-lg mx-auto lg:mx-0 rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900">
-            <Image
-              src="/rack-display-01.png"
-              alt="SoCal Shades sunglass display"
-              fill
-              className="object-cover"
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              priority
-            />
-            <div className="absolute inset-0 opacity-0 animate-fadeSlide">
-              <Image
-                src="/rack-display-02.png"
-                alt="SoCal Shades sunglass display alternate"
-                fill
-                className="object-cover"
-                sizes="(min-width: 1024px) 50vw, 100vw"
-              />
-            </div>
+            {heroImages.map((image, index) => (
+              <div
+                key={image.src}
+                className={
+                  index === 0
+                    ? 'absolute inset-0'
+                    : 'absolute inset-0 opacity-0 animate-fadeSlide'
+                }
+              >
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  priority={index === 0}
+                />
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent px-4 pb-12 pt-8 flex items-end">
+                  <p className="text-[0.7rem] sm:text-xs text-zinc-200 max-w-xs">
+                    {image.caption}
+                  </p>
+                </div>
+              </div>
+            ))}
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-4 flex justify-end">
               <Link
                 href="/products"
@@ -102,9 +129,18 @@ export default function Products() {
                   </div>
                 </Link>
                 <div className="mt-3">
-                  <RedirectConfirmModal shopUrl={product.shopUrl || shopifyUrl}>
-                    <span className="text-xs sm:text-sm">Buy Now</span>
-                  </RedirectConfirmModal>
+                  {product.name === '10-Piece Rack Program' ? (
+                    <Link
+                      href="/sunglasses"
+                      className="btn-outline w-full text-center text-xs sm:text-sm"
+                    >
+                      Learn More
+                    </Link>
+                  ) : (
+                    <RedirectConfirmModal shopUrl={product.shopUrl || shopifyUrl}>
+                      <span className="text-xs sm:text-sm">Buy Now</span>
+                    </RedirectConfirmModal>
+                  )}
                 </div>
               </div>
             ))}
