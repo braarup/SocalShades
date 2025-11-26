@@ -73,39 +73,40 @@ export default function Products() {
           {/* Right: 3 product tiles */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 xl:gap-5">
             {products.map((product, index) => (
-              <Link
+              <div
                 key={index}
-                href="/sunglasses"
                 className="product-card flex flex-col h-full px-4 py-4 sm:px-5 sm:py-5"
               >
-                <div className="w-full aspect-[4/3] rounded-lg overflow-hidden border border-zinc-800 bg-zinc-900 mb-3 sm:mb-4">
-                  <Image
-                    src={product.image}
-                    alt={product.name}
-                    width={96}
-                    height={96}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="flex flex-col justify-center pr-1 sm:pr-3 flex-1">
-                  <div className="flex items-center justify-between gap-2 mb-1">
-                    <h3 className="font-semibold text-sm sm:text-base truncate">
-                      {product.name}
-                    </h3>
-                    <span className="badge-pill text-[0.6rem] sm:text-[0.65rem] px-2 py-0.5 whitespace-nowrap">
-                      {product.badge}
-                    </span>
+                <Link href="/sunglasses" className="block">
+                  <div className="w-full aspect-[4/3] rounded-lg overflow-hidden border border-zinc-800 bg-zinc-900 mb-3 sm:mb-4">
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      width={96}
+                      height={96}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <p className="text-muted text-xs sm:text-sm line-clamp-2 leading-snug mt-0.5">
-                    {product.description}
-                  </p>
-                </div>
+                  <div className="flex flex-col justify-center pr-1 sm:pr-3 flex-1">
+                    <div className="flex items-center justify-between gap-2 mb-1">
+                      <h3 className="font-semibold text-sm sm:text-base truncate">
+                        {product.name}
+                      </h3>
+                      <span className="badge-pill text-[0.6rem] sm:text-[0.65rem] px-2 py-0.5 whitespace-nowrap">
+                        {product.badge}
+                      </span>
+                    </div>
+                    <p className="text-muted text-xs sm:text-sm line-clamp-2 leading-snug mt-0.5">
+                      {product.description}
+                    </p>
+                  </div>
+                </Link>
                 <div className="mt-3">
                   <RedirectConfirmModal shopUrl={product.shopUrl || shopifyUrl}>
                     <span className="text-xs sm:text-sm">Buy Now</span>
                   </RedirectConfirmModal>
                 </div>
-              </Link>
+              </div>
             ))}
           </div>
         </div>
