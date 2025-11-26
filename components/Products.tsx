@@ -55,6 +55,14 @@ export default function Products() {
                 sizes="(min-width: 1024px) 50vw, 100vw"
               />
             </div>
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-4 flex justify-end">
+              <Link
+                href="/products"
+                className="btn-primary text-xs sm:text-sm px-4 py-2"
+              >
+                Learn More
+              </Link>
+            </div>
           </div>
 
           {/* Right: 3 product tiles */}
@@ -74,7 +82,7 @@ export default function Products() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="flex flex-col justify-center pr-1 sm:pr-3">
+                <div className="flex flex-col justify-center pr-1 sm:pr-3 flex-1">
                   <div className="flex items-center justify-between gap-2 mb-1">
                     <h3 className="font-semibold text-sm sm:text-base truncate">
                       {product.name}
@@ -86,6 +94,14 @@ export default function Products() {
                   <p className="text-muted text-xs sm:text-sm line-clamp-2 leading-snug mt-0.5">
                     {product.description}
                   </p>
+                </div>
+                <div className="mt-3">
+                  <Link
+                    href="/store" // future online store
+                    className="btn-outline w-full text-center text-xs sm:text-sm"
+                  >
+                    Buy Now
+                  </Link>
                 </div>
               </Link>
             ))}

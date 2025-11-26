@@ -19,6 +19,24 @@ const services = [
     description: 'High‑turn items placed for visibility to increase add‑on sales.',
     image: '/lighters-01.png',
     href: '/beyond'
+  },
+  {
+    title: 'Headwear & Caps',
+    description: 'Branded and trend-forward hats that pair perfectly with sunglasses.',
+    image: '/hats-01.png',
+    href: '/beyond'
+  },
+  {
+    title: 'Wellness & Energy',
+    description: 'Grab-and-go wellness items that keep customers fueled on the go.',
+    image: '/wellness-01.png',
+    href: '/beyond'
+  },
+  {
+    title: 'Impulse Essentials',
+    description: 'Must-have everyday items positioned for quick, last-minute grabs.',
+    image: '/impulse-01.png',
+    href: '/beyond'
   }
 ]
 
@@ -41,7 +59,7 @@ export default function BeyondShades() {
           {/* Left: main Beyond Shades display */}
           <div className="relative w-full aspect-[4/3] max-w-lg mx-auto lg:mx-0 rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900">
             <Image
-              src="/beyond-display-01.png"
+              src="/FastCharging-01.png"
               alt="Beyond Shades impulse display"
               fill
               className="object-cover"
@@ -50,39 +68,55 @@ export default function BeyondShades() {
             />
             <div className="absolute inset-0 opacity-0 animate-fadeSlide">
               <Image
-                src="/beyond-display-02.png"
+                src="/FastCharging-02.png"
                 alt="Beyond Shades impulse display alternate"
                 fill
                 className="object-cover"
                 sizes="(min-width: 1024px) 50vw, 100vw"
               />
             </div>
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-4 flex justify-end">
+              <Link
+                href="/beyond-shades"
+                className="btn-primary text-xs sm:text-sm px-4 py-2"
+              >
+                Learn More
+              </Link>
+            </div>
           </div>
 
-          {/* Right: 3 Beyond Shades tiles */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 xl:gap-5">
+          {/* Right: 6 Beyond Shades tiles (3 across, 2 high, extra compact on mobile) */}
+          <div className="grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-2 xl:grid-cols-3 gap-2 sm:gap-3 xl:gap-4">
             {services.map((service, index) => (
               <Link
                 key={index}
                 href={service.href}
-                className="product-card flex flex-col h-full px-4 py-4 sm:px-5 sm:py-5"
+                className="product-card flex flex-col h-full px-2.5 py-2.5 sm:px-3 sm:py-3 text-[0.7rem] sm:text-xs"
               >
-                <div className="w-full aspect-[4/3] rounded-lg overflow-hidden border border-zinc-800 bg-zinc-900 mb-3 sm:mb-4">
+                <div className="w-full aspect-[4/3] rounded-lg overflow-hidden border border-zinc-800 bg-zinc-900 mb-2 sm:mb-2.5">
                   <Image
                     src={service.image}
                     alt={service.title}
-                    width={96}
-                    height={96}
+                    width={72}
+                    height={72}
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="flex flex-col justify-center pr-1 sm:pr-3">
-                  <h3 className="font-semibold text-sm sm:text-base mb-1">
+                <div className="flex flex-col justify-center pr-0.5 sm:pr-1.5 flex-1">
+                  <h3 className="font-semibold text-[0.7rem] sm:text-xs mb-0.5">
                     {service.title}
                   </h3>
-                  <p className="text-muted text-xs sm:text-sm leading-snug">
+                  <p className="text-muted text-[0.65rem] sm:text-[0.7rem] leading-snug line-clamp-2">
                     {service.description}
                   </p>
+                </div>
+                <div className="mt-1.5 sm:mt-2">
+                  <Link
+                    href="/store" // future online store
+                    className="btn-outline w-full text-center text-[0.65rem] sm:text-[0.7rem] py-1"
+                  >
+                    Buy Now
+                  </Link>
                 </div>
               </Link>
             ))}
