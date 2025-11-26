@@ -9,7 +9,7 @@ const products = [
     badge: 'Regular',
     image: '/sunglasses-regular.png',
     shopUrl:
-      'https://admin.shopify.com/store/brandons-store-123472/products?selectedView=all&contextualState=VIEWING&countryCode=US&channelId=58926825659&channelPublicationId=143594225851'
+      'https://fy4nx3bj65eew5oj-69208539323.shopifypreview.com/products_preview?preview_key=5db6906d4f9447b800b04a3e6bcea249'
   },
   {
     name: 'Premium Collection',
