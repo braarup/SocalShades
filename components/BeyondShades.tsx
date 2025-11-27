@@ -71,7 +71,7 @@ export default function BeyondShades() {
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-4 flex justify-end">
               <Link
                 href="/beyond-shades"
-                className="btn-primary text-xs sm:text-sm px-4 py-2"
+                className="btn-learn-more text-xs sm:text-sm px-4 py-2"
               >
                 Learn More
               </Link>

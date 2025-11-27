@@ -48,6 +48,10 @@ body {
   .icon-tile {
     @apply bg-zinc-900 border border-zinc-800 rounded-2xl p-6 h-full;
   }
+
+  .btn-learn-more {
+    @apply bg-accent hover:bg-accent-dark text-ink font-bold py-3 px-6 rounded-full border border-black transition-colors;
+  }
 }
 
 @keyframes heroFadeSlide {

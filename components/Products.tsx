@@ -84,7 +84,7 @@ export default function Products() {
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-4 flex justify-end">
               <Link
                 href="/products"
-                className="btn-primary text-xs sm:text-sm px-4 py-2"
+                className="btn-learn-more text-xs sm:text-sm px-4 py-2"
               >
                 Learn More
               </Link>
@@ -128,7 +128,7 @@ export default function Products() {
                   {product.name === '10-Piece Rack Program' ? (
                     <Link
                       href="/products"
-                      className="btn-primary text-xs sm:text-sm px-4 py-2"
+                      className="btn-learn-more text-xs sm:text-sm px-4 py-2"
                     >
                       Learn More
                     </Link>
