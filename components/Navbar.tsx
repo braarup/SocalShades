@@ -50,7 +50,7 @@ export default function Navbar() {
             <Link href="/retailer-signup" className="btn-learn-more">
               Open an Account
             </Link>
-            <Link href="/contact" className="btn-learn-more">
+            <Link href="/contact" className="btn-outline">
               Contact Us
             </Link>
           </div>
@@ -89,7 +89,7 @@ export default function Navbar() {
                 <Link href="/retailer-signup" className="btn-learn-more text-center" onClick={closeMenu}>
                   Open an Account
                 </Link>
-                <Link href="/contact" className="btn-learn-more text-center" onClick={closeMenu}>
+                <Link href="/contact" className="btn-outline text-center" onClick={closeMenu}>
                   Contact Us
                 </Link>
               </div>

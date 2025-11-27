@@ -135,7 +135,7 @@ export default function Products() {
                   ) : (
                     <a
                       href={product.shopUrl || shopifyUrl}
-                      className="btn-primary w-full text-center text-xs sm:text-sm inline-flex items-center justify-center px-4 py-2"
+                      className="btn-outline w-full text-center text-xs sm:text-sm inline-flex items-center justify-center px-4 py-2"
                     >
                       Buy Now
                     </a>

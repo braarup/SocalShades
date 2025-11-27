@@ -107,7 +107,7 @@ export default function BeyondShades() {
                 <div className="mt-1.5 sm:mt-2">
                   <a
                     href={shopifyUrl}
-                    className="btn-primary w-full text-center text-[0.65rem] sm:text-[0.7rem] inline-flex items-center justify-center px-3 py-1.5"
+                    className="btn-outline w-full text-center text-[0.65rem] sm:text-[0.7rem] inline-flex items-center justify-center px-3 py-1.5"
                   >
                     Buy Now
                   </a>
