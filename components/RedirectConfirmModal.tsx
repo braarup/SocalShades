@@ -22,14 +22,14 @@ export default function RedirectConfirmModal({
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="btn-outline w-full text-center"
+        className="btn-outline w-full text-center hidden md:inline-flex"
       >
         {children}
       </button>
 
       {open && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60"
+          className="fixed inset-0 z-50 hidden md:flex items-center justify-center bg-black/60"
           onClick={() => setOpen(false)}
         >
           <div
