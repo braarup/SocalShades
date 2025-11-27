@@ -103,9 +103,9 @@ export default function Products() {
                     <Image
                       src={product.image}
                       alt={product.name}
-                      fill
-                      className="object-cover"
-                      sizes="(min-width: 1280px) 360px, (min-width: 1024px) 320px, (min-width: 640px) 260px, 100vw"
+                      width={640}
+                      height={480}
+                      className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="flex flex-col justify-center pr-1 sm:pr-3 flex-1">
