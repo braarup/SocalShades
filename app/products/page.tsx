@@ -15,7 +15,7 @@ export default function ProductsPage() {
               Our 10-Piece Sunglasses Rack — Designed to Maximize Your Profits
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/retailer-signup" className="btn-primary text-lg px-8 py-3">
+              <Link href="/retailer-signup" className="btn-learn-more text-lg px-8 py-3">
                 Get Started Today
               </Link>
               <Link href="/contact" className="btn-outline text-lg px-8 py-3">
@@ -442,7 +442,7 @@ export default function ProductsPage() {
               Join hundreds of retailers already profiting from our 10-piece sunglasses rack program.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/retailer-signup" className="btn-primary text-lg px-8 py-3">
+              <Link href="/retailer-signup" className="btn-learn-more text-lg px-8 py-3">
                 Become a Retailer
               </Link>
               <Link href="/storefront-services" className="btn-outline text-lg px-8 py-3">

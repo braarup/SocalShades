@@ -248,7 +248,7 @@ export default function StorefrontServices() {
             Join the 80% of stores who chose The One Man Band program and are seeing real results at their counter.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/retailer-signup" className="btn-primary text-lg px-8 py-4">
+            <Link href="/retailer-signup" className="btn-learn-more text-lg px-8 py-4">
               Get Started Today
             </Link>
           </div>

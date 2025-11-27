@@ -32,7 +32,7 @@ export default function BeyondShadesPage() {
               From super-fast mobile charging solutions to everyday essentials, we provide the products your customers need right when they need them.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/retailer-signup" className="btn-primary text-lg px-8 py-3">
+              <Link href="/retailer-signup" className="btn-learn-more text-lg px-8 py-3">
                 Start Selling Today
               </Link>
               <Link href="/contact" className="btn-outline text-lg px-8 py-3">
@@ -437,7 +437,7 @@ export default function BeyondShadesPage() {
               Add these high-demand impulse products to your store and watch your revenue grow.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/retailer-signup" className="btn-primary text-lg px-8 py-3">
+              <Link href="/retailer-signup" className="btn-learn-more text-lg px-8 py-3">
                 Become a Retailer
               </Link>
               <Link href="/storefront-services" className="btn-outline text-lg px-8 py-3">
