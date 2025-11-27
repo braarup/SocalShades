@@ -81,29 +81,38 @@ export default function BeyondShades() {
           {/* Right: 6 Beyond Shades tiles (3 across, 2 high, extra compact on mobile) */}
           <div className="grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-2 xl:grid-cols-3 gap-2 sm:gap-3 xl:gap-4">
             {services.map((service, index) => (
-              <Link
+              <div
                 key={index}
-                href={service.href}
                 className="product-card flex flex-col h-full px-2.5 py-2.5 sm:px-3 sm:py-3 text-[0.7rem] sm:text-xs"
               >
-                <div className="w-full aspect-[4/3] rounded-lg overflow-hidden border border-zinc-800 bg-zinc-900 mb-2 sm:mb-2.5">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    width={72}
-                    height={72}
-                    className="w-full h-full object-cover"
-                  />
+                <Link href={service.href} className="block">
+                  <div className="w-full aspect-[4/3] rounded-lg overflow-hidden border border-zinc-800 bg-zinc-900 mb-2 sm:mb-2.5">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      width={72}
+                      height={72}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="flex flex-col justify-center pr-0.5 sm:pr-1.5 flex-1">
+                    <h3 className="font-semibold text-[0.7rem] sm:text-xs mb-0.5">
+                      {service.title}
+                    </h3>
+                    <p className="text-muted text-[0.65rem] sm:text-[0.7rem] leading-snug line-clamp-2">
+                      {service.description}
+                    </p>
+                  </div>
+                </Link>
+                <div className="mt-1.5 sm:mt-2">
+                  <a
+                    href={shopifyUrl}
+                    className="btn-primary w-full text-center text-[0.65rem] sm:text-[0.7rem] inline-flex items-center justify-center px-3 py-1.5"
+                  >
+                    Buy Now
+                  </a>
                 </div>
-                <div className="flex flex-col justify-center pr-0.5 sm:pr-1.5 flex-1">
-                  <h3 className="font-semibold text-[0.7rem] sm:text-xs mb-0.5">
-                    {service.title}
-                  </h3>
-                  <p className="text-muted text-[0.65rem] sm:text-[0.7rem] leading-snug line-clamp-2">
-                    {service.description}
-                  </p>
-                </div>
-              </Link>
+              </div>
             ))}
           </div>
         </div>
