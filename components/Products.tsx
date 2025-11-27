@@ -25,7 +25,7 @@ const products = [
     name: 'Standard Collection',
     description: 'Everyday best-sellers at easy price points your customers love.',
     badge: 'Standard',
-    image: '/standardcollage-01.png',
+    image: '/standardcollage-01.jpg',
     shopUrl:
       'https://brandons-store-123472.myshopify.com/collections/standard-sunglasses-collection'
   },
@@ -33,7 +33,7 @@ const products = [
     name: 'Premium Collection',
     description: 'Upgraded lenses and finishes for shoppers who want more.',
     badge: 'Premium',
-    image: '/premiumcollage-01.png',
+    image: '/premiumcollage-01.jpg',
     shopUrl:
       'https://brandons-store-123472.myshopify.com/collections/premium-sunglasses-collection-elevated-style-superior-quality'
   },
