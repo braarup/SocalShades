@@ -90,8 +90,8 @@ export default function BeyondShades() {
                     <Image
                       src={service.image}
                       alt={service.title}
-                      width={72}
-                      height={72}
+                      width={400}
+                      height={300}
                       className="w-full h-full object-cover"
                     />
                   </div>
