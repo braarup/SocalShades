@@ -12,7 +12,7 @@ const services = [
   {
     title: 'Supplements',
     description: 'Energy shots and wellness packs that move quickly at the counter.',
-    image: '/supplements-01.png',
+    image: '/wellness-01.png',
     href: '/beyond'
   },
   {
@@ -62,22 +62,13 @@ export default function BeyondShades() {
           {/* Left: main Beyond Shades display */}
           <div className="relative w-full aspect-[4/3] max-w-lg mx-auto lg:mx-0 rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900">
             <Image
-              src="/FastCharging-01.png"
+              src="/FastCell-02.png"
               alt="Beyond Shades impulse display"
               fill
               className="object-cover"
               sizes="(min-width: 1024px) 50vw, 100vw"
               priority
             />
-            <div className="absolute inset-0 opacity-0 animate-fadeSlide">
-              <Image
-                src="/FastCharging-02.png"
-                alt="Beyond Shades impulse display alternate"
-                fill
-                className="object-cover"
-                sizes="(min-width: 1024px) 50vw, 100vw"
-              />
-            </div>
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-4 flex justify-end">
               <Link
                 href="/beyond-shades"
