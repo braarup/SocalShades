@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import RedirectConfirmModal from './RedirectConfirmModal'
 
 const services = [
   {
@@ -105,12 +106,9 @@ export default function BeyondShades() {
                   </div>
                 </Link>
                 <div className="mt-1.5 sm:mt-2">
-                  <a
-                    href={shopifyUrl}
-                    className="btn-outline w-full text-center text-[0.65rem] sm:text-[0.7rem] inline-flex items-center justify-center px-3 py-1.5"
-                  >
-                    Buy Now
-                  </a>
+                  <RedirectConfirmModal shopUrl={shopifyUrl}>
+                    <span className="text-[0.65rem] sm:text-[0.7rem]">Buy Now</span>
+                  </RedirectConfirmModal>
                 </div>
               </div>
             ))}
