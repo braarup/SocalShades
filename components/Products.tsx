@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import RedirectConfirmModal from './RedirectConfirmModal'
 
 const heroImages = [
   {
@@ -134,11 +133,12 @@ export default function Products() {
                       Learn More
                     </Link>
                   ) : (
-                    <div className="w-full">
-                      <RedirectConfirmModal shopUrl={product.shopUrl || shopifyUrl}>
-                        <span className="text-xs sm:text-sm">Buy Now</span>
-                      </RedirectConfirmModal>
-                    </div>
+                    <a
+                      href={product.shopUrl || shopifyUrl}
+                      className="btn-primary w-full text-center text-xs sm:text-sm inline-flex items-center justify-center px-4 py-2"
+                    >
+                      Buy Now
+                    </a>
                   )}
                 </div>
               </div>
