@@ -6,17 +6,17 @@ const heroImages = [
   {
     src: '/10Piece-01.png',
     alt: 'SoCal Shades 10-piece display',
-    caption: 'Standard rack collection'
+    caption: 'Standard Rack Collection'
   },
   {
     src: '/10Piece-02.png',
     alt: 'SoCal Shades 10-piece display alternate',
-    caption: '10-piece rack collection'
+    caption: '10-piece Rack Collection'
   },
   {
     src: '/Premium-01.png',
     alt: 'SoCal Shades premium collection display',
-    caption: 'Premium rack collection.'
+    caption: 'Premium Rack Collection.'
   }
 ]
 
@@ -40,7 +40,6 @@ const products = [
   {
     name: '10-Piece Rack Program',
     description: 'Compact, high-impact rack that keeps your top movers front and center.',
-    badge: '10-Piece Rack',
     image: '/10Piece-02.png'
   }
 ]
@@ -61,16 +60,12 @@ export default function Products() {
         </div>
 
         <div className="grid lg:grid-cols-[1.1fr,1.9fr] gap-8 items-stretch">
-          {/* Left: main display with two images */}
+          {/* Left: main display with three images */}
           <div className="relative w-full aspect-[4/3] max-w-lg mx-auto lg:mx-0 rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900">
             {heroImages.map((image, index) => (
               <div
                 key={image.src}
-                className={
-                  index === 0
-                    ? 'absolute inset-0'
-                    : 'absolute inset-0 opacity-0 animate-fadeSlide'
-                }
+                className={`absolute inset-0 animate-fadeSlide`}
               >
                 <Image
                   src={image.src}
@@ -104,7 +99,7 @@ export default function Products() {
                 key={index}
                 className="product-card flex flex-col h-full px-4 py-4 sm:px-5 sm:py-5"
               >
-                <Link href="/sunglasses" className="block">
+                <Link href="/products" className="block">
                   <div className="w-full aspect-[4/3] rounded-lg overflow-hidden border border-zinc-800 bg-zinc-900 mb-3 sm:mb-4">
                     <Image
                       src={product.image}
@@ -119,27 +114,31 @@ export default function Products() {
                       <h3 className="font-semibold text-sm sm:text-base truncate">
                         {product.name}
                       </h3>
-                      <span className="badge-pill text-[0.6rem] sm:text-[0.65rem] px-2 py-0.5 whitespace-nowrap">
-                        {product.badge}
-                      </span>
+                      {product.name !== '10-Piece Rack Program' && (
+                        <span className="badge-pill text-[0.6rem] sm:text-[0.65rem] px-2 py-0.5 whitespace-nowrap">
+                          {product.badge}
+                        </span>
+                      )}
                     </div>
                     <p className="text-muted text-xs sm:text-sm line-clamp-2 leading-snug mt-0.5">
                       {product.description}
                     </p>
                   </div>
                 </Link>
-                <div className="mt-3">
+                <div className="mt-3 flex justify-center">
                   {product.name === '10-Piece Rack Program' ? (
                     <Link
-                      href="/sunglasses"
-                      className="btn-outline w-full text-center text-xs sm:text-sm"
+                      href="/products"
+                      className="btn-primary text-xs sm:text-sm px-4 py-2"
                     >
                       Learn More
                     </Link>
                   ) : (
-                    <RedirectConfirmModal shopUrl={product.shopUrl || shopifyUrl}>
-                      <span className="text-xs sm:text-sm">Buy Now</span>
-                    </RedirectConfirmModal>
+                    <div className="w-full">
+                      <RedirectConfirmModal shopUrl={product.shopUrl || shopifyUrl}>
+                        <span className="text-xs sm:text-sm">Buy Now</span>
+                      </RedirectConfirmModal>
+                    </div>
                   )}
                 </div>
               </div>
