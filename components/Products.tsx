@@ -60,7 +60,7 @@ export default function Products() {
 
         <div className="grid lg:grid-cols-[1.1fr,1.9fr] gap-8 items-stretch">
           {/* Left: main display with three images */}
-          <div className="relative w-full aspect-[4/3] max-w-lg mx-auto lg:mx-0 rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900">
+          <div className="relative w-full aspect-[4/3] max-w-3xl mx-auto lg:mx-0 rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900">
             {heroImages.map((image, index) => (
               <div
                 key={image.src}
@@ -71,7 +71,7 @@ export default function Products() {
                   alt={image.alt}
                   fill
                   className="object-cover"
-                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  sizes="(min-width: 1280px) 800px, (min-width: 1024px) 640px, (min-width: 640px) 480px, 100vw"
                   priority={index === 0}
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent px-4 pb-12 pt-8 flex items-end">
@@ -103,9 +103,9 @@ export default function Products() {
                     <Image
                       src={product.image}
                       alt={product.name}
-                      width={96}
-                      height={96}
-                      className="w-full h-full object-cover"
+                      fill
+                      className="object-cover"
+                      sizes="(min-width: 1280px) 360px, (min-width: 1024px) 320px, (min-width: 640px) 260px, 100vw"
                     />
                   </div>
                   <div className="flex flex-col justify-center pr-1 sm:pr-3 flex-1">
