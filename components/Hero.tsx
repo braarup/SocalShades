@@ -51,7 +51,7 @@ export default function Hero() {
         
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4">
-          <Link href="/products" className="btn-primary w-full sm:w-auto text-center">
+          <Link href="/products" className="btn-learn-more w-full sm:w-auto text-center">
             Shop Sunglasses Wholesale
           </Link>
           <Link href="/storefront-services" className="btn-outline w-full sm:w-auto text-center">

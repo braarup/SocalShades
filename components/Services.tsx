@@ -38,7 +38,7 @@ export default function Services() {
             </div>
             
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <Link href="/retailer-signup" className="btn-primary">
+              <Link href="/retailer-signup" className="btn-learn-more">
                 Book a Free Consultation
               </Link>
               <Link href="/services" className="btn-outline">

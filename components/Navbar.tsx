@@ -47,10 +47,10 @@ export default function Navbar() {
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-3">
-            <Link href="/retailer-signup" className="btn-outline">
+            <Link href="/retailer-signup" className="btn-learn-more">
               Open an Account
             </Link>
-            <Link href="/contact" className="btn-primary">
+            <Link href="/contact" className="btn-learn-more">
               Contact Us
             </Link>
           </div>
@@ -86,10 +86,10 @@ export default function Navbar() {
                 Contact
               </Link>
               <div className="flex flex-col space-y-2 pt-3">
-                <Link href="/retailer-signup" className="btn-outline text-center" onClick={closeMenu}>
-                  Become a Retailer
+                <Link href="/retailer-signup" className="btn-learn-more text-center" onClick={closeMenu}>
+                  Open an Account
                 </Link>
-                <Link href="/contact" className="btn-primary text-center" onClick={closeMenu}>
+                <Link href="/contact" className="btn-learn-more text-center" onClick={closeMenu}>
                   Contact Us
                 </Link>
               </div>
