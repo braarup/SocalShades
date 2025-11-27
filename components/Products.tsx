@@ -65,7 +65,7 @@ export default function Products() {
             {heroImages.map((image, index) => (
               <div
                 key={image.src}
-                className={`absolute inset-0 animate-fadeSlide`}
+                className={`hero-slide hero-slide-${index}`}
               >
                 <Image
                   src={image.src}
