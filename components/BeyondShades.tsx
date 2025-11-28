@@ -110,17 +110,17 @@ export default function BeyondShades() {
               >
                 <Link href={service.href} className="block">
                   <div
-                    className={`w-full rounded-lg overflow-hidden border border-zinc-800 bg-zinc-900 mb-2 sm:mb-2.5 ${
-                      service.title === 'Mobile Accessories' ? 'aspect-[5/4]' : 'aspect-[4/3]'
-                    }`}
+                    className={`w-full rounded-lg overflow-hidden border border-zinc-800 bg-zinc-900 mb-2 sm:mb-2.5 aspect-[4/3]`}
                   >
                     <Image
                       src={service.image}
                       alt={service.title}
                       width={400}
                       height={320}
-                      className={`w-full h-full object-cover ${
-                        service.title === 'Mobile Accessories' ? 'object-top' : ''
+                      className={`w-full h-full ${
+                        service.title === 'Mobile Accessories'
+                          ? 'object-contain object-center'
+                          : 'object-cover'
                       }`}
                     />
                   </div>
