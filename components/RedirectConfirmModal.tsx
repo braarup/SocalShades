@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 interface RedirectConfirmModalProps {
   shopUrl: string;
@@ -12,19 +12,6 @@ export default function RedirectConfirmModal({
   children,
 }: RedirectConfirmModalProps) {
   const [open, setOpen] = useState(false);
-  const [isDesktop, setIsDesktop] = useState(false);
-
-  useEffect(() => {
-    const update = () => {
-      if (typeof window !== "undefined") {
-        setIsDesktop(window.innerWidth >= 768);
-      }
-    };
-
-    update();
-    window.addEventListener("resize", update);
-    return () => window.removeEventListener("resize", update);
-  }, []);
 
   const handleContinue = () => {
     window.location.href = shopUrl;
@@ -32,22 +19,13 @@ export default function RedirectConfirmModal({
 
   return (
     <>
-      {isDesktop ? (
-        <button
-          type="button"
-          onClick={() => setOpen(true)}
-          className="btn-outline w-full text-center text-xs sm:text-sm inline-flex items-center justify-center px-4 py-2"
-        >
-          {children}
-        </button>
-      ) : (
-        <a
-          href={shopUrl}
-          className="btn-outline w-full text-center text-xs sm:text-sm inline-flex items-center justify-center px-4 py-2"
-        >
-          {children}
-        </a>
-      )}
+      <button
+        type="button"
+        onClick={() => setOpen(true)}
+        className="btn-outline w-full text-center text-xs sm:text-sm inline-flex items-center justify-center px-4 py-2"
+      >
+        {children}
+      </button>
 
       {open && (
         <div
