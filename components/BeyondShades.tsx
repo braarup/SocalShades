@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { useState } from 'react'
 import RedirectConfirmModal from './RedirectConfirmModal'
 
 const services = [
@@ -43,6 +44,7 @@ const services = [
 
 export default function BeyondShades() {
   const shopifyUrl = process.env.NEXT_PUBLIC_SHOPIFY_STORE_URL || 'https://socalshadeswholesale.myshopify.com/collections/supercell-super-fast-charging-premium-mobile-accessories'
+  const [redirectUrl, setRedirectUrl] = useState<string | null>(null)
 
   return (
     <section id="beyond" className="py-16 bg-bg">
@@ -106,15 +108,24 @@ export default function BeyondShades() {
                   </div>
                 </Link>
                 <div className="mt-1.5 sm:mt-2">
-                  <RedirectConfirmModal shopUrl={shopifyUrl}>
-                    <span className="text-[0.65rem] sm:text-[0.7rem]">Buy Now</span>
-                  </RedirectConfirmModal>
+                  <button
+                    type="button"
+                    onClick={() => setRedirectUrl(shopifyUrl)}
+                    className="btn-outline w-full text-center text-[0.65rem] sm:text-[0.7rem] inline-flex items-center justify-center px-3 py-1.5"
+                  >
+                    Buy Now
+                  </button>
                 </div>
               </div>
             ))}
           </div>
         </div>
       </div>
+      <RedirectConfirmModal
+        shopUrl={redirectUrl}
+        open={redirectUrl !== null}
+        onClose={() => setRedirectUrl(null)}
+      />
     </section>
   )
 }

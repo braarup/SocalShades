@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { useState } from 'react'
 import RedirectConfirmModal from './RedirectConfirmModal'
 
 const heroImages = [
@@ -46,6 +47,7 @@ const products = [
 
 export default function Products() {
   const shopifyUrl = process.env.NEXT_PUBLIC_SHOPIFY_STORE_URL || 'https://your-shop-name.myshopify.com'
+  const [redirectUrl, setRedirectUrl] = useState<string | null>(null)
 
   return (
     <section id="products" className="py-16 bg-bg">
@@ -134,11 +136,13 @@ export default function Products() {
                       Learn More
                     </Link>
                   ) : (
-                    <div className="w-full">
-                      <RedirectConfirmModal shopUrl={product.shopUrl || shopifyUrl}>
-                        Buy Now
-                      </RedirectConfirmModal>
-                    </div>
+                    <button
+                      type="button"
+                      onClick={() => setRedirectUrl(product.shopUrl || shopifyUrl)}
+                      className="btn-outline w-full text-center text-xs sm:text-sm inline-flex items-center justify-center px-4 py-2"
+                    >
+                      Buy Now
+                    </button>
                   )}
                 </div>
               </div>
@@ -146,6 +150,11 @@ export default function Products() {
           </div>
         </div>
       </div>
+      <RedirectConfirmModal
+        shopUrl={redirectUrl}
+        open={redirectUrl !== null}
+        onClose={() => setRedirectUrl(null)}
+      />
     </section>
   )
 }
