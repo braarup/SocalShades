@@ -42,7 +42,7 @@ const services = [
 ]
 
 export default function BeyondShades() {
-  const shopifyUrl = process.env.NEXT_PUBLIC_SHOPIFY_STORE_URL || 'https://your-shop-name.myshopify.com'
+  const shopifyUrl = process.env.NEXT_PUBLIC_SHOPIFY_STORE_URL || 'https://socalshadeswholesale.myshopify.com/collections/supercell-super-fast-charging-premium-mobile-accessories'
 
   return (
     <section id="beyond" className="py-16 bg-bg">
