@@ -7,17 +7,13 @@ import RedirectConfirmModal from './RedirectConfirmModal'
 
 const heroImages = [
   {
+    src: '/FastCell-01.png',
+    alt: 'Super Super fast charging'
+  },
+  {
     src: '/FastCell-02.png',
-    alt: 'Beyond Shades impulse display - mobile accessories'
+    alt: 'Super Super fast charging'
   },
-  {
-    src: '/mobile-01.png',
-    alt: 'Beyond Shades mobile accessories assortment'
-  },
-  {
-    src: '/impulse-01.png',
-    alt: 'Beyond Shades impulse essentials display'
-  }
 ]
 
 const services = [
