@@ -55,16 +55,16 @@ body {
 }
 
 @keyframes heroFadeSlide {
-  /* Cross-fade with overlap so there is no blank frame */
+  /* Faster cross-fade with minimal blank time */
   0%,
-  5% {
+  3% {
     opacity: 0;
   }
-  10%,
-  30% {
+  8%,
+  25% {
     opacity: 1;
   }
-  35%,
+  30%,
   100% {
     opacity: 0;
   }
