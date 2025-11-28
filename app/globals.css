@@ -88,3 +88,16 @@ body {
 .hero-slide-2 {
   animation-delay: 14s;
 }
+
+/* Two-slide variant for BeyondShades hero so there is no long blank gap */
+.beyond-hero-slide {
+  animation-duration: 14s;
+}
+
+.beyond-hero-slide-0 {
+  animation-delay: 0s;
+}
+
+.beyond-hero-slide-1 {
+  animation-delay: 7s;
+}

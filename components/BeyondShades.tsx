@@ -79,7 +79,7 @@ export default function BeyondShades() {
             {heroImages.map((image, index) => (
               <div
                 key={image.src}
-                className={`hero-slide hero-slide-${index}`}
+                className={`hero-slide beyond-hero-slide beyond-hero-slide-${index}`}
               >
                 <Image
                   src={image.src}
