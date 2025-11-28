@@ -36,7 +36,7 @@ export default function RedirectConfirmModal({
             className="bg-zinc-950 border border-zinc-800 rounded-xl p-5 max-w-sm w-[90%] text-center"
             onClick={(e) => e.stopPropagation()}
           >
-            <h2 className="text-base font-semibold mb-2">Leaving SoCalShadesWholesale.com</h2>
+            <h2 className="text-base font-semibold mb-2 text-accent">Leaving SoCalShadesWholesale.com</h2>
             <p className="text-xs text-muted mb-4">
               You&apos;re about to be redirected to our secure Shopify store to
               complete your purchase.
