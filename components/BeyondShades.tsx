@@ -5,6 +5,21 @@ import Image from 'next/image'
 import { useState } from 'react'
 import RedirectConfirmModal from './RedirectConfirmModal'
 
+const heroImages = [
+  {
+    src: '/FastCell-02.png',
+    alt: 'Beyond Shades impulse display - mobile accessories'
+  },
+  {
+    src: '/mobile-01.png',
+    alt: 'Beyond Shades mobile accessories assortment'
+  },
+  {
+    src: '/impulse-01.png',
+    alt: 'Beyond Shades impulse essentials display'
+  }
+]
+
 const services = [
   {
     title: 'Mobile Accessories',
@@ -63,16 +78,23 @@ export default function BeyondShades() {
         </div>
 
         <div className="grid lg:grid-cols-[1.1fr,1.9fr] gap-8 items-stretch">
-          {/* Left: main Beyond Shades display */}
+          {/* Left: main Beyond Shades rotating display */}
           <div className="relative w-full aspect-[4/3] max-w-lg mx-auto lg:mx-0 rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900">
-            <Image
-              src="/FastCell-02.png"
-              alt="Beyond Shades impulse display"
-              fill
-              className="object-cover"
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              priority
-            />
+            {heroImages.map((image, index) => (
+              <div
+                key={image.src}
+                className={`hero-slide hero-slide-${index}`}
+              >
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  priority={index === 0}
+                />
+              </div>
+            ))}
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-4 flex justify-end">
               <Link
                 href="/beyond-shades"
@@ -91,13 +113,19 @@ export default function BeyondShades() {
                 className="product-card flex flex-col h-full px-2.5 py-2.5 sm:px-3 sm:py-3 text-[0.7rem] sm:text-xs"
               >
                 <Link href={service.href} className="block">
-                  <div className="w-full aspect-[4/3] rounded-lg overflow-hidden border border-zinc-800 bg-zinc-900 mb-2 sm:mb-2.5">
+                  <div
+                    className={`w-full rounded-lg overflow-hidden border border-zinc-800 bg-zinc-900 mb-2 sm:mb-2.5 ${
+                      service.title === 'Mobile Accessories' ? 'aspect-[5/4]' : 'aspect-[4/3]'
+                    }`}
+                  >
                     <Image
                       src={service.image}
                       alt={service.title}
                       width={400}
-                      height={300}
-                      className="w-full h-full object-cover"
+                      height={320}
+                      className={`w-full h-full object-cover ${
+                        service.title === 'Mobile Accessories' ? 'object-top' : ''
+                      }`}
                     />
                   </div>
                   <div className="flex flex-col justify-center pr-0.5 sm:pr-1.5 flex-1">
