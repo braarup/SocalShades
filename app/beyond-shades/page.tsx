@@ -60,7 +60,7 @@ export default function BeyondShadesPage() {
               </p>
             </div>
 
-            {/* Mobile Accessories Grid */}
+            {/* Mobile Accessories Grid - Hero Products */}
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               {/* 30W Wall Charger */}
               <div className="bg-gradient-to-br from-zinc-900 to-zinc-800 rounded-xl p-8 border border-zinc-700 hover:border-accent/50 transition-all">
@@ -200,6 +200,116 @@ export default function BeyondShadesPage() {
                 <div>
                   <div className="text-3xl font-bold text-accent mb-2">High Margins</div>
                   <p className="text-muted">200-300% markup on every unit sold</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Super-Fast Mobile Accessories Tiles */}
+            <div className="mt-12">
+              <div className="text-center mb-8">
+                <h3 className="text-2xl sm:text-3xl font-bold mb-3">
+                  Super-Fast Mobile Accessories Lineup
+                </h3>
+                <p className="text-muted max-w-3xl mx-auto">
+                  Highlight your fastest-charging cables, chargers, and earbuds with a clear, easy-to-browse layout.
+                </p>
+              </div>
+
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {/* 4-In-1 Cable - Super Fast */}
+                <div className="bg-zinc-900 border border-zinc-700 rounded-xl p-5 flex flex-col justify-between">
+                  <div className="mb-4">
+                    <h4 className="text-lg font-semibold mb-1">4-In-1 Cable</h4>
+                    <p className="text-xs text-accent font-semibold mb-2">Super Fast</p>
+                    <p className="text-sm text-muted">
+                      One cable, four connectors. Perfect for customers with multiple devices.
+                    </p>
+                  </div>
+                  <p className="text-xs text-muted">Great add-on at the counter.</p>
+                </div>
+
+                {/* C To C Cable - Super Fast */}
+                <div className="bg-zinc-900 border border-zinc-700 rounded-xl p-5 flex flex-col justify-between">
+                  <div className="mb-4">
+                    <h4 className="text-lg font-semibold mb-1">C To C Cable</h4>
+                    <p className="text-xs text-accent font-semibold mb-2">Super Fast</p>
+                    <p className="text-sm text-muted">
+                      High-speed USB-C to USB-C cable built for modern phones and tablets.
+                    </p>
+                  </div>
+                  <p className="text-xs text-muted">Ideal for Android and newer devices.</p>
+                </div>
+
+                {/* Dual Car Charger - Super Fast */}
+                <div className="bg-zinc-900 border border-zinc-700 rounded-xl p-5 flex flex-col justify-between">
+                  <div className="mb-4">
+                    <h4 className="text-lg font-semibold mb-1">Dual Car Charger</h4>
+                    <p className="text-xs text-accent font-semibold mb-2">Super Fast</p>
+                    <p className="text-sm text-muted">
+                      Charge two devices at once with ultra-fast power delivery on the go.
+                    </p>
+                  </div>
+                  <p className="text-xs text-muted">Perfect for commuters and rideshare drivers.</p>
+                </div>
+
+                {/* Wall Charger - Super Fast */}
+                <div className="bg-zinc-900 border border-zinc-700 rounded-xl p-5 flex flex-col justify-between">
+                  <div className="mb-4">
+                    <h4 className="text-lg font-semibold mb-1">Wall Charger</h4>
+                    <p className="text-xs text-accent font-semibold mb-2">Super Fast</p>
+                    <p className="text-sm text-muted">
+                      Compact, powerful wall adapter that gets customers back to 100% quickly.
+                    </p>
+                  </div>
+                  <p className="text-xs text-muted">A must-have replacement or spare charger.</p>
+                </div>
+
+                {/* Earbuds - Lightning */}
+                <div className="bg-zinc-900 border border-zinc-700 rounded-xl p-5 flex flex-col justify-between">
+                  <div className="mb-4">
+                    <h4 className="text-lg font-semibold mb-1">Earbuds</h4>
+                    <p className="text-xs text-accent font-semibold mb-1">Lightning</p>
+                    <p className="text-sm text-muted">
+                      Wired earbuds with Lightning connector for iPhone users who forgot theirs.
+                    </p>
+                  </div>
+                  <p className="text-xs text-muted">Strong everyday impulse purchase.</p>
+                </div>
+
+                {/* Earbuds - Type C */}
+                <div className="bg-zinc-900 border border-zinc-700 rounded-xl p-5 flex flex-col justify-between">
+                  <div className="mb-4">
+                    <h4 className="text-lg font-semibold mb-1">Earbuds</h4>
+                    <p className="text-xs text-accent font-semibold mb-1">Type C</p>
+                    <p className="text-sm text-muted">
+                      Clear, reliable audio with USB-C connection for modern Android devices.
+                    </p>
+                  </div>
+                  <p className="text-xs text-muted">Great next-to-register placement.</p>
+                </div>
+
+                {/* USB To C Cable - Super Fast */}
+                <div className="bg-zinc-900 border border-zinc-700 rounded-xl p-5 flex flex-col justify-between">
+                  <div className="mb-4">
+                    <h4 className="text-lg font-semibold mb-1">USB To C Cable</h4>
+                    <p className="text-xs text-accent font-semibold mb-2">Super Fast</p>
+                    <p className="text-sm text-muted">
+                      Standard USB to USB-C cable that works with countless devices.
+                    </p>
+                  </div>
+                  <p className="text-xs text-muted">Easy add-on with chargers and power banks.</p>
+                </div>
+
+                {/* USB to Lightning - Super Fast */}
+                <div className="bg-zinc-900 border border-zinc-700 rounded-xl p-5 flex flex-col justify-between">
+                  <div className="mb-4">
+                    <h4 className="text-lg font-semibold mb-1">USB to Lightning Cable</h4>
+                    <p className="text-xs text-accent font-semibold mb-2">Super Fast</p>
+                    <p className="text-sm text-muted">
+                      High-speed cable for iPhone and iPad, built for everyday use.
+                    </p>
+                  </div>
+                  <p className="text-xs text-muted">Always in demand, especially for travelers.</p>
                 </div>
               </div>
             </div>
