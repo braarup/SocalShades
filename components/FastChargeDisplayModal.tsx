@@ -121,13 +121,25 @@ export default function FastChargeDisplayModal({ defaultOpen = false }: { defaul
         </div>
 
         <div className="grid md:grid-cols-2 gap-0 flex-1 overflow-y-auto">
-          {/* Left: main rotating display image (two hero images only) */}
-          <div className="relative h-56 sm:h-72 md:h-full bg-zinc-900">
+          {/* Left: main rotating display image (two hero images with quick cross-fade) */}
+          <div className="relative h-56 sm:h-72 md:h-full bg-zinc-900 overflow-hidden">
             <Image
-              src={activeSkuIndex === 0 ? '/FastCell-01.png' : '/FastCell-02.png'}
-              alt="Super fast charging display"
+              src="/FastCell-01.png"
+              alt="Super fast charging display 1"
               fill
-              className="object-contain object-center"
+              className={`object-contain object-center transition-opacity duration-500 ease-in-out ${
+                activeSkuIndex === 0 ? 'opacity-100' : 'opacity-0'
+              }`}
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              priority
+            />
+            <Image
+              src="/FastCell-02.png"
+              alt="Super fast charging display 2"
+              fill
+              className={`object-contain object-center transition-opacity duration-500 ease-in-out ${
+                activeSkuIndex === 1 ? 'opacity-100' : 'opacity-0'
+              }`}
               sizes="(min-width: 1024px) 50vw, 100vw"
               priority
             />
