@@ -75,7 +75,7 @@ export default function BeyondShades() {
 
         <div className="grid lg:grid-cols-[1.1fr,1.9fr] gap-8 items-stretch">
           {/* Left: main Beyond Shades rotating display */}
-          <div className="relative w-full aspect-[4/3] max-w-lg mx-auto lg:mx-0 rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900">
+          <div className="relative w-full aspect-[3/2] sm:aspect-[4/3] max-w-lg mx-auto lg:mx-0 rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900">
             {heroImages.map((image, index) => (
               <div
                 key={image.src}
