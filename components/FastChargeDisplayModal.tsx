@@ -18,29 +18,29 @@ const categories: Category[] = [
   {
     label: 'Cables',
     skus: [
-      { name: '4-In-1 Cable - Super Fast', image: '/FastCell-4in1.png' },
-      { name: 'USB To C Cable - Super Fast', image: '/FastCell-UsbToC.png' }
+      { name: '4-In-1 Cable - Super Fast', image: '/4-In-1 Cable - Super Fast.JPG' },
+      { name: 'USB To C Cable - Super Fast', image: '/USB To C Cable - Super Fast.JPG' }
     ]
   },
   {
     label: 'Car Chargers',
     skus: [
-      { name: 'Dual Car Charger - Super Fast', image: '/FastCell-DualCar.png' },
-      { name: 'Wall Charger - Super Fast', image: '/FastCell-Wall.png' }
+      { name: 'Dual Car Charger - Super Fast', image: '/Dual Car Charger - Super Fast.JPG' },
+      { name: 'Wall Charger - Super Fast', image: '/Wall Charger - Super Fast.JPG' }
     ]
   },
   {
     label: 'Earbuds',
     skus: [
-      { name: 'Earbuds - Lightning', image: '/FastCell-EarbudsLightning.png' },
-      { name: 'Earbuds - Type C', image: '/FastCell-EarbudsTypeC.png' }
+      { name: 'Earbuds - Lightning', image: '/Earbuds - Lightning.JPG' },
+      { name: 'Earbuds - Type C', image: '/Earbuds - Type C.JPG' }
     ]
   },
   {
     label: 'Premium Cables',
     skus: [
-      { name: 'USB to Lightning - Super Fast', image: '/FastCell-UsbToLightning.png' },
-      { name: 'C To C Cable - Super Fast', image: '/FastCell-CToC.png' }
+      { name: 'USB to Lightning - Super Fast', image: '/USB to Lightning - Super Fast.JPG' },
+      { name: 'C To C Cable - Super Fast', image: '/USB To C Cable - Super Fast.JPG' }
     ]
   }
 ]
@@ -108,7 +108,7 @@ export default function FastChargeDisplayModal({ defaultOpen = false }: { defaul
           <div>
             <p className="text-[0.65rem] sm:text-xs uppercase tracking-[0.2em] text-accent mb-1">New Program</p>
             <h2 className="text-lg sm:text-2xl font-bold text-text">
-              {activeSku.name}
+              Super Super Fast Charging Display
             </h2>
           </div>
           <button
@@ -121,11 +121,11 @@ export default function FastChargeDisplayModal({ defaultOpen = false }: { defaul
         </div>
 
         <div className="grid md:grid-cols-2 gap-0 flex-1 overflow-y-auto">
-          {/* Left: main rotating SKU image */}
+          {/* Left: main rotating display image (two hero images only) */}
           <div className="relative h-56 sm:h-72 md:h-full bg-zinc-900">
             <Image
-              src={activeSku.image}
-              alt={activeSku.name}
+              src={activeSkuIndex === 0 ? '/mobile-01.png' : '/mobile-02.png'}
+              alt="Super fast charging display"
               fill
               className="object-contain object-center"
               sizes="(min-width: 1024px) 50vw, 100vw"
@@ -145,13 +145,13 @@ export default function FastChargeDisplayModal({ defaultOpen = false }: { defaul
             </div>
           </div>
 
-          {/* Right: grid of categories (4 sections, 2 SKUs each) */}
+          {/* Right: grid of categories (4 sections, 2 SKUs each, with rotating images) */}
           <div className="p-4 sm:p-6 flex flex-col h-full bg-zinc-950/70">
             <p className="text-xs sm:text-sm font-semibold text-accent mb-1.5 sm:mb-2">
               Super-Fast Mobile Accessories Program
             </p>
             <h3 className="text-lg sm:text-2xl font-bold mb-1.5 sm:mb-2 text-text">
-              30W Wall & 55W Car Chargers
+              {activeSku.name}
             </h3>
             <p className="text-xs sm:text-sm text-muted mb-3 sm:mb-4">
               Draw attention to your fastest-charging accessories with a dedicated, high-impact countertop display.
@@ -160,20 +160,31 @@ export default function FastChargeDisplayModal({ defaultOpen = false }: { defaul
             <div className="grid grid-cols-2 gap-2 sm:gap-3 mb-4 sm:mb-6">
               {categories.map((category, index) => {
                 const isActive = index === activeCategoryIndex
+                const skuToShow = category.skus[activeSkuIndex]
                 return (
                   <div
                     key={category.label}
-                    className={`aspect-video rounded-lg border flex flex-col items-center justify-center text-[0.65rem] sm:text-xs font-semibold transition-colors ${
+                    className={`aspect-video rounded-lg border overflow-hidden flex flex-col text-[0.65rem] sm:text-xs font-semibold transition-colors ${
                       isActive
                         ? 'border-accent bg-accent/10 text-text'
                         : 'border-zinc-800 bg-zinc-900/70 text-muted'
                     }`}
                   >
-                    <span className="mb-1">{category.label}</span>
-                    <span className="text-[0.6rem] sm:text-[0.65rem] font-normal text-muted-foreground">
-                      {category.skus[0].name.split(' - ')[0]} &amp;{' '}
-                      {category.skus[1].name.split(' - ')[0]}
-                    </span>
+                    <div className="relative flex-1 w-full bg-zinc-900">
+                      <Image
+                        src={skuToShow.image}
+                        alt={skuToShow.name}
+                        fill
+                        className="object-contain object-center"
+                        sizes="(min-width: 1024px) 25vw, 50vw"
+                      />
+                    </div>
+                    <div className="px-2 py-1.5 flex flex-col items-center justify-center">
+                      <span className="mb-0.5">{category.label}</span>
+                      <span className="text-[0.6rem] sm:text-[0.65rem] font-normal text-muted-foreground text-center">
+                        {skuToShow.name}
+                      </span>
+                    </div>
                   </div>
                 )
               })}
