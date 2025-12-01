@@ -124,7 +124,7 @@ export default function FastChargeDisplayModal({ defaultOpen = false }: { defaul
           {/* Left: main rotating display image (two hero images only) */}
           <div className="relative h-56 sm:h-72 md:h-full bg-zinc-900">
             <Image
-              src={activeSkuIndex === 0 ? '/mobile-01.png' : '/mobile-02.png'}
+              src={activeSkuIndex === 0 ? '/FastCell-01.png' : '/FastCell-02.png'}
               alt="Super fast charging display"
               fill
               className="object-contain object-center"
