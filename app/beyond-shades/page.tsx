@@ -60,14 +60,14 @@ export default function BeyondShadesPage() {
               </p>
             </div>
 
-            {/* Mobile Accessories Grid - Hero Products */}
+            {/* Mobile Accessories Grid - Program Overview & Margins */}
             <div className="grid md:grid-cols-2 gap-8 mb-12">
-              {/* 30W Wall Charger */}
+              {/* Super-Fast Charging Technology */}
               <div className="bg-gradient-to-br from-zinc-900 to-zinc-800 rounded-xl p-8 border border-zinc-700 hover:border-accent/50 transition-all">
                 <div className="flex items-start justify-between mb-4">
                   <div>
-                    <h3 className="text-2xl font-bold mb-2">30W Wall Charger</h3>
-                    <div className="text-accent font-bold text-lg">Fast Charging Technology</div>
+                    <h3 className="text-2xl font-bold mb-2">Super-Fast Charging Technology</h3>
+                    <div className="text-accent font-bold text-lg">30W–55W Power Delivery</div>
                   </div>
                   <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center flex-shrink-0">
                     <svg className="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -75,110 +75,98 @@ export default function BeyondShadesPage() {
                     </svg>
                   </div>
                 </div>
-                
+
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-start gap-3">
                     <svg className="w-5 h-5 text-accent flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    <span>30W Power Delivery for rapid charging</span>
+                    <span>Next-gen USB-C and multi-tip cables for modern devices.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <svg className="w-5 h-5 text-accent flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    <span>Includes USB-C cable with fast charging support</span>
+                    <span>Optimized for the latest iPhone, Samsung, and Android devices.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <svg className="w-5 h-5 text-accent flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    <span>Compatible with iPhone, Samsung, Google & more</span>
+                    <span>Engineered for faster charge times and cooler operation.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <svg className="w-5 h-5 text-accent flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    <span>Compact, travel-friendly design</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <svg className="w-5 h-5 text-accent flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span>Built-in safety protections (overcharge, overheat)</span>
+                    <span>Built-in protections against overcharge, short circuit, and overheating.</span>
                   </li>
                 </ul>
 
                 <div className="bg-zinc-900/50 rounded-lg p-4 border border-zinc-700">
                   <div className="flex items-center justify-between">
                     <div>
-                      <div className="text-sm text-muted">Wholesale Price</div>
-                      <div className="text-xl font-bold">Starting at $5</div>
+                      <div className="text-sm text-muted">Typical Wholesale</div>
+                      <div className="text-xl font-bold">$5–$8 per unit</div>
                     </div>
                     <div className="text-right">
                       <div className="text-sm text-muted">Suggested Retail</div>
-                      <div className="text-xl font-bold text-accent">$15-$20</div>
+                      <div className="text-xl font-bold text-accent">$15–$25</div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* 55W Car Charger */}
+              {/* Program Margins & Sell-Through */}
               <div className="bg-gradient-to-br from-zinc-900 to-zinc-800 rounded-xl p-8 border border-zinc-700 hover:border-accent/50 transition-all">
                 <div className="flex items-start justify-between mb-4">
                   <div>
-                    <h3 className="text-2xl font-bold mb-2">55W Car Charger</h3>
-                    <div className="text-accent font-bold text-lg">Ultra-Fast On-The-Go Charging</div>
+                    <h3 className="text-2xl font-bold mb-2">Program Margins &amp; Sell-Through</h3>
+                    <div className="text-accent font-bold text-lg">High-Turn, High-Margin Line</div>
                   </div>
                   <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center flex-shrink-0">
                     <svg className="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 3a1 1 0 00-1 1v2H7a1 1 0 000 2h3v2H7a1 1 0 000 2h3v6a1 1 0 102 0v-6h3a1 1 0 000-2h-3V8h3a1 1 0 000-2h-3V4a1 1 0 00-1-1z" />
                     </svg>
                   </div>
                 </div>
-                
+
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-start gap-3">
                     <svg className="w-5 h-5 text-accent flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    <span>55W super-fast charging capability</span>
+                    <span>Typical margins of 150–250% on cables and chargers.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <svg className="w-5 h-5 text-accent flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    <span>Dual ports: Charge two devices simultaneously</span>
+                    <span>Frequent repeat purchases as customers replace lost or worn-out items.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <svg className="w-5 h-5 text-accent flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    <span>Includes USB-C cable with fast charging</span>
+                    <span>Perfectly suited for front-counter or near-register placement.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <svg className="w-5 h-5 text-accent flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    <span>LED indicator light for charging status</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <svg className="w-5 h-5 text-accent flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span>Universal fit for all 12V car outlets</span>
+                    <span>Drive higher average tickets by pairing with sunglasses or impulse items.</span>
                   </li>
                 </ul>
 
                 <div className="bg-zinc-900/50 rounded-lg p-4 border border-zinc-700">
                   <div className="flex items-center justify-between">
                     <div>
-                      <div className="text-sm text-muted">Wholesale Price</div>
-                      <div className="text-xl font-bold">Starting at $6</div>
+                      <div className="text-sm text-muted">Example Basket Uplift</div>
+                      <div className="text-xl font-bold">+$8–$15 per sale</div>
                     </div>
                     <div className="text-right">
-                      <div className="text-sm text-muted">Suggested Retail</div>
-                      <div className="text-xl font-bold text-accent">$18-$25</div>
+                      <div className="text-sm text-muted">Accessory Attach Rate</div>
+                      <div className="text-xl font-bold text-accent">20–40%+</div>
                     </div>
                   </div>
                 </div>
