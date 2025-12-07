@@ -21,7 +21,8 @@ const services = [
     title: 'Mobile Accessories',
     description: 'Chargers, cables, car mounts — the essentials customers forget and buy on impulse.',
     image: '/mobile-01.png',
-    href: '/mobile'
+    href: '/mobile',
+    shopUrl: 'https://socalshadeswholesale.myshopify.com/collections/supercell-super-fast-charging-premium-mobile-accessories'
   },
   {
     title: 'Beyond Clean Collection',
@@ -56,7 +57,7 @@ const services = [
 ]
 
 export default function BeyondShades() {
-  const shopifyUrl = process.env.NEXT_PUBLIC_SHOPIFY_STORE_URL || 'https://socalshadeswholesale.myshopify.com/collections/beyond-shades-collection-description'
+  const defaultShopifyUrl = process.env.NEXT_PUBLIC_SHOPIFY_STORE_URL || 'https://socalshadeswholesale.myshopify.com/collections/beyond-shades-collection-description'
   const [redirectUrl, setRedirectUrl] = useState<string | null>(null)
 
   return (
@@ -136,7 +137,7 @@ export default function BeyondShades() {
                 <div className="mt-1.5 sm:mt-2">
                   <button
                     type="button"
-                    onClick={() => setRedirectUrl(shopifyUrl)}
+                    onClick={() => setRedirectUrl((service as any).shopUrl || defaultShopifyUrl)}
                     className="btn-outline w-full text-center text-[0.65rem] sm:text-[0.7rem] inline-flex items-center justify-center px-3 py-1.5"
                   >
                     Buy Now
