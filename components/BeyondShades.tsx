@@ -24,8 +24,8 @@ const services = [
     href: '/mobile'
   },
   {
-    title: 'Supplements',
-    description: 'Energy shots and wellness packs that move quickly at the counter.',
+    title: 'Beyond Clean Collection',
+    description: 'Essential hygiene and freshness products designed for daily convenience, cleanliness, and peace of mind..',
     image: '/wellness-01.png',
     href: '/beyond'
   },
@@ -56,7 +56,7 @@ const services = [
 ]
 
 export default function BeyondShades() {
-  const shopifyUrl = process.env.NEXT_PUBLIC_SHOPIFY_STORE_URL || 'https://socalshadeswholesale.myshopify.com/collections/supercell-super-fast-charging-premium-mobile-accessories'
+  const shopifyUrl = process.env.NEXT_PUBLIC_SHOPIFY_STORE_URL || 'https://socalshadeswholesale.myshopify.com/collections/beyond-shades-collection-description'
   const [redirectUrl, setRedirectUrl] = useState<string | null>(null)
 
   return (
