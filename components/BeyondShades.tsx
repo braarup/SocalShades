@@ -25,8 +25,8 @@ const services = [
   },
   {
     title: 'Beyond Clean Collection',
-    description: 'Essential hygiene and freshness products designed for daily convenience, cleanliness, and peace of mind..',
-    image: '/wellness-01.png',
+    description: 'Essential hygiene and freshness products designed for daily convenience and peace of mind.',
+    image: '/beyondshades-01.png',
     href: '/beyond'
   },
   {
