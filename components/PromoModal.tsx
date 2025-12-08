@@ -75,7 +75,7 @@ export default function PromoModal() {
                 Includes <span className="text-accent">$1,200+ Worth</span> of Displays
               </p>
               <p className="text-2xl font-bold text-white mt-2">
-                — Absolutely Free.
+                — At No Charge.
               </p>
             </div>
 

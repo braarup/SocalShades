@@ -106,8 +106,77 @@ export default function ProductsPage() {
           </div>
         </div>
       </section>
+      {/* Premium Rack Overview */}
+      <section className="py-16 md:py-20 bg-zinc-950">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+                Premium Rack Overview
+              </h2>
+              <p className="text-lg sm:text-xl text-muted max-w-3xl mx-auto">
+                Highlight your best shoppers with our upgraded premium rack mix designed for higher tickets and repeat purchases.
+              </p>
+            </div>
 
-      
+            <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center mb-12">
+              <div className="bg-zinc-900/70 rounded-lg p-8 border border-zinc-700">
+                <h3 className="text-2xl font-bold mb-6 text-accent">What&apos;s Different with Premium</h3>
+                <ul className="space-y-4 text-lg">
+                  <li className="flex items-start gap-3">
+                    <svg className="w-6 h-6 text-accent flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span>Higher-end frames, polarized options, and upgraded finishes.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <svg className="w-6 h-6 text-accent flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span>Curated styles built to support $15–$18 retail price points.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <svg className="w-6 h-6 text-accent flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span>Great for upscale locations or stores wanting a “step-up” option.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <svg className="w-6 h-6 text-accent flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span>Pairs well with standard racks so shoppers can trade up.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="space-y-6">
+                <div className="bg-gradient-to-br from-accent/20 to-transparent border border-accent/30 rounded-lg p-8">
+                  <div className="text-4xl font-bold text-accent mb-2">$150–$220</div>
+                  <div className="text-muted mb-4">Suggested Premium Rack Retail Range</div>
+                  <div className="text-2xl font-bold mb-2">$60–$80</div>
+                  <div className="text-muted">Your Wholesale Cost (per premium rack)</div>
+                </div>
+
+                <div className="bg-zinc-900/60 rounded-lg p-6 border border-zinc-700">
+                  <h4 className="font-bold text-xl mb-3 text-accent">Premium Profit Potential</h4>
+                  <p className="text-muted mb-3">
+                    At $6 per pair and $15–$18 retail, premium racks deliver even stronger dollars per sale.
+                  </p>
+                  <div className="text-3xl font-bold">$90–$140</div>
+                  <div className="text-muted">Estimated profit per premium rack sold out</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-accent/10 border border-accent/30 rounded-lg p-6 text-center">
+              <p className="text-lg">
+                <span className="font-bold text-accent">Upgrade Option:</span> Use premium racks alongside standard racks to give shoppers an easy “good, better, best” choice.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Premium vs Standard */}
       <section className="py-16 md:py-20">
