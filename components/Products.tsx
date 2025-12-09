@@ -26,25 +26,20 @@ const heroImages = [
 
 const products = [
   {
-    name: 'Standard Collection',
-    description: 'Everyday best-sellers at easy price points your customers love.',
-    badge: 'Standard',
-    image: '/standardcollage-01.jpg',
-    shopUrl:
-      'https://socalshadeswholesale.myshopify.com/collections/standard-sunglasses-collection'
-  },
-  {
-    name: 'Premium Collection',
-    description: 'Upgraded lenses and finishes for shoppers who want more.',
+    name: 'Premium Rack Program',
+    description: 'An upgraded premium rack that adds higher-ticket sunglasses to your counter.',
     badge: 'Premium',
-    image: '/premiumcollage-01.jpg',
-    shopUrl:
-      'https://socalshadeswholesale.myshopify.com/collections/premium-sunglasses-collection-elevated-style-superior-quality'
+    image: '/Premium-01.png'
   },
   {
     name: '10-Piece Rack Program',
     description: 'Compact, high-impact rack that keeps your top movers front and center.',
     image: '/10Piece-02.png'
+  },
+  {
+    name: 'Products',
+    description: 'See how our Standard and Premium sunglasses programs work together.',
+    image: '/products-01.png'
   }
 ]
 
@@ -120,7 +115,7 @@ export default function Products() {
                       <h3 className="font-semibold text-sm sm:text-base truncate">
                         {product.name}
                       </h3>
-                      {product.name !== '10-Piece Rack Program' && (
+                      {product.badge && (
                         <span
                           className="badge-pill text-[0.6rem] sm:text-[0.65rem] px-2 py-0.5 whitespace-nowrap cursor-pointer"
                           onClick={(e: MouseEvent<HTMLSpanElement>) => {
@@ -150,14 +145,20 @@ export default function Products() {
                     >
                       Learn More
                     </Link>
-                  ) : (
-                    <button
-                      type="button"
-                      onClick={() => setRedirectUrl(product.shopUrl || shopifyUrl)}
-                      className="btn-outline w-full text-center text-xs sm:text-sm inline-flex items-center justify-center px-4 py-2"
+                  ) : product.name === 'Premium Rack Program' ? (
+                    <Link
+                      href="/premium-rack"
+                      className="btn-learn-more text-xs sm:text-sm px-4 py-2"
                     >
-                      Buy Now
-                    </button>
+                      Learn More
+                    </Link>
+                  ) : (
+                    <Link
+                      href="/products"
+                      className="btn-learn-more text-xs sm:text-sm px-4 py-2"
+                    >
+                      Learn More
+                    </Link>
                   )}
                 </div>
               </div>
