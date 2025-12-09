@@ -136,37 +136,6 @@ export default function OneManBandPage() {
           </div>
         </div>
 
-        {/* Regular Servicing */}
-        <div className="bg-gradient-to-br from-accent/10 to-transparent border border-accent/30 rounded-2xl p-8 md:p-12 mb-16">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="w-20 h-20 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <svg className="w-10 h-10 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Regular Service Every 3 Weeks
-            </h2>
-            <p className="text-lg md:text-xl text-gray-200 mb-6">
-              We don&apos;t just set you up and disappear. Our team visits every 3 weeks to restock inventory, refresh displays, introduce new products, and ensure your counter is always optimized for peak performance.
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8">
-              <div>
-                <div className="text-3xl font-bold text-accent mb-2">Restock</div>
-                <p className="text-muted">Fresh inventory delivered on schedule</p>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-accent mb-2">Optimize</div>
-                <p className="text-muted">Display adjustments based on sales data</p>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-accent mb-2">Support</div>
-                <p className="text-muted">Ongoing training and consultation</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* The Complete Package */}
         <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 md:p-12 mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
