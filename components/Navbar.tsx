@@ -34,18 +34,18 @@ export default function Navbar() {
             <Link href="/premium-rack" className="text-muted hover:text-text transition-colors">
               Premium Rack
             </Link>
+            <Link href="/one-man-band" className="text-muted hover:text-text transition-colors">
+              One Man Band
+            </Link>
             <Link href="/beyond-shades" className="text-muted hover:text-text transition-colors">
               Beyond Shades
             </Link>
             <Link href="/storefront-services" className="text-muted hover:text-text transition-colors">
               Storefront Services
             </Link>
-            <Link href="/store-locator" className="text-muted hover:text-text transition-colors">
+            {/* <Link href="/store-locator" className="text-muted hover:text-text transition-colors">
               Store Locator
-            </Link>
-            <Link href="/contact" className="text-muted hover:text-text transition-colors">
-              Contact
-            </Link>
+            </Link> */}
           </div>
 
           {/* CTA Buttons */}
@@ -79,18 +79,21 @@ export default function Navbar() {
               <Link href="/10-piece-rack" className="text-muted hover:text-text transition-colors" onClick={closeMenu}>
                 10-Piece Rack
               </Link>
+              <Link href="/premium-rack" className="text-muted hover:text-text transition-colors" onClick={closeMenu}>
+                Premium Rack
+              </Link>
               <Link href="/beyond-shades" className="text-muted hover:text-text transition-colors" onClick={closeMenu}>
                 Beyond Shades
+              </Link>
+              <Link href="/one-man-band" className="text-muted hover:text-text transition-colors" onClick={closeMenu}>
+                One Man Band
               </Link>
               <Link href="/storefront-services" className="text-muted hover:text-text transition-colors" onClick={closeMenu}>
                 Storefront Services
               </Link>
-              <Link href="/store-locator" className="text-muted hover:text-text transition-colors" onClick={closeMenu}>
+              {/* <Link href="/store-locator" className="text-muted hover:text-text transition-colors" onClick={closeMenu}>
                 Store Locator
-              </Link>
-              <Link href="/contact" className="text-muted hover:text-text transition-colors" onClick={closeMenu}>
-                Contact
-              </Link>
+              </Link> */}
               <div className="flex flex-col space-y-2 pt-3">
                 <Link href="/retailer-signup" className="btn-learn-more text-center" onClick={closeMenu}>
                   Open an Account

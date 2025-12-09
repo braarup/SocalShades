@@ -1,54 +1,31 @@
-"use client";
+'use client';
 
 import React from 'react';
 import Link from 'next/link';
 
-export default function StorefrontServices() {
+export default function OneManBandPage() {
   return (
     <div className="min-h-screen pt-28 md:pt-32 pb-16 bg-bg">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <div className="text-center mb-12 md:mb-16">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 sm:mb-6">
-            Storefront Services
+            <span className="text-accent">The One Man Band</span>
+            <br />
+            Turnkey Retail Display Program
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl text-gray-200 max-w-4xl mx-auto mb-6">
-            From single racks to full counter makeovers, we design, install, and service front-end programs that turn your checkout into a profit center.
+            Everything you need to boost counter sales — displays, products, and merchandising expertise — all in one complete package.
           </p>
           <div className="inline-block bg-accent/10 border border-accent/30 rounded-xl px-6 py-4 mb-8">
             <p className="text-2xl md:text-3xl font-bold text-accent">
-              Merchandising, product mix, and service — handled for you.
+              $1,200+ Worth of Displays — Absolutely Free
             </p>
-            <p className="text-sm text-muted mt-2">Including our flagship One Man Band program.</p>
+            <p className="text-sm text-muted mt-2">80% of stores choose this program</p>
           </div>
         </div>
 
-        {/* What We Do At The Counter */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 hover:border-accent/50 transition-colors">
-            <h3 className="text-2xl font-bold mb-3">Plan &amp; Design</h3>
-            <p className="text-muted mb-3">
-              We walk your store, study how customers move, and design a counter layout that makes it easy for them to see and grab the right products.
-            </p>
-            <p className="text-sm text-muted">Traffic patterns, sightlines, and checkout flow all get considered.</p>
-          </div>
-          <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 hover:border-accent/50 transition-colors">
-            <h3 className="text-2xl font-bold mb-3">Install &amp; Set-Up</h3>
-            <p className="text-muted mb-3">
-              Our team brings in racks, signage, and product, then sets everything up so your counter looks organized, professional, and ready to sell on day one.
-            </p>
-            <p className="text-sm text-muted">No extra staff, no guessing, no DIY merchandising.</p>
-          </div>
-          <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 hover:border-accent/50 transition-colors">
-            <h3 className="text-2xl font-bold mb-3">Service &amp; Optimize</h3>
-            <p className="text-muted mb-3">
-              We come back on a regular schedule to restock, rotate slow movers, and keep your counter fresh so it always feels full and intentional.
-            </p>
-            <p className="text-sm text-muted">You get the benefit of a full-time merchandiser without adding payroll.</p>
-          </div>
-        </div>
-
-        {/* Core Display & Product Solutions */}
+        {/* Main Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {/* Premium Displays & Racks */}
           <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 hover:border-accent/50 transition-colors">
@@ -104,10 +81,6 @@ export default function StorefrontServices() {
             </ul>
           </div>
 
-        </div>
-
-        {/* Merchandising & Profit Strategy */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {/* Merchandising Expertise */}
           <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 hover:border-accent/50 transition-colors">
             <div className="w-16 h-16 bg-accent/10 rounded-xl flex items-center justify-center mb-6">
@@ -194,6 +167,45 @@ export default function StorefrontServices() {
           </div>
         </div>
 
+        {/* The Complete Package */}
+        <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 md:p-12 mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+            The Complete <span className="text-accent">One Man Band</span> Package
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            <div className="text-center p-6">
+              <div className="text-4xl mb-3">🕶️</div>
+              <h3 className="font-bold mb-2">10-Piece Sunglasses Rack</h3>
+              <p className="text-sm text-muted">Premium rotating display with best-selling styles</p>
+            </div>
+            <div className="text-center p-6">
+              <div className="text-4xl mb-3">📱</div>
+              <h3 className="font-bold mb-2">Mobile Accessories</h3>
+              <p className="text-sm text-muted">High-margin phone cases, chargers, and cables</p>
+            </div>
+            <div className="text-center p-6">
+              <div className="text-4xl mb-3">🔥</div>
+              <h3 className="font-bold mb-2">Lighters &amp; Impulse Items</h3>
+              <p className="text-sm text-muted">Fast-moving everyday essentials</p>
+            </div>
+            <div className="text-center p-6">
+              <div className="text-4xl mb-3">💊</div>
+              <h3 className="font-bold mb-2">Supplements</h3>
+              <p className="text-sm text-muted">Popular health and wellness products</p>
+            </div>
+            <div className="text-center p-6">
+              <div className="text-4xl mb-3">📊</div>
+              <h3 className="font-bold mb-2">Custom Merchandising</h3>
+              <p className="text-sm text-muted">Tailored planogram for your space</p>
+            </div>
+            <div className="text-center p-6">
+              <div className="text-4xl mb-3">🔄</div>
+              <h3 className="font-bold mb-2">Ongoing Service</h3>
+              <p className="text-sm text-muted">Every 3 weeks, like clockwork</p>
+            </div>
+          </div>
+        </div>
+
         {/* Bottom Line Impact */}
         <div className="max-w-4xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
@@ -230,17 +242,14 @@ export default function StorefrontServices() {
         {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-accent/10 via-accent/5 to-accent/10 border border-accent/30 rounded-2xl p-8 md:p-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Transform Your Counter?
+            Ready to Launch The One Man Band?
           </h2>
           <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-            Whether you&apos;re starting with a single rack or want our full One Man Band program, we&apos;ll help you build a front-end that sells.
+            Join the 80% of stores who chose The One Man Band program and are seeing real results at their counter.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/retailer-signup" className="btn-learn-more text-lg px-8 py-4">
               Get Started Today
-            </Link>
-            <Link href="/one-man-band" className="btn-outline text-lg px-8 py-4">
-              Explore The One Man Band
             </Link>
           </div>
         </div>
