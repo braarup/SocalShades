@@ -30,16 +30,16 @@ const services = [
     image: '/beyondshades-01.png',
     href: '/beyond'
   },
+    {
+    title: 'Headwear & Caps',
+    description: 'Branded and trend-forward hats that pair perfectly with sunglasses.',
+    image: '/hats-01.png',
+    href: '/beyond'
+  },
   {
     title: 'Lighters & Impulse',
     description: 'High‑turn items placed for visibility to increase add‑on sales.',
     image: '/lighters-01.png',
-    href: '/beyond'
-  },
-  {
-    title: 'Headwear & Caps',
-    description: 'Branded and trend-forward hats that pair perfectly with sunglasses.',
-    image: '/hats-01.png',
     href: '/beyond'
   },
   {

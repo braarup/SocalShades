@@ -31,6 +31,9 @@ export default function Navbar() {
             <Link href="/products" className="text-muted hover:text-text transition-colors">
               Sunglasses
             </Link>
+            <Link href="/10-piece-rack" className="text-muted hover:text-text transition-colors">
+              10-Piece Rack
+            </Link>
             <Link href="/beyond-shades" className="text-muted hover:text-text transition-colors">
               Beyond Shades
             </Link>
@@ -72,6 +75,9 @@ export default function Navbar() {
             <div className="flex flex-col space-y-3 pt-4">
               <Link href="/products" className="text-muted hover:text-text transition-colors" onClick={closeMenu}>
                 Sunglasses
+              </Link>
+              <Link href="/10-piece-rack" className="text-muted hover:text-text transition-colors" onClick={closeMenu}>
+                10-Piece Rack
               </Link>
               <Link href="/beyond-shades" className="text-muted hover:text-text transition-colors" onClick={closeMenu}>
                 Beyond Shades
