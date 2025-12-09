@@ -132,7 +132,7 @@ export default function Products() {
                 <div className="mt-3 flex justify-center">
                   {product.name === '10-Piece Rack Program' ? (
                     <Link
-                      href="/products"
+                      href="/10-piece-rack"
                       className="btn-learn-more text-xs sm:text-sm px-4 py-2"
                     >
                       Learn More
