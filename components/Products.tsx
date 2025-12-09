@@ -2,7 +2,8 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useState, type MouseEvent } from 'react'
+import { useRouter } from 'next/navigation'
 import RedirectConfirmModal from './RedirectConfirmModal'
 
 const heroImages = [
@@ -30,7 +31,7 @@ const products = [
     badge: 'Standard',
     image: '/standardcollage-01.jpg',
     shopUrl:
-      'https://brandons-store-123472.myshopify.com/collections/standard-sunglasses-collection'
+      'https://socalshadeswholesale.myshopify.com/collections/standard-sunglasses-collection'
   },
   {
     name: 'Premium Collection',
@@ -38,7 +39,7 @@ const products = [
     badge: 'Premium',
     image: '/premiumcollage-01.jpg',
     shopUrl:
-      'https://brandons-store-123472.myshopify.com/collections/premium-sunglasses-collection-elevated-style-superior-quality'
+      'https://socalshadeswholesale.myshopify.com/collections/premium-sunglasses-collection-elevated-style-superior-quality'
   },
   {
     name: '10-Piece Rack Program',
@@ -48,8 +49,9 @@ const products = [
 ]
 
 export default function Products() {
-  const shopifyUrl = process.env.NEXT_PUBLIC_SHOPIFY_STORE_URL || 'https://your-shop-name.myshopify.com'
+  const shopifyUrl = process.env.NEXT_PUBLIC_SHOPIFY_STORE_URL || 'https://socalshadeswholesale.myshopify.com'
   const [redirectUrl, setRedirectUrl] = useState<string | null>(null)
+  const router = useRouter()
 
   return (
     <section id="products" className="py-16 bg-bg">
@@ -119,7 +121,18 @@ export default function Products() {
                         {product.name}
                       </h3>
                       {product.name !== '10-Piece Rack Program' && (
-                        <span className="badge-pill text-[0.6rem] sm:text-[0.65rem] px-2 py-0.5 whitespace-nowrap">
+                        <span
+                          className="badge-pill text-[0.6rem] sm:text-[0.65rem] px-2 py-0.5 whitespace-nowrap cursor-pointer"
+                          onClick={(e: MouseEvent<HTMLSpanElement>) => {
+                            e.preventDefault()
+                            e.stopPropagation()
+                            if (product.badge === 'Standard') {
+                              router.push('/10-piece-rack')
+                            } else if (product.badge === 'Premium') {
+                              router.push('/premium-rack')
+                            }
+                          }}
+                        >
                           {product.badge}
                         </span>
                       )}
