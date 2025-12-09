@@ -34,7 +34,7 @@ export default function PremiumRackPage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-                Premium Rack Overview
+                Overview
               </h2>
               <p className="text-lg sm:text-xl text-muted max-w-3xl mx-auto">
                 Highlight your best shoppers with our upgraded premium rack mix designed for higher tickets and repeat purchases.
@@ -67,13 +67,13 @@ export default function PremiumRackPage() {
                       <svg className="w-6 h-6 text-accent flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
-                      <span>Curated styles built to support premium retail price points.</span>
+                      <span>Comes with a lifetime warranty on every pair.</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <svg className="w-6 h-6 text-accent flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
-                      <span>Great for upscale locations or stores wanting a “step-up” option.</span>
+                      <span>Includes a premium microfiber pouch with each pair.</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <svg className="w-6 h-6 text-accent flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">

@@ -28,11 +28,11 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <Link href="/products" className="text-muted hover:text-text transition-colors">
-              Sunglasses
-            </Link>
             <Link href="/10-piece-rack" className="text-muted hover:text-text transition-colors">
               10-Piece Rack
+            </Link>
+            <Link href="/premium-rack" className="text-muted hover:text-text transition-colors">
+              Premium Rack
             </Link>
             <Link href="/beyond-shades" className="text-muted hover:text-text transition-colors">
               Beyond Shades

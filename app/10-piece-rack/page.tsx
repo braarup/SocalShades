@@ -34,7 +34,7 @@ export default function TenPieceRackPage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-                The 10-Piece Sunglasses Rack
+                Overview
               </h2>
               <p className="text-lg sm:text-xl text-muted max-w-3xl mx-auto">
                 A carefully curated selection of styles that sell. Each rack is designed for maximum visual impact and optimized for impulse purchases.
