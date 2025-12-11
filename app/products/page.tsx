@@ -1,28 +1,241 @@
+"use client"
+
+import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
+import RedirectConfirmModal from '@/components/RedirectConfirmModal'
+
 const standardStyles = [
-  { name: 'Ace', image: '/Standard/Ace.jpg' },
-  { name: 'Drift', image: '/Standard/Drift.jpg' },
-  { name: 'Titan', image: '/Standard/Titan.jpg' }
+  {
+    name: 'Ace',
+    image: '/Standard/Ace.jpg',
+    description: 'Easy-wear classic frame that fits almost every face.'
+  },
+  {
+    name: 'Drift',
+    image: '/Standard/Drift.jpg',
+    description: 'Laid-back, surf-inspired shape built for all-day wear.'
+  },
+  {
+    name: 'Icon Gloss',
+    image: '/Standard/Icon Gloss.jpg',
+    description: 'Timeless glossy finish with a proven, high-turnover silhouette.'
+  },
+  {
+    name: 'Icon Soft',
+    image: '/Standard/Icon Soft.jpg',
+    description: 'Matte soft-touch finish that feels premium at value pricing.'
+  },
+  {
+    name: 'Legacy',
+    image: '/Standard/Legacy.jpg',
+    description: 'Everyday staple style that anchors your standard rack selection.'
+  },
+  {
+    name: 'Radiant Black',
+    image: '/Standard/Radiant Black.jpg',
+    description: 'Bold black frames with just the right amount of shine.'
+  },
+  {
+    name: 'Riff',
+    image: '/Standard/Riff.jpg',
+    description: 'Music-festival energy in a lightweight, easy-to-merch style.'
+  },
+  {
+    name: 'Titan',
+    image: '/Standard/Titan.jpg',
+    description: 'Stronger, squared-off look that stands out on the rack.'
+  },
+  {
+    name: 'Titan RV',
+    image: '/Standard/Titan RV.jpg',
+    description: 'Mirror-finish variation of Titan that grabs instant attention.'
+  },
+  {
+    name: 'Vortex',
+    image: '/Standard/Vortex.JPG',
+    description: 'Edgier frame for customers who want something a little different.'
+  }
 ]
 
 const premiumStyles = [
-  { name: 'Aurora', image: '/Premium/Aurora.JPG' },
-  { name: 'RushPro', image: '/Premium/RushPro.JPG' },
-  { name: 'Velocity X Black', image: '/Premium/Velocity X Black.JPG' }
+  {
+    name: 'Aurora',
+    image: '/Premium/Aurora.JPG',
+    description: 'Soft gradient lenses and smooth curves for a modern premium look.'
+  },
+  {
+    name: 'FreeStride',
+    image: '/Premium/FreeStride.JPG',
+    description: 'Lightweight, sport-forward frame built for all-day comfort.'
+  },
+  {
+    name: 'GlideForce',
+    image: '/Premium/GlideForce.JPG',
+    description: 'Aerodynamic styling with bold lines that stand out instantly.'
+  },
+  {
+    name: 'RushPro',
+    image: '/Premium/RushPro.JPG',
+    description: 'High-energy wrap design that screams performance and speed.'
+  },
+  {
+    name: 'Stormline',
+    image: '/Premium/Stormline.JPG',
+    description: 'Striking frame and lens combo for shoppers who want a statement piece.'
+  },
+  {
+    name: 'Trailblaze',
+    image: '/Premium/Trailblaze.JPG',
+    description: 'Outdoor-ready style that looks great on the road or the trail.'
+  },
+  {
+    name: 'Velocity X Black',
+    image: '/Premium/Velocity X Black.JPG',
+    description: 'Sleek, dark profile with a premium fit and finish.'
+  },
+  {
+    name: 'Vortex Sport',
+    image: '/Premium/Vortex Sport.JPG',
+    description: 'Sport version of Vortex with extra edge and attitude.'
+  }
 ]
 
 const mobileAccessories = [
-  { name: '4-In-1 Cable – Super Fast', image: '/4-In-1 Cable - Super Fast.JPG' },
-  { name: 'Dual Car Charger – Super Fast', image: '/Dual Car Charger - Super Fast.JPG' },
-  { name: 'Earbuds – Lightning', image: '/Earbuds - Lightning.JPG' }
+  {
+    name: '4-In-1 Cable  Super Fast',
+    image: '/SuperFast/4-In-1 Cable - Super Fast.JPG',
+    description: 'Universal 4-in-1 cable that covers the most common devices at the counter.'
+  },
+  {
+    name: 'C To C Cable  Super Fast',
+    image: '/SuperFast/C To C Cable - Super Fast.JPG',
+    description: 'USB-C to USB-C Super-Fast cable for modern phones and tablets.'
+  },
+  {
+    name: 'Dual Car Charger  Super Fast',
+    image: '/SuperFast/Dual Car Charger - Super Fast.JPG',
+    description: 'High-output dual-port car charger that saves the day on the road.'
+  },
+  {
+    name: 'Earbuds  Lightning',
+    image: '/SuperFast/Earbuds - Lightning.JPG',
+    description: 'Wired Lightning earbuds for iPhone users who forgot theirs at home.'
+  },
+  {
+    name: 'Earbuds  Type C',
+    image: '/SuperFast/Earbuds - Type C.JPG',
+    description: 'Reliable Type-C earbuds that pair perfectly with Android shoppers.'
+  },
+  {
+    name: 'USB To C Cable  Super Fast',
+    image: '/SuperFast/USB To C Cable - Super Fast.JPG',
+    description: 'USB-A to USB-C Super-Fast cable for quick top-off charging.'
+  },
+  {
+    name: 'USB to Lightning  Super Fast',
+    image: '/SuperFast/USB to Lightning - Super Fast.JPG',
+    description: 'USB-A to Lightning cable for fast, dependable charging on the go.'
+  },
+  {
+    name: 'Wall Charger  Super Fast',
+    image: '/SuperFast/Wall Charger - Super Fast.JPG',
+    description: 'Compact wall charger that turns any outlet into a Super-Fast charge point.'
+  }
 ]
 
 const beyondProducts = [
-  { name: 'Beyond Clean Collection', image: '/beyondshades-01.png' },
-  { name: 'Headwear & Caps', image: '/hats-01.png' },
-  { name: 'Lighters & Impulse', image: '/lighters-01.png' }
+  {
+    name: 'Backwoods Air Fresheners',
+    image: '/BeyondShades/Backwoods1.JPG',
+    description: 'Popular Backwoods-inspired scents that keep cars and small spaces smelling fresh.'
+  },
+  {
+    name: 'Blessed Keychain',
+    image: '/BeyondShades/Blessed.JPG',
+    description: 'Faith-forward keychain that catches the eye right at checkout.'
+  },
+  {
+    name: 'Camo Straw Hats',
+    image: '/BeyondShades/CamoHats.png',
+    description: 'Camo-print straw hats that add personality and sun protection in one grab.'
+  },
+  {
+    name: 'Cash Keychain',
+    image: '/BeyondShades/Cash.JPG',
+    description: 'Cash-themed keychain that feels like a fun little flex at the counter.'
+  },
+  {
+    name: 'Cookie Keychain',
+    image: '/BeyondShades/Cookie.JPG',
+    description: 'Cookie-inspired design that draws attention and sparks impulse smiles.'
+  },
+  {
+    name: 'Guns & Roses Keychain',
+    image: '/BeyondShades/GunsNRoses1.JPG',
+    description: 'Rock-and-roll inspired keychain for customers who love bold graphics.'
+  },
+  {
+    name: 'Hand Sanitizer',
+    image: '/BeyondShades/HandSanitizer.JPG',
+    description: 'Convenient sanitizer that keeps hands clean and baskets a little bigger.'
+  },
+  {
+    name: 'Hand Wipes',
+    image: '/BeyondShades/HandWipes.JPG',
+    description: 'Travel-size wipes perfect for glove boxes, purses, and quick cleanups.'
+  },
+  {
+    name: 'Just Hit It Keychain',
+    image: '/BeyondShades/JustHitIt.JPG',
+    description: 'Playful Just Hit It message that always gets a second look.'
+  },
+  {
+    name: 'Logo Straw Hat',
+    image: '/BeyondShades/LogoStrawHat.png',
+    description: 'Brand-forward straw hat designed to stand tall on your front counter.'
+  },
+  {
+    name: 'Regular Straw Hat',
+    image: '/BeyondShades/RegStrawHat.png',
+    description: 'Classic straw hat style that works from beach runs to backyard BBQs.'
+  },
+  {
+    name: 'Scent Bomb',
+    image: '/BeyondShades/ScentBomb.JPG',
+    description: 'Powerful air freshener that keeps customers coming back for refills.'
+  },
+  {
+    name: 'Skull Keychain',
+    image: '/BeyondShades/Skull.JPG',
+    description: 'Edgy skull graphic that’s perfect for customers with a bold style.'
+  },
+  {
+    name: 'Smiley Keychain',
+    image: '/BeyondShades/Smiley.JPG',
+    description: 'Bright smiley design that feels fun and easy to grab on impulse.'
+  },
+  {
+    name: 'Stun & Pepper Combo',
+    image: '/BeyondShades/StunPepperCombo.png',
+    description: 'Practical self-defense combo that adds real utility to your front-end mix.'
+  },
+  {
+    name: 'Super Dad Keychain',
+    image: '/BeyondShades/SuperDad.JPG',
+    description: 'Super Dad message that moves fast around Father’s Day and beyond.'
+  },
+  {
+    name: 'Super Mom Keychain',
+    image: '/BeyondShades/SuperMom.JPG',
+    description: 'Super Mom design that sells itself near the register year-round.'
+  },
+  {
+    name: 'TikTok Keychain',
+    image: '/BeyondShades/TikTok.JPG',
+    description: 'TikTok-inspired design that taps into what your younger shoppers recognize.'
+  }
 ]
 
 const STANDARD_SHOP_URL =
@@ -35,6 +248,29 @@ const BEYOND_SHOP_URL =
   'https://socalshadeswholesale.myshopify.com/collections/beyond-shades-collection-description'
 
 export default function ProductsPage() {
+  const [redirectOpen, setRedirectOpen] = useState(false)
+  const [redirectUrl, setRedirectUrl] = useState<string | null>(null)
+
+  const handleStandardBuyNow = () => {
+    setRedirectUrl(STANDARD_SHOP_URL)
+    setRedirectOpen(true)
+  }
+
+  const handlePremiumBuyNow = () => {
+    setRedirectUrl(PREMIUM_SHOP_URL)
+    setRedirectOpen(true)
+  }
+
+  const handleMobileBuyNow = () => {
+    setRedirectUrl(MOBILE_SHOP_URL)
+    setRedirectOpen(true)
+  }
+
+  const handleBeyondBuyNow = () => {
+    setRedirectUrl(BEYOND_SHOP_URL)
+    setRedirectOpen(true)
+  }
+
   return (
     <main className="min-h-screen bg-bg">
       {/* Hero Section */}
@@ -42,10 +278,10 @@ export default function ProductsPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-              Wholesale Sunglasses
+              Socal Shades Products
             </h1>
             <p className="text-xl sm:text-2xl text-muted mb-8">
-              Our 10-Piece Sunglasses Rack — Designed to Maximize Your Profits
+              Our Sunglasses and Beyond Shades Products — Designed to Maximize Your Profits
             </p>
             <div className="mt-4 flex justify-center">
               <Link href="/retailer-signup" className="btn-learn-more text-lg px-8 py-3">
@@ -85,17 +321,16 @@ export default function ProductsPage() {
                   <div className="p-5 flex flex-col gap-3 flex-1">
                     <h3 className="text-xl font-bold">{style.name}</h3>
                     <p className="text-sm text-muted">
-                      Reliable, easy-to-wear frames your customers recognize and trust.
+                      {style.description}
                     </p>
                     <div className="mt-auto">
-                      <a
-                        href={STANDARD_SHOP_URL}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                      <button
+                        type="button"
+                        onClick={handleStandardBuyNow}
                         className="btn-learn-more text-sm px-4 py-2 inline-flex items-center justify-center"
                       >
                         Buy Now
-                      </a>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -135,17 +370,16 @@ export default function ProductsPage() {
                   <div className="p-5 flex flex-col gap-3 flex-1">
                     <h3 className="text-xl font-bold">{style.name}</h3>
                     <p className="text-sm text-muted">
-                      Designer-inspired looks that justify higher ticket prices and capture attention.
+                      {style.description}
                     </p>
                     <div className="mt-auto">
-                      <a
-                        href={PREMIUM_SHOP_URL}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                      <button
+                        type="button"
+                        onClick={handlePremiumBuyNow}
                         className="btn-learn-more text-sm px-4 py-2 inline-flex items-center justify-center"
                       >
                         Buy Now
-                      </a>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -185,17 +419,16 @@ export default function ProductsPage() {
                   <div className="p-5 flex flex-col gap-3 flex-1">
                     <h3 className="text-xl font-bold">{item.name}</h3>
                     <p className="text-sm text-muted">
-                      Part of our Super-Fast charging program built for repeat add-on sales.
+                      {item.description}
                     </p>
                     <div className="mt-auto">
-                      <a
-                        href={MOBILE_SHOP_URL}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                      <button
+                        type="button"
+                        onClick={handleMobileBuyNow}
                         className="btn-learn-more text-sm px-4 py-2 inline-flex items-center justify-center"
                       >
                         Buy Now
-                      </a>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -235,17 +468,16 @@ export default function ProductsPage() {
                   <div className="p-5 flex flex-col gap-3 flex-1">
                     <h3 className="text-xl font-bold">{item.name}</h3>
                     <p className="text-sm text-muted">
-                      Plug these into your front-end to capture last-minute add-on purchases.
+                      {item.description}
                     </p>
                     <div className="mt-auto">
-                      <a
-                        href={BEYOND_SHOP_URL}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                      <button
+                        type="button"
+                        onClick={handleBeyondBuyNow}
                         className="btn-learn-more text-sm px-4 py-2 inline-flex items-center justify-center"
                       >
                         Buy Now
-                      </a>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -342,6 +574,14 @@ export default function ProductsPage() {
           </div>
         </div>
       </section>
+      <RedirectConfirmModal
+        shopUrl={redirectUrl}
+        open={redirectOpen}
+        onClose={() => {
+          setRedirectOpen(false)
+          setRedirectUrl(null)
+        }}
+      />
     </main>
   )
 }
