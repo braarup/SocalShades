@@ -9,9 +9,11 @@ export default function OneManBandPage() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <div className="text-center mb-12 md:mb-16">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 sm:mb-6 leading-snug sm:leading-relaxed">
-            <span className="block text-accent mb-1 sm:mb-2">The One Man Band</span>
-            <span className="block">Turnkey Retail Display Program</span>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 sm:mb-6 leading-tight">
+            <span className="block text-accent">The One Man Band</span>
+            <span className="block text-xl sm:text-2xl md:text-3xl font-semibold text-gray-100 mt-3 sm:mt-4">
+              Turnkey Retail Display Program
+            </span>
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl text-gray-200 max-w-4xl mx-auto mb-6">
             Everything you need to boost counter sales — displays, products, and merchandising expertise — all in one complete package.
