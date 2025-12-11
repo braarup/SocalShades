@@ -1,19 +1,52 @@
 "use client"
 
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
-// import FastChargeDisplayModal from '@/components/FastChargeDisplayModal'
+import Image from 'next/image'
+
+const superFastItems = [
+  {
+    name: '4-In-1 Cable – Super Fast',
+    image: '/SuperFast/4-In-1 Cable - Super Fast.JPG',
+    description: 'Universal 4-in-1 cable that covers the most common devices at the counter.'
+  },
+  {
+    name: 'C To C Cable – Super Fast',
+    image: '/SuperFast/C To C Cable - Super Fast.JPG',
+    description: 'USB-C to USB-C Super-Fast cable for modern phones and tablets.'
+  },
+  {
+    name: 'Dual Car Charger – Super Fast',
+    image: '/SuperFast/Dual Car Charger - Super Fast.JPG',
+    description: 'High-output dual-port car charger that saves the day on the road.'
+  },
+  {
+    name: 'Earbuds – Lightning',
+    image: '/SuperFast/Earbuds - Lightning.JPG',
+    description: 'Wired Lightning earbuds for iPhone users who forgot theirs at home.'
+  },
+  {
+    name: 'Earbuds – Type C',
+    image: '/SuperFast/Earbuds - Type C.JPG',
+    description: 'Reliable Type-C earbuds that pair perfectly with Android shoppers.'
+  },
+  {
+    name: 'USB To C Cable – Super Fast',
+    image: '/SuperFast/USB To C Cable - Super Fast.JPG',
+    description: 'USB-A to USB-C Super-Fast cable for quick top-off charging.'
+  },
+  {
+    name: 'USB to Lightning – Super Fast',
+    image: '/SuperFast/USB to Lightning - Super Fast.JPG',
+    description: 'USB-A to Lightning cable for fast, dependable charging on the go.'
+  },
+  {
+    name: 'Wall Charger – Super Fast',
+    image: '/SuperFast/Wall Charger - Super Fast.JPG',
+    description: 'Compact wall charger that turns any outlet into a Super-Fast charge point.'
+  }
+]
 
 export default function BeyondShadesPage() {
-  // const [showModal, setShowModal] = useState(false)
-
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setShowModal(true)
-  //   }, 2000) // 2 second delay
-
-  //   return () => clearTimeout(timer)
-  // }, [])
 
   return (
     <main className="min-h-screen bg-bg">
