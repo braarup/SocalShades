@@ -86,7 +86,7 @@ export default function Navbar() {
                 Premium Rack
               </Link>
               <Link href="/beyond-shades" className="text-muted hover:text-text transition-colors" onClick={closeMenu}>
-                Beyond Shades
+                Fast Cell
               </Link>
               <Link href="/one-man-band" className="text-muted hover:text-text transition-colors" onClick={closeMenu}>
                 One Man Band

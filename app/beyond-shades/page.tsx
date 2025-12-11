@@ -81,7 +81,7 @@ export default function BeyondShadesPage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-                FastCell Super-Fast Display
+                Super-FastCell Accessorries Display
               </h2>
               <p className="text-lg sm:text-xl text-muted max-w-3xl mx-auto">
                 A dedicated front-end mobile accessories program designed to capture last-minute “my phone is at 2%” purchases.
