@@ -85,16 +85,16 @@ export default function BeyondShades() {
             </div>
           </div>
 
-          {/* Right: 4 Beyond Shades tiles (2x2, wider cards on desktop) */}
-          <div className="grid grid-cols-2 sm:grid-cols-2 xl:grid-cols-2 gap-3 sm:gap-4 xl:gap-6">
+          {/* Right: 4 Beyond Shades tiles (styled like Flagship Sunglasses cards) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 xl:gap-5">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="product-card flex flex-col h-full w-full px-2 py-2 sm:px-2.5 sm:py-2.5 text-[0.65rem] sm:text-[0.7rem]"
+                className="product-card flex flex-col h-full px-4 py-4 sm:px-5 sm:py-5"
               >
                 <Link href={service.href} className="block">
                   <div
-                    className={`w-full rounded-lg overflow-hidden border border-zinc-800 bg-zinc-900 mb-2 sm:mb-2.5 aspect-[4/3]`}
+                    className="w-full aspect-[4/3] rounded-lg overflow-hidden border border-zinc-800 bg-zinc-900 mb-3 sm:mb-4"
                   >
                     <Image
                       src={service.image}
@@ -104,11 +104,11 @@ export default function BeyondShades() {
                       className="w-full h-full object-contain object-center"
                     />
                   </div>
-                  <div className="flex flex-col justify-center pr-0.5 sm:pr-1.5 flex-1">
-                    <h3 className="font-semibold text-[0.7rem] sm:text-xs mb-0.5">
+                  <div className="flex flex-col justify-center pr-1 sm:pr-3 flex-1">
+                    <h3 className="font-semibold text-sm sm:text-base mb-0.5">
                       {service.title}
                     </h3>
-                    <p className="text-muted text-[0.65rem] sm:text-[0.7rem] leading-snug line-clamp-2">
+                    <p className="text-muted text-xs sm:text-sm leading-snug line-clamp-2 mt-0.5">
                       {service.description}
                     </p>
                   </div>
@@ -116,7 +116,7 @@ export default function BeyondShades() {
                 <div className="mt-1.5 sm:mt-2">
                   <Link
                     href={service.href}
-                    className="btn-learn-more w-full text-center text-[0.65rem] sm:text-[0.7rem]"
+                    className="btn-learn-more w-full text-center text-xs sm:text-sm px-4 py-2"
                   >
                     Learn More
                   </Link>
