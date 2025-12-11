@@ -323,7 +323,7 @@ export default function ProductsPage() {
                     <p className="text-sm text-muted">
                       {style.description}
                     </p>
-                    <div className="mt-auto">
+                    <div className="mt-auto flex justify-center">
                       <button
                         type="button"
                         onClick={handleStandardBuyNow}
@@ -372,7 +372,7 @@ export default function ProductsPage() {
                     <p className="text-sm text-muted">
                       {style.description}
                     </p>
-                    <div className="mt-auto">
+                    <div className="mt-auto flex justify-center">
                       <button
                         type="button"
                         onClick={handlePremiumBuyNow}
@@ -421,7 +421,7 @@ export default function ProductsPage() {
                     <p className="text-sm text-muted">
                       {item.description}
                     </p>
-                    <div className="mt-auto">
+                    <div className="mt-auto flex justify-center">
                       <button
                         type="button"
                         onClick={handleMobileBuyNow}
@@ -470,7 +470,7 @@ export default function ProductsPage() {
                     <p className="text-sm text-muted">
                       {item.description}
                     </p>
-                    <div className="mt-auto">
+                    <div className="mt-auto flex justify-center">
                       <button
                         type="button"
                         onClick={handleBeyondBuyNow}
