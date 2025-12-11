@@ -57,9 +57,9 @@ export default function BeyondShades() {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-[1.1fr,1.9fr] gap-6 md:gap-8 items-stretch">
+        <div className="grid lg:grid-cols-[1.1fr,1.9fr] gap-4 md:gap-6 items-stretch">
           {/* Left: main Beyond Shades rotating display */}
-          <div className="relative w-full aspect-[16/9] max-w-md mx-auto lg:mx-0 rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900">
+          <div className="relative w-full aspect-[16/9] max-w-sm mx-auto lg:mx-0 rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900">
             {heroImages.map((image, index) => (
               <div
                 key={image.src}
@@ -85,16 +85,16 @@ export default function BeyondShades() {
             </div>
           </div>
 
-          {/* Right: 4 Beyond Shades tiles (styled like Flagship Sunglasses cards) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 xl:gap-5">
+          {/* Right: 4 Beyond Shades tiles (compact cards) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 xl:gap-4">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="product-card flex flex-col h-full px-4 py-4 sm:px-5 sm:py-5"
+                className="product-card flex flex-col h-full px-3 py-3 sm:px-4 sm:py-4 text-xs sm:text-sm"
               >
                 <Link href={service.href} className="block">
                   <div
-                    className="w-full aspect-[4/3] rounded-lg overflow-hidden border border-zinc-800 bg-zinc-900 mb-3 sm:mb-4"
+                    className="w-full aspect-[5/4] rounded-lg overflow-hidden border border-zinc-800 bg-zinc-900 mb-2.5 sm:mb-3"
                   >
                     <Image
                       src={service.image}
@@ -104,19 +104,19 @@ export default function BeyondShades() {
                       className="w-full h-full object-contain object-center"
                     />
                   </div>
-                  <div className="flex flex-col justify-center pr-1 sm:pr-3 flex-1">
-                    <h3 className="font-semibold text-sm sm:text-base mb-0.5">
+                  <div className="flex flex-col justify-center pr-1.5 sm:pr-3 flex-1">
+                    <h3 className="font-semibold text-[0.75rem] sm:text-sm mb-0.5">
                       {service.title}
                     </h3>
-                    <p className="text-muted text-xs sm:text-sm leading-snug line-clamp-2 mt-0.5">
+                    <p className="text-muted text-[0.7rem] sm:text-[0.8rem] leading-snug line-clamp-2 mt-0.5">
                       {service.description}
                     </p>
                   </div>
                 </Link>
-                <div className="mt-1.5 sm:mt-2">
+                <div className="mt-2 sm:mt-2.5 flex justify-center">
                   <Link
                     href={service.href}
-                    className="btn-learn-more w-full text-center text-xs sm:text-sm px-4 py-2"
+                    className="btn-learn-more inline-flex items-center justify-center text-[0.7rem] sm:text-xs px-3 py-1.5"
                   >
                     Learn More
                   </Link>
