@@ -19,26 +19,26 @@ const services = [
     title: 'Mobile Accessories',
     description: 'Chargers, cables, car mounts — the essentials customers forget and buy on impulse.',
     image: '/mobile-01.png',
-    href: '/mobile',
+    href: '/beyond-shades',
     shopUrl: 'https://socalshadeswholesale.myshopify.com/collections/supercell-super-fast-charging-premium-mobile-accessories'
   },
   {
     title: 'Beyond Clean Collection',
     description: 'Essential hygiene and freshness products designed for daily convenience and peace of mind.',
     image: '/beyondshades-01.png',
-    href: '/beyond'
+    href: '/products'
   },
     {
     title: 'Headwear & Caps',
     description: 'Branded and trend-forward hats that pair perfectly with sunglasses.',
     image: '/hats-01.png',
-    href: '/beyond'
+    href: '/products'
   },
   {
     title: 'Lighters & Impulse',
     description: 'High‑turn items placed for visibility to increase add‑on sales.',
     image: '/lighters-01.png',
-    href: '/beyond'
+    href: '/products'
   }
 ]
 
@@ -57,9 +57,9 @@ export default function BeyondShades() {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-[1.1fr,1.9fr] gap-8 items-stretch">
+        <div className="grid lg:grid-cols-[1.1fr,1.9fr] gap-6 md:gap-8 items-stretch">
           {/* Left: main Beyond Shades rotating display */}
-          <div className="relative w-full aspect-[16/9] sm:aspect-[4/3] max-w-lg mx-auto lg:mx-0 rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900">
+          <div className="relative w-full aspect-[16/9] max-w-md mx-auto lg:mx-0 rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900">
             {heroImages.map((image, index) => (
               <div
                 key={image.src}
@@ -90,7 +90,7 @@ export default function BeyondShades() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="product-card flex flex-col h-full px-2.5 py-2.5 sm:px-3 sm:py-3 text-[0.7rem] sm:text-xs"
+                className="product-card flex flex-col h-full max-w-xs mx-auto px-2 py-2 sm:px-2.5 sm:py-2.5 text-[0.65rem] sm:text-[0.7rem]"
               >
                 <Link href={service.href} className="block">
                   <div
@@ -120,7 +120,7 @@ export default function BeyondShades() {
                 <div className="mt-1.5 sm:mt-2">
                   <Link
                     href={service.href}
-                    className="btn-outline w-full text-center text-[0.65rem] sm:text-[0.7rem] inline-flex items-center justify-center px-3 py-1.5"
+                    className="btn-learn-more w-full text-center text-[0.65rem] sm:text-[0.7rem]"
                   >
                     Learn More
                   </Link>
