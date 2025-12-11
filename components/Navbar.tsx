@@ -43,6 +43,9 @@ export default function Navbar() {
             <Link href="/storefront-services" className="text-muted hover:text-text transition-colors">
               Storefront Services
             </Link>
+            <Link href="/products" className="text-muted hover:text-text transition-colors">
+              Products
+            </Link>
             {/* <Link href="/store-locator" className="text-muted hover:text-text transition-colors">
               Store Locator
             </Link> */}
@@ -73,9 +76,9 @@ export default function Navbar() {
         {isOpen && (
           <div className="lg:hidden pb-4 border-t border-zinc-800 mt-4">
             <div className="flex flex-col space-y-3 pt-4">
-              <Link href="/products" className="text-muted hover:text-text transition-colors" onClick={closeMenu}>
+              {/* <Link href="/products" className="text-muted hover:text-text transition-colors" onClick={closeMenu}>
                 Sunglasses
-              </Link>
+              </Link> */}
               <Link href="/10-piece-rack" className="text-muted hover:text-text transition-colors" onClick={closeMenu}>
                 10-Piece Rack
               </Link>
@@ -90,6 +93,9 @@ export default function Navbar() {
               </Link>
               <Link href="/storefront-services" className="text-muted hover:text-text transition-colors" onClick={closeMenu}>
                 Storefront Services
+              </Link>
+              <Link href="/products" className="text-muted hover:text-text transition-colors" onClick={closeMenu}>
+                Products
               </Link>
               {/* <Link href="/store-locator" className="text-muted hover:text-text transition-colors" onClick={closeMenu}>
                 Store Locator

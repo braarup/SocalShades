@@ -2,8 +2,6 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { useState } from 'react'
-import RedirectConfirmModal from './RedirectConfirmModal'
 
 const heroImages = [
   {
@@ -41,25 +39,10 @@ const services = [
     description: 'High‑turn items placed for visibility to increase add‑on sales.',
     image: '/lighters-01.png',
     href: '/beyond'
-  },
-  {
-    title: 'Wellness & Energy',
-    description: 'Grab-and-go wellness items that keep customers fueled on the go.',
-    image: '/wellness-01.png',
-    href: '/beyond'
-  },
-  {
-    title: 'Impulse Essentials',
-    description: 'Must-have everyday items positioned for quick, last-minute grabs.',
-    image: '/impulse-01.png',
-    href: '/beyond'
   }
 ]
 
 export default function BeyondShades() {
-  const defaultShopifyUrl = process.env.NEXT_PUBLIC_SHOPIFY_STORE_URL || 'https://socalshadeswholesale.myshopify.com/collections/beyond-shades-collection-description'
-  const [redirectUrl, setRedirectUrl] = useState<string | null>(null)
-
   return (
     <section id="beyond" className="py-16 bg-bg">
       <div className="container mx-auto px-4">
@@ -102,8 +85,8 @@ export default function BeyondShades() {
             </div>
           </div>
 
-          {/* Right: 6 Beyond Shades tiles (3 across, 2 high, extra compact on mobile) */}
-          <div className="grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-2 xl:grid-cols-3 gap-2 sm:gap-3 xl:gap-4">
+          {/* Right: 4 Beyond Shades tiles (2x2, extra compact on mobile) */}
+          <div className="grid grid-cols-2 sm:grid-cols-2 xl:grid-cols-2 gap-2 sm:gap-3 xl:gap-4">
             {services.map((service, index) => (
               <div
                 key={index}
@@ -135,24 +118,18 @@ export default function BeyondShades() {
                   </div>
                 </Link>
                 <div className="mt-1.5 sm:mt-2">
-                  <button
-                    type="button"
-                    onClick={() => setRedirectUrl((service as any).shopUrl || defaultShopifyUrl)}
+                  <Link
+                    href={service.href}
                     className="btn-outline w-full text-center text-[0.65rem] sm:text-[0.7rem] inline-flex items-center justify-center px-3 py-1.5"
                   >
-                    Buy Now
-                  </button>
+                    Learn More
+                  </Link>
                 </div>
               </div>
             ))}
           </div>
         </div>
       </div>
-      <RedirectConfirmModal
-        shopUrl={redirectUrl}
-        open={redirectUrl !== null}
-        onClose={() => setRedirectUrl(null)}
-      />
     </section>
   )
 }
