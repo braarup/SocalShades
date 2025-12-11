@@ -85,12 +85,12 @@ export default function BeyondShades() {
             </div>
           </div>
 
-          {/* Right: 4 Beyond Shades tiles (2x2, extra compact on mobile) */}
-          <div className="grid grid-cols-2 sm:grid-cols-2 xl:grid-cols-2 gap-2 sm:gap-3 xl:gap-4">
+          {/* Right: 4 Beyond Shades tiles (2x2, wider cards on desktop) */}
+          <div className="grid grid-cols-2 sm:grid-cols-2 xl:grid-cols-2 gap-3 sm:gap-4 xl:gap-6">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="product-card flex flex-col h-full max-w-xs mx-auto px-2 py-2 sm:px-2.5 sm:py-2.5 text-[0.65rem] sm:text-[0.7rem]"
+                className="product-card flex flex-col h-full w-full px-2 py-2 sm:px-2.5 sm:py-2.5 text-[0.65rem] sm:text-[0.7rem]"
               >
                 <Link href={service.href} className="block">
                   <div
@@ -101,11 +101,7 @@ export default function BeyondShades() {
                       alt={service.title}
                       width={400}
                       height={320}
-                      className={`w-full h-full ${
-                        service.title === 'Mobile Accessories'
-                          ? 'object-contain object-center'
-                          : 'object-cover'
-                      }`}
+                      className="w-full h-full object-contain object-center"
                     />
                   </div>
                   <div className="flex flex-col justify-center pr-0.5 sm:pr-1.5 flex-1">
