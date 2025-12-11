@@ -52,6 +52,10 @@ body {
   .btn-learn-more {
     @apply bg-accent hover:bg-accent-dark text-ink font-bold py-3 px-6 rounded-full border border-black transition-colors;
   }
+
+  .beyond-grid-2x2 {
+    @apply grid grid-cols-1 sm:grid-cols-2 gap-3 xl:gap-4;
+  }
 }
 
 @keyframes heroFadeSlide {

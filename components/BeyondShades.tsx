@@ -85,8 +85,8 @@ export default function BeyondShades() {
             </div>
           </div>
 
-          {/* Right: 4 Beyond Shades tiles (compact cards) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 xl:gap-4">
+          {/* Right: 4 Beyond Shades tiles (2x2 grid via global utility) */}
+          <div className="beyond-grid-2x2">
             {services.map((service, index) => (
               <div
                 key={index}
