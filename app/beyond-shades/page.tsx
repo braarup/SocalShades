@@ -211,9 +211,6 @@ export default function BeyondShadesPage() {
               <Link href="/retailer-signup" className="btn-learn-more text-lg px-8 py-3">
                 Become a Retailer
               </Link>
-              <Link href="/storefront-services" className="btn-outline text-lg px-8 py-3">
-                View Full Program
-              </Link>
             </div>
             <p className="text-sm text-muted mt-6">
               Questions? <Link href="/contact" className="text-accent hover:underline">Contact us</Link> for more details.
