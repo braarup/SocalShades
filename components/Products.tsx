@@ -37,9 +37,9 @@ const products = [
     image: '/10Piece-02.png'
   },
   {
-    name: 'Products',
-    description: 'See how our Standard and Premium sunglasses programs work together.',
-    image: '/products-01.png'
+    name: 'Sunglasses Collection',
+    description: 'Check out our full range of sunglasses.',
+    image: '/sunglasses-01.png'
   }
 ]
 
