@@ -57,9 +57,9 @@ export default function BeyondShades() {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-[1.1fr,1.9fr] gap-4 md:gap-6 items-stretch">
-          {/* Left: main Beyond Shades rotating display */}
-          <div className="relative w-full aspect-[16/9] max-w-sm mx-auto lg:mx-0 rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900">
+        <div className="grid lg:grid-cols-[1.1fr,1.9fr] gap-8 items-stretch">
+          {/* Left: main Beyond Shades rotating display (match flagship sizing) */}
+          <div className="relative w-full aspect-[4/3] max-w-3xl mx-auto lg:mx-0 rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900">
             {heroImages.map((image, index) => (
               <div
                 key={image.src}
@@ -69,8 +69,8 @@ export default function BeyondShades() {
                   src={image.src}
                   alt={image.alt}
                   fill
-                  className="object-contain object-center bg-black"
-                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  className="object-cover"
+                  sizes="(min-width: 1280px) 800px, (min-width: 1024px) 640px, (min-width: 640px) 480px, 100vw"
                   priority={index === 0}
                 />
               </div>
@@ -85,38 +85,36 @@ export default function BeyondShades() {
             </div>
           </div>
 
-          {/* Right: 4 Beyond Shades tiles (2x2 grid via global utility) */}
+          {/* Right: 4 Beyond Shades tiles (same format as Flagship small tiles) */}
           <div className="beyond-grid-2x2">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="product-card flex flex-col h-full px-3 py-3 sm:px-4 sm:py-4 text-xs sm:text-sm"
+                className="product-card flex flex-col h-full px-4 py-4 sm:px-5 sm:py-5"
               >
                 <Link href={service.href} className="block">
-                  <div
-                    className="w-full aspect-[5/4] rounded-lg overflow-hidden border border-zinc-800 bg-zinc-900 mb-2.5 sm:mb-3"
-                  >
+                  <div className="w-full aspect-[4/3] rounded-lg overflow-hidden border border-zinc-800 bg-zinc-900 mb-3 sm:mb-4">
                     <Image
                       src={service.image}
                       alt={service.title}
-                      width={400}
-                      height={320}
-                      className="w-full h-full object-contain object-center"
+                      width={640}
+                      height={480}
+                      className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="flex flex-col justify-center pr-1.5 sm:pr-3 flex-1">
-                    <h3 className="font-semibold text-[0.75rem] sm:text-sm mb-0.5">
+                  <div className="flex flex-col justify-center pr-1 sm:pr-3 flex-1">
+                    <h3 className="font-semibold text-sm sm:text-base mb-0.5">
                       {service.title}
                     </h3>
-                    <p className="text-muted text-[0.7rem] sm:text-[0.8rem] leading-snug line-clamp-2 mt-0.5">
+                    <p className="text-muted text-xs sm:text-sm leading-snug line-clamp-2 mt-0.5">
                       {service.description}
                     </p>
                   </div>
                 </Link>
-                <div className="mt-2 sm:mt-2.5 flex justify-center">
+                <div className="mt-3 flex justify-center">
                   <Link
                     href={service.href}
-                    className="btn-learn-more inline-flex items-center justify-center text-[0.7rem] sm:text-xs px-3 py-1.5"
+                    className="btn-learn-more text-xs sm:text-sm px-4 py-2"
                   >
                     Learn More
                   </Link>
