@@ -38,7 +38,7 @@ export default function Navbar() {
               One Man Band
             </Link>
             <Link href="/beyond-shades" className="text-muted hover:text-text transition-colors">
-              Beyond Shades
+              Fast Cell
             </Link>
             <Link href="/storefront-services" className="text-muted hover:text-text transition-colors">
               Storefront Services
