@@ -159,9 +159,9 @@ export default function OneManBandPage() {
               <p className="text-sm text-muted">Fast-moving everyday essentials</p>
             </div>
             <div className="text-center p-6">
-              <div className="text-4xl mb-3">💊</div>
-              <h3 className="font-bold mb-2">Supplements</h3>
-              <p className="text-sm text-muted">Popular health and wellness products</p>
+              <div className="text-4xl mb-3">😎</div>
+              <h3 className="font-bold mb-2">Premium Sunglasses</h3>
+              <p className="text-sm text-muted">High-margin premium shades that customers love</p>
             </div>
             <div className="text-center p-6">
               <div className="text-4xl mb-3">📊</div>
