@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { Facebook, Instagram } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -10,7 +11,7 @@ export default function Footer() {
               © {new Date().getFullYear()} SoCal Shades Wholesale. All rights reserved.
             </p>
           </div>
-          <div className="flex flex-wrap gap-6 text-sm md:justify-end">
+          <div className="flex flex-wrap gap-6 text-sm md:justify-end items-center">
             <Link href="/contact" className="text-muted hover:text-text transition-colors">
               Contact
             </Link>
@@ -21,17 +22,19 @@ export default function Footer() {
               href="https://www.facebook.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted hover:text-text transition-colors"
+              className="text-muted hover:text-text transition-colors inline-flex items-center"
+              aria-label="SoCal Shades Facebook"
             >
-              Facebook
+              <Facebook className="w-5 h-5" />
             </a>
             <a
               href="https://www.instagram.com/socalshades.co/#"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted hover:text-text transition-colors"
+              className="text-muted hover:text-text transition-colors inline-flex items-center"
+              aria-label="SoCal Shades Instagram"
             >
-              Instagram
+              <Instagram className="w-5 h-5" />
             </a>
           </div>
         </div>
