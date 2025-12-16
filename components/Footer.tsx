@@ -17,6 +17,22 @@ export default function Footer() {
             <Link href="/privacy" className="text-muted hover:text-text transition-colors">
               Privacy
             </Link>
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted hover:text-text transition-colors"
+            >
+              Facebook
+            </a>
+            <a
+              href="https://www.instagram.com/socalshades.co/#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted hover:text-text transition-colors"
+            >
+              Instagram
+            </a>
           </div>
         </div>
       </div>
