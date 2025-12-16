@@ -1,3 +1,5 @@
+import { Facebook, Instagram } from 'lucide-react'
+
 export default function Contact() {
   return (
     <div className="min-h-screen pt-28 md:pt-32 pb-16 bg-bg">
@@ -44,6 +46,31 @@ export default function Contact() {
                 support@socalshadeswholesale.com
               </a>
             </p>
+          </section>
+
+          <section>
+            <h2 className="text-lg sm:text-xl font-semibold mb-2">Connect With Us</h2>
+            <p className="text-muted mb-3">Follow SoCal Shades on social for updates, promotions, and new product drops.</p>
+            <div className="flex items-center gap-4">
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted hover:text-text transition-colors inline-flex items-center"
+                aria-label="SoCal Shades Facebook"
+              >
+                <Facebook className="w-6 h-6" />
+              </a>
+              <a
+                href="https://www.instagram.com/socalshades.co/#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted hover:text-text transition-colors inline-flex items-center"
+                aria-label="SoCal Shades Instagram"
+              >
+                <Instagram className="w-6 h-6" />
+              </a>
+            </div>
           </section>
 
           <section>
