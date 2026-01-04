@@ -332,12 +332,6 @@ const beyondProducts: BeyondProduct[] = [
 
   // Scents & sanitizers
   {
-    name: 'Backwoods Air Fresheners',
-    image: '/BeyondShades/Backwoods-Beannie.JPG',
-    description: 'Backwoods-branded scent story that keeps cars and small spaces smelling fresh.',
-    category: 'Scents & Sanitizers'
-  },
-  {
     name: 'Scent Bomb',
     image: '/BeyondShades/ScentBomb.JPG',
     description: 'Powerful air freshener that keeps customers coming back for refills.',
@@ -357,6 +351,12 @@ const beyondProducts: BeyondProduct[] = [
   },
 
   // Lighters & more / impulse protection
+  {
+    name: 'Lighters Assortment',
+    image: '/BeyondShades/lighters-01.png',
+    description: 'High-impulse lighter assortment that turns empty counter space into quick add-on sales.',
+    category: 'Lighters & More'
+  },
   {
     name: 'Stun & Pepper Combo',
     image: '/BeyondShades/StunPepperCombo.png',
@@ -428,7 +428,7 @@ export default function ProductsPage() {
         </div>
       </section>
       {/* Standard Sunglasses */}
-      <section className="py-16 md:py-20 bg-zinc-900">
+      <section id="standard-sunglasses" className="py-16 md:py-20 bg-zinc-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-10">
@@ -477,7 +477,7 @@ export default function ProductsPage() {
       </section>
 
       {/* Premium Sunglasses */}
-      <section className="py-16 md:py-20 bg-zinc-950">
+      <section id="premium-sunglasses" className="py-16 md:py-20 bg-zinc-950">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-10">
@@ -526,7 +526,7 @@ export default function ProductsPage() {
       </section>
 
       {/* Super-Fast Mobile Accessories */}
-      <section className="py-16 md:py-20 bg-bg">
+      <section id="super-fast-mobile" className="py-16 md:py-20 bg-bg">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-10">
@@ -575,7 +575,7 @@ export default function ProductsPage() {
       </section>
 
       {/* Beyond Shades Products */}
-      <section className="py-16 md:py-20 bg-zinc-900">
+      <section id="beyond-shades-products" className="py-16 md:py-20 bg-zinc-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-10">
@@ -593,7 +593,22 @@ export default function ProductsPage() {
                 if (items.length === 0) return null
 
                 return (
-                  <div key={category.key}>
+                  <div
+                    key={category.key}
+                    id={
+                      category.key === 'Caps'
+                        ? 'beyond-caps'
+                        : category.key === 'Beanies'
+                        ? 'beyond-beanies'
+                        : category.key === 'Brim Hats'
+                        ? 'beyond-brim-hats'
+                        : category.key === 'Scents & Sanitizers'
+                        ? 'beyond-scents-sanitizers'
+                        : category.key === 'Lighters & More'
+                        ? 'beyond-lighters-more'
+                        : undefined
+                    }
+                  >
                     <div className="mb-6">
                       <h3 className="text-2xl sm:text-3xl font-bold mb-1">
                         {category.label}

@@ -19,26 +19,26 @@ const services = [
     title: 'Mobile Accessories',
     description: 'Chargers, cables, car mounts — the essentials customers forget and buy on impulse.',
     image: '/mobile-01.png',
-    href: '/beyond-shades',
+    href: '/products#super-fast-mobile',
     shopUrl: 'https://socalshadeswholesale.myshopify.com/collections/supercell-super-fast-charging-premium-mobile-accessories'
   },
   {
     title: 'Beyond Clean Collection',
     description: 'Essential hygiene and freshness products designed for daily convenience and peace of mind.',
     image: '/beyondshades-01.png',
-    href: '/products'
+    href: '/products#beyond-scents-sanitizers'
   },
     {
     title: 'Headwear & Caps',
     description: 'Branded and trend-forward hats that pair perfectly with sunglasses.',
     image: '/hats-01.png',
-    href: '/products'
+    href: '/products#beyond-caps'
   },
   {
     title: 'Lighters & Impulse',
     description: 'High‑turn items placed for visibility to increase add‑on sales.',
     image: '/lighters-01.png',
-    href: '/products'
+    href: '/products#beyond-lighters-more'
   }
 ]
 
