@@ -50,16 +50,16 @@ export default function Services() {
           <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <div 
+                <div
                   className="h-48 bg-cover bg-center rounded-lg"
-                  style={{ backgroundImage: "url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=400')" }}
+                  style={{ backgroundImage: "url('/Unorganized.png')" }}
                 />
                 <p className="text-muted text-sm mt-2">Before: cluttered, low‑visibility counter</p>
               </div>
               <div>
-                <div 
+                <div
                   className="h-48 bg-cover bg-center rounded-lg"
-                  style={{ backgroundImage: "url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=400')" }}
+                  style={{ backgroundImage: "url('/Organized.png')" }}
                 />
                 <p className="text-muted text-sm mt-2">After: organized display with focused sightlines</p>
               </div>
