@@ -162,59 +162,160 @@ type BeyondProduct = {
 }
 
 const beyondProducts: BeyondProduct[] = [
+  // Caps
   {
-    name: 'Backwoods Air Fresheners',
-    image: '/BeyondShades/Backwoods1.JPG',
-    description: 'Popular Backwoods-inspired scents that keep cars and small spaces smelling fresh.',
-    category: 'Scents & Sanitizers'
+    name: 'Backwoods Cap',
+    image: '/BeyondShades/Backwoods-Cap.JPG',
+    description: 'Backwoods graphic cap that brings street-style energy to your front counter.',
+    category: 'Caps'
   },
   {
-    name: 'Blessed Keychain',
-    image: '/BeyondShades/Blessed.JPG',
-    description: 'Faith-forward keychain that catches the eye right at checkout.',
-    category: 'Lighters & More'
+    name: 'Backwoods Multi Cap',
+    image: '/BeyondShades/Backwoods-Multi-Cap.JPG',
+    description: 'Multi-graphic Backwoods cap assortment that creates a bold, eye-catching display.',
+    category: 'Caps'
   },
+  {
+    name: 'Blessed Cap',
+    image: '/BeyondShades/Blessed-Cap.JPG',
+    description: 'Faith-forward Blessed cap that customers instantly recognize and reach for.',
+    category: 'Caps'
+  },
+  {
+    name: 'Cash Cap',
+    image: '/BeyondShades/Cash-Cap.JPG',
+    description: 'Cash-themed cap that feels like a fun little flex at the counter.',
+    category: 'Caps'
+  },
+  {
+    name: 'Cookie Cap',
+    image: '/BeyondShades/Cookie-Ca[.JPG',
+    description: 'Cookie-inspired cap design that draws attention and sparks impulse smiles.',
+    category: 'Caps'
+  },
+  {
+    name: 'Guns & Roses Cap',
+    image: '/BeyondShades/GunsNRoses-Cap.JPG',
+    description: 'Rock-and-roll Guns & Roses cap for customers who love bold graphics.',
+    category: 'Caps'
+  },
+  {
+    name: 'Just Hit It Cap',
+    image: '/BeyondShades/JustHitIt-Cap.JPG',
+    description: 'Playful Just Hit It cap that always gets a second look.',
+    category: 'Caps'
+  },
+  {
+    name: 'Skull Cap',
+    image: '/BeyondShades/Skull-Cap.JPG',
+    description: 'Edgy skull cap that fits perfectly with customers who like a bolder style.',
+    category: 'Caps'
+  },
+  {
+    name: 'Smiley Cap',
+    image: '/BeyondShades/Smiley-Cap.JPG',
+    description: 'Bright smiley cap that feels fun, friendly, and easy to grab on impulse.',
+    category: 'Caps'
+  },
+  {
+    name: 'Super Dad Cap',
+    image: '/BeyondShades/SuperDad-Cap.JPG',
+    description: 'Super Dad cap that moves fast around Father’s Day and beyond.',
+    category: 'Caps'
+  },
+  {
+    name: 'Super Mom Cap',
+    image: '/BeyondShades/SuperMom-Cap.JPG',
+    description: 'Super Mom cap that sells itself near the register year-round.',
+    category: 'Caps'
+  },
+  {
+    name: 'TikTok Cap',
+    image: '/BeyondShades/TikTok-Cap.JPG',
+    description: 'TikTok-inspired cap that taps into what your younger shoppers recognize.',
+    category: 'Caps'
+  },
+
+  // Beanies
+  {
+    name: 'Backwoods Beanie',
+    image: '/BeyondShades/Backwoods-Beannie.JPG',
+    description: 'Cozy Backwoods beanie that pairs perfectly with cooler-weather traffic.',
+    category: 'Beanies'
+  },
+  {
+    name: 'Backwoods Multi Beanie',
+    image: '/BeyondShades/Backwoods-Multi-Beannie.JPG',
+    description: 'Multi-style Backwoods beanie mix that makes a high-impact beanie display.',
+    category: 'Beanies'
+  },
+  {
+    name: 'Blessed Beanie',
+    image: '/BeyondShades/Blessed-Beannie.JPG',
+    description: 'Blessed beanie that adds a faith-forward touch to your winter assortment.',
+    category: 'Beanies'
+  },
+  {
+    name: 'Cash Beanie',
+    image: '/BeyondShades/Cash-Beannie.JPG',
+    description: 'Cash-themed beanie that stands out and invites impulse grabs.',
+    category: 'Beanies'
+  },
+  {
+    name: 'Cookie Beanie',
+    image: '/BeyondShades/Cookie-Beannie.JPG',
+    description: 'Cookie-inspired beanie that shoppers can’t help but pick up.',
+    category: 'Beanies'
+  },
+  {
+    name: 'Guns & Roses Beanie',
+    image: '/BeyondShades/GunsNRoses-Beannie.JPG',
+    description: 'Guns & Roses beanie with rock-and-roll attitude built in.',
+    category: 'Beanies'
+  },
+  {
+    name: 'Just Hit It Beanie',
+    image: '/BeyondShades/JustHitIt-Beannie.JPG',
+    description: 'Just Hit It beanie that brings a playful wink to your beanie rack.',
+    category: 'Beanies'
+  },
+  {
+    name: 'Skull Beanie',
+    image: '/BeyondShades/Skull-Beannie.JPG',
+    description: 'Skull beanie for customers who live in bold, graphic styles.',
+    category: 'Beanies'
+  },
+  {
+    name: 'Smiley Beanie',
+    image: '/BeyondShades/Smiley-Beannie.JPG',
+    description: 'Smiley beanie that keeps things warm, bright, and upbeat.',
+    category: 'Beanies'
+  },
+  {
+    name: 'Super Dad Beanie',
+    image: '/BeyondShades/SuperDad-Beannie.JPG',
+    description: 'Super Dad beanie that makes an easy gift add-on at checkout.',
+    category: 'Beanies'
+  },
+  {
+    name: 'Super Mom Beanie',
+    image: '/BeyondShades/SuperMom-Beannie.JPG',
+    description: 'Super Mom beanie that moves quickly year-round as a grab-and-go gift.',
+    category: 'Beanies'
+  },
+  {
+    name: 'TikTok Beanie',
+    image: '/BeyondShades/TikTok-Beannie.JPG',
+    description: 'TikTok-inspired beanie that connects with trend-focused shoppers.',
+    category: 'Beanies'
+  },
+
+  // Brim hats
   {
     name: 'Camo Straw Hats',
     image: '/BeyondShades/CamoHats.png',
     description: 'Camo-print straw hats that add personality and sun protection in one grab.',
     category: 'Brim Hats'
-  },
-  {
-    name: 'Cash Keychain',
-    image: '/BeyondShades/Cash.JPG',
-    description: 'Cash-themed keychain that feels like a fun little flex at the counter.',
-    category: 'Lighters & More'
-  },
-  {
-    name: 'Cookie Keychain',
-    image: '/BeyondShades/Cookie.JPG',
-    description: 'Cookie-inspired design that draws attention and sparks impulse smiles.',
-    category: 'Lighters & More'
-  },
-  {
-    name: 'Guns & Roses Keychain',
-    image: '/BeyondShades/GunsNRoses1.JPG',
-    description: 'Rock-and-roll inspired keychain for customers who love bold graphics.',
-    category: 'Lighters & More'
-  },
-  {
-    name: 'Hand Sanitizer',
-    image: '/BeyondShades/HandSanitizer.JPG',
-    description: 'Convenient sanitizer that keeps hands clean and baskets a little bigger.',
-    category: 'Scents & Sanitizers'
-  },
-  {
-    name: 'Hand Wipes',
-    image: '/BeyondShades/HandWipes.JPG',
-    description: 'Travel-size wipes perfect for glove boxes, purses, and quick cleanups.',
-    category: 'Scents & Sanitizers'
-  },
-  {
-    name: 'Just Hit It Keychain',
-    image: '/BeyondShades/JustHitIt.JPG',
-    description: 'Playful Just Hit It message that always gets a second look.',
-    category: 'Lighters & More'
   },
   {
     name: 'Logo Straw Hat',
@@ -228,6 +329,14 @@ const beyondProducts: BeyondProduct[] = [
     description: 'Classic straw hat style that works from beach runs to backyard BBQs.',
     category: 'Brim Hats'
   },
+
+  // Scents & sanitizers
+  {
+    name: 'Backwoods Air Fresheners',
+    image: '/BeyondShades/Backwoods-Beannie.JPG',
+    description: 'Backwoods-branded scent story that keeps cars and small spaces smelling fresh.',
+    category: 'Scents & Sanitizers'
+  },
   {
     name: 'Scent Bomb',
     image: '/BeyondShades/ScentBomb.JPG',
@@ -235,39 +344,23 @@ const beyondProducts: BeyondProduct[] = [
     category: 'Scents & Sanitizers'
   },
   {
-    name: 'Skull Keychain',
-    image: '/BeyondShades/Skull.JPG',
-    description: 'Edgy skull graphic that’s perfect for customers with a bold style.',
-    category: 'Lighters & More'
+    name: 'Hand Sanitizer',
+    image: '/BeyondShades/HandSanitizer.JPG',
+    description: 'Convenient sanitizer that keeps hands clean and baskets a little bigger.',
+    category: 'Scents & Sanitizers'
   },
   {
-    name: 'Smiley Keychain',
-    image: '/BeyondShades/Smiley.JPG',
-    description: 'Bright smiley design that feels fun and easy to grab on impulse.',
-    category: 'Lighters & More'
+    name: 'Hand Wipes',
+    image: '/BeyondShades/HandWipes.JPG',
+    description: 'Travel-size wipes perfect for glove boxes, purses, and quick cleanups.',
+    category: 'Scents & Sanitizers'
   },
+
+  // Lighters & more / impulse protection
   {
     name: 'Stun & Pepper Combo',
     image: '/BeyondShades/StunPepperCombo.png',
     description: 'Practical self-defense combo that adds real utility to your front-end mix.',
-    category: 'Lighters & More'
-  },
-  {
-    name: 'Super Dad Keychain',
-    image: '/BeyondShades/SuperDad.JPG',
-    description: 'Super Dad message that moves fast around Father’s Day and beyond.',
-    category: 'Lighters & More'
-  },
-  {
-    name: 'Super Mom Keychain',
-    image: '/BeyondShades/SuperMom.JPG',
-    description: 'Super Mom design that sells itself near the register year-round.',
-    category: 'Lighters & More'
-  },
-  {
-    name: 'TikTok Keychain',
-    image: '/BeyondShades/TikTok.JPG',
-    description: 'TikTok-inspired design that taps into what your younger shoppers recognize.',
     category: 'Lighters & More'
   }
 ]
