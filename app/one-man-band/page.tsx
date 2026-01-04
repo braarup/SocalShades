@@ -165,8 +165,8 @@ export default function OneManBandPage() {
             </div>
             <div className="text-center p-6">
               <div className="text-4xl mb-3">📊</div>
-              <h3 className="font-bold mb-2">Custom Merchandising</h3>
-              <p className="text-sm text-muted">Tailored planogram for your space</p>
+              <h3 className="font-bold mb-2">Customized Storefronts</h3>
+              <p className="text-sm text-muted">Displays that work for your space</p>
             </div>
             <div className="text-center p-6">
               <div className="text-4xl mb-3">🔄</div>
