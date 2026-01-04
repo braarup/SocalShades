@@ -5,6 +5,7 @@ import BeyondShades from '@/components/BeyondShades'
 import Services from '@/components/Services'
 import Testimonials from '@/components/Testimonials'
 import CTABanner from '@/components/CTABanner'
+import SocialInstagram from '@/components/SocialInstagram'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -21,6 +22,7 @@ export default function Home() {
       <Services />
       <Products />
       <BeyondShades />
+      <SocialInstagram />
       <Testimonials />
       <CTABanner />
     </>
