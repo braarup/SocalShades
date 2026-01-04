@@ -5,6 +5,13 @@ import BeyondShades from '@/components/BeyondShades'
 import Services from '@/components/Services'
 import Testimonials from '@/components/Testimonials'
 import CTABanner from '@/components/CTABanner'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Wholesale Sunglasses & Retail Displays',
+  description:
+    'So‑Cal Shades Wholesale supplies high‑margin sunglasses, mobile accessories, and custom storefront displays designed to boost impulse sales at your counter.',
+}
 
 export default function Home() {
   return (
