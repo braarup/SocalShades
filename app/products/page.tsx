@@ -146,97 +146,139 @@ const mobileAccessories = [
   }
 ]
 
-const beyondProducts = [
+type BeyondCategory =
+  | 'Caps'
+  | 'Beanies'
+  | 'Brim Hats'
+  | 'Mobile Accessories'
+  | 'Scents & Sanitizers'
+  | 'Lighters & More'
+
+type BeyondProduct = {
+  name: string
+  image: string
+  description: string
+  category: BeyondCategory
+}
+
+const beyondProducts: BeyondProduct[] = [
   {
     name: 'Backwoods Air Fresheners',
     image: '/BeyondShades/Backwoods1.JPG',
-    description: 'Popular Backwoods-inspired scents that keep cars and small spaces smelling fresh.'
+    description: 'Popular Backwoods-inspired scents that keep cars and small spaces smelling fresh.',
+    category: 'Scents & Sanitizers'
   },
   {
     name: 'Blessed Keychain',
     image: '/BeyondShades/Blessed.JPG',
-    description: 'Faith-forward keychain that catches the eye right at checkout.'
+    description: 'Faith-forward keychain that catches the eye right at checkout.',
+    category: 'Lighters & More'
   },
   {
     name: 'Camo Straw Hats',
     image: '/BeyondShades/CamoHats.png',
-    description: 'Camo-print straw hats that add personality and sun protection in one grab.'
+    description: 'Camo-print straw hats that add personality and sun protection in one grab.',
+    category: 'Brim Hats'
   },
   {
     name: 'Cash Keychain',
     image: '/BeyondShades/Cash.JPG',
-    description: 'Cash-themed keychain that feels like a fun little flex at the counter.'
+    description: 'Cash-themed keychain that feels like a fun little flex at the counter.',
+    category: 'Lighters & More'
   },
   {
     name: 'Cookie Keychain',
     image: '/BeyondShades/Cookie.JPG',
-    description: 'Cookie-inspired design that draws attention and sparks impulse smiles.'
+    description: 'Cookie-inspired design that draws attention and sparks impulse smiles.',
+    category: 'Lighters & More'
   },
   {
     name: 'Guns & Roses Keychain',
     image: '/BeyondShades/GunsNRoses1.JPG',
-    description: 'Rock-and-roll inspired keychain for customers who love bold graphics.'
+    description: 'Rock-and-roll inspired keychain for customers who love bold graphics.',
+    category: 'Lighters & More'
   },
   {
     name: 'Hand Sanitizer',
     image: '/BeyondShades/HandSanitizer.JPG',
-    description: 'Convenient sanitizer that keeps hands clean and baskets a little bigger.'
+    description: 'Convenient sanitizer that keeps hands clean and baskets a little bigger.',
+    category: 'Scents & Sanitizers'
   },
   {
     name: 'Hand Wipes',
     image: '/BeyondShades/HandWipes.JPG',
-    description: 'Travel-size wipes perfect for glove boxes, purses, and quick cleanups.'
+    description: 'Travel-size wipes perfect for glove boxes, purses, and quick cleanups.',
+    category: 'Scents & Sanitizers'
   },
   {
     name: 'Just Hit It Keychain',
     image: '/BeyondShades/JustHitIt.JPG',
-    description: 'Playful Just Hit It message that always gets a second look.'
+    description: 'Playful Just Hit It message that always gets a second look.',
+    category: 'Lighters & More'
   },
   {
     name: 'Logo Straw Hat',
     image: '/BeyondShades/LogoStrawHat.png',
-    description: 'Brand-forward straw hat designed to stand tall on your front counter.'
+    description: 'Brand-forward straw hat designed to stand tall on your front counter.',
+    category: 'Brim Hats'
   },
   {
     name: 'Regular Straw Hat',
     image: '/BeyondShades/RegStrawHat.png',
-    description: 'Classic straw hat style that works from beach runs to backyard BBQs.'
+    description: 'Classic straw hat style that works from beach runs to backyard BBQs.',
+    category: 'Brim Hats'
   },
   {
     name: 'Scent Bomb',
     image: '/BeyondShades/ScentBomb.JPG',
-    description: 'Powerful air freshener that keeps customers coming back for refills.'
+    description: 'Powerful air freshener that keeps customers coming back for refills.',
+    category: 'Scents & Sanitizers'
   },
   {
     name: 'Skull Keychain',
     image: '/BeyondShades/Skull.JPG',
-    description: 'Edgy skull graphic that’s perfect for customers with a bold style.'
+    description: 'Edgy skull graphic that’s perfect for customers with a bold style.',
+    category: 'Lighters & More'
   },
   {
     name: 'Smiley Keychain',
     image: '/BeyondShades/Smiley.JPG',
-    description: 'Bright smiley design that feels fun and easy to grab on impulse.'
+    description: 'Bright smiley design that feels fun and easy to grab on impulse.',
+    category: 'Lighters & More'
   },
   {
     name: 'Stun & Pepper Combo',
     image: '/BeyondShades/StunPepperCombo.png',
-    description: 'Practical self-defense combo that adds real utility to your front-end mix.'
+    description: 'Practical self-defense combo that adds real utility to your front-end mix.',
+    category: 'Lighters & More'
   },
   {
     name: 'Super Dad Keychain',
     image: '/BeyondShades/SuperDad.JPG',
-    description: 'Super Dad message that moves fast around Father’s Day and beyond.'
+    description: 'Super Dad message that moves fast around Father’s Day and beyond.',
+    category: 'Lighters & More'
   },
   {
     name: 'Super Mom Keychain',
     image: '/BeyondShades/SuperMom.JPG',
-    description: 'Super Mom design that sells itself near the register year-round.'
+    description: 'Super Mom design that sells itself near the register year-round.',
+    category: 'Lighters & More'
   },
   {
     name: 'TikTok Keychain',
     image: '/BeyondShades/TikTok.JPG',
-    description: 'TikTok-inspired design that taps into what your younger shoppers recognize.'
+    description: 'TikTok-inspired design that taps into what your younger shoppers recognize.',
+    category: 'Lighters & More'
   }
+]
+
+const beyondCategories: { key: BeyondCategory; label: string }[] = [
+  { key: 'Caps', label: 'Caps' },
+  { key: 'Beanies', label: 'Beanies' },
+  { key: 'Brim Hats', label: 'Brim Hats' },
+  { key: 'Mobile Accessories', label: 'Mobile Accessories' },
+  { key: 'Scents & Sanitizers', label: 'Scents & Sanitizers' },
+  { key: 'Lighters & More', label: 'Lighters & More' }
 ]
 
 const STANDARD_SHOP_URL =
@@ -452,37 +494,57 @@ export default function ProductsPage() {
               </p>
             </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {beyondProducts.map((item) => (
-                <div
-                  key={item.name}
-                  className="bg-zinc-800/60 rounded-xl border border-zinc-700 overflow-hidden flex flex-col"
-                >
-                  <div className="relative w-full aspect-[4/3] bg-black">
-                    <Image
-                      src={item.image}
-                      alt={item.name}
-                      fill
-                      className="object-contain object-center"
-                    />
-                  </div>
-                  <div className="p-5 flex flex-col gap-3 flex-1">
-                    <h3 className="text-xl font-bold">{item.name}</h3>
-                    <p className="text-sm text-muted">
-                      {item.description}
-                    </p>
-                    <div className="mt-auto flex justify-center">
-                      <button
-                        type="button"
-                        onClick={handleBeyondBuyNow}
-                        className="btn-learn-more text-sm px-4 py-2 inline-flex items-center justify-center"
-                      >
-                        Buy Now
-                      </button>
+            <div className="space-y-12">
+              {beyondCategories.map((category) => {
+                const items = beyondProducts.filter((item) => item.category === category.key)
+                if (items.length === 0) return null
+
+                return (
+                  <div key={category.key}>
+                    <div className="mb-6">
+                      <h3 className="text-2xl sm:text-3xl font-bold mb-1">
+                        {category.label}
+                      </h3>
+                      <p className="text-sm sm:text-base text-muted">
+                        Explore our Beyond Shades {category.label.toLowerCase()} collection.
+                      </p>
+                    </div>
+
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                      {items.map((item) => (
+                        <div
+                          key={item.name}
+                          className="bg-zinc-800/60 rounded-xl border border-zinc-700 overflow-hidden flex flex-col"
+                        >
+                          <div className="relative w-full aspect-[4/3] bg-black">
+                            <Image
+                              src={item.image}
+                              alt={item.name}
+                              fill
+                              className="object-contain object-center"
+                            />
+                          </div>
+                          <div className="p-5 flex flex-col gap-3 flex-1">
+                            <h4 className="text-xl font-bold">{item.name}</h4>
+                            <p className="text-sm text-muted">
+                              {item.description}
+                            </p>
+                            <div className="mt-auto flex justify-center">
+                              <button
+                                type="button"
+                                onClick={handleBeyondBuyNow}
+                                className="btn-learn-more text-sm px-4 py-2 inline-flex items-center justify-center"
+                              >
+                                Buy Now
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   </div>
-                </div>
-              ))}
+                )
+              })}
             </div>
           </div>
         </div>
