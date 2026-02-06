@@ -1,5 +1,6 @@
 import Hero from '@/components/Hero'
 import TrustBar from '@/components/TrustBar'
+import RetailerStrip from '@/components/RetailerStrip'
 import Products from '@/components/Products'
 import BeyondShades from '@/components/BeyondShades'
 import Services from '@/components/Services'
@@ -19,6 +20,7 @@ export default function Home() {
     <>
       <Hero />
       <TrustBar />
+      <RetailerStrip />
       <Services />
       <Products />
       <BeyondShades />

@@ -44,7 +44,7 @@ export default function Navbar() {
               Storefront Services
             </Link>
             <Link href="/products" className="text-muted hover:text-text transition-colors">
-              Products
+              Catalog
             </Link>
             {/* <Link href="/store-locator" className="text-muted hover:text-text transition-colors">
               Store Locator
