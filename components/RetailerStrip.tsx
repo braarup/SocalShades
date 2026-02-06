@@ -3,23 +3,23 @@ import Image from 'next/image'
 const retailers = [
   {
     name: 'Chevron',
-    logo: '/retailers/chevron.png',
+    logo: '/Retailers/chevron.png',
   },
   {
     name: '76',
-    logo: '/retailers/76.png',
+    logo: '/Retailers/76.png',
   },
   {
     name: '7-Eleven',
-    logo: '/retailers/7-eleven.png',
+    logo: '/Retailers/7-eleven.png',
   },
   {
     name: 'Shell',
-    logo: '/retailers/shell.png',
+    logo: '/Retailers/shell.png',
   },
   {
     name: 'Sinclair',
-    logo: '/retailers/sinclair.png',
+    logo: '/Retailers/sinclair.png',
   },
 ]
 
