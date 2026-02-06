@@ -36,13 +36,13 @@ export default function RetailerStrip() {
             {retailers.map((retailer) => (
               <div
                 key={retailer.name}
-                className="h-8 sm:h-10 flex items-center grayscale opacity-80 hover:opacity-100 transition-opacity"
+                className="h-10 sm:h-12 flex items-center opacity-100"
               >
                 <Image
                   src={retailer.logo}
                   alt={retailer.name}
-                  width={120}
-                  height={40}
+                  width={180}
+                  height={60}
                   className="h-full w-auto object-contain"
                 />
               </div>

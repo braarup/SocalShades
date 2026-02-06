@@ -20,13 +20,13 @@ export default function Home() {
     <>
       <Hero />
       <TrustBar />
-      <RetailerStrip />
       <Services />
       <Products />
       <BeyondShades />
       <SocialInstagram />
       <Testimonials />
       <CTABanner />
+      <RetailerStrip />
     </>
   )
 }
