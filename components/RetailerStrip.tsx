@@ -29,7 +29,7 @@ export default function RetailerStrip() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center gap-4">
           <p className="text-xs sm:text-sm uppercase tracking-[0.18em] text-zinc-400 text-center">
-            Participating retailers (partial list)
+            Participating retailers
           </p>
 
           <div className="flex flex-wrap justify-center gap-x-10 gap-y-6">

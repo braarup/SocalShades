@@ -25,8 +25,8 @@ export default function Home() {
       <BeyondShades />
       <SocialInstagram />
       <Testimonials />
-      <CTABanner />
       <RetailerStrip />
+      <CTABanner />
     </>
   )
 }
