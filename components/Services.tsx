@@ -42,12 +42,9 @@ export default function Services() {
               </div>
             </div>
             
-            <div className="mt-8 flex flex-col sm:flex-row gap-4">
+            <div className="mt-8 flex justify-center">
               <Link href="/retailer-signup" className="btn-learn-more">
                 Book a Free Consultation
-              </Link>
-              <Link href="/services" className="btn-outline">
-                See Before & After
               </Link>
             </div>
           </div>
@@ -60,9 +57,10 @@ export default function Services() {
                   onClick={() => setModalImage('/Unorganized.png')}
                   className="block w-full focus:outline-none"
                 >
-                  <div
-                    className="h-72 md:h-80 bg-cover bg-center rounded-lg border border-zinc-700 cursor-pointer"
-                    style={{ backgroundImage: "url('/Unorganized.png')" }}
+                  <img
+                    src="/Unorganized.png"
+                    alt="Before: Unutilized counter opportunity"
+                    className="w-full h-auto rounded-lg border border-zinc-700 cursor-pointer"
                   />
                 </button>
                 <p className="text-muted text-sm mt-2">Before: Unutilized counter opportunity</p>
@@ -73,9 +71,10 @@ export default function Services() {
                   onClick={() => setModalImage('/Organized.png')}
                   className="block w-full focus:outline-none"
                 >
-                  <div
-                    className="h-72 md:h-80 bg-cover bg-center rounded-lg border border-zinc-700 cursor-pointer"
-                    style={{ backgroundImage: "url('/Organized.png')" }}
+                  <img
+                    src="/Organized.png"
+                    alt="After: Revenue-generating sunglass rack display"
+                    className="w-full h-auto rounded-lg border border-zinc-700 cursor-pointer"
                   />
                 </button>
                 <p className="text-muted text-sm mt-2">After: Revenue-generating sunglass rack display</p>
