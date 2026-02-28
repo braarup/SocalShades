@@ -459,15 +459,7 @@ export default function ProductsPage() {
                     <p className="text-sm text-muted">
                       {style.description}
                     </p>
-                    <div className="mt-auto flex justify-center">
-                      <button
-                        type="button"
-                        onClick={handleStandardBuyNow}
-                        className="btn-learn-more text-sm px-4 py-2 inline-flex items-center justify-center"
-                      >
-                        Buy Now
-                      </button>
-                    </div>
+                    
                   </div>
                 </div>
               ))}
@@ -508,15 +500,7 @@ export default function ProductsPage() {
                     <p className="text-sm text-muted">
                       {style.description}
                     </p>
-                    <div className="mt-auto flex justify-center">
-                      <button
-                        type="button"
-                        onClick={handlePremiumBuyNow}
-                        className="btn-learn-more text-sm px-4 py-2 inline-flex items-center justify-center"
-                      >
-                        Buy Now
-                      </button>
-                    </div>
+                    
                   </div>
                 </div>
               ))}
@@ -557,15 +541,7 @@ export default function ProductsPage() {
                     <p className="text-sm text-muted">
                       {item.description}
                     </p>
-                    <div className="mt-auto flex justify-center">
-                      <button
-                        type="button"
-                        onClick={handleMobileBuyNow}
-                        className="btn-learn-more text-sm px-4 py-2 inline-flex items-center justify-center"
-                      >
-                        Buy Now
-                      </button>
-                    </div>
+                    
                   </div>
                 </div>
               ))}
@@ -637,15 +613,7 @@ export default function ProductsPage() {
                             <p className="text-sm text-muted">
                               {item.description}
                             </p>
-                            <div className="mt-auto flex justify-center">
-                              <button
-                                type="button"
-                                onClick={handleBeyondBuyNow}
-                                className="btn-learn-more text-sm px-4 py-2 inline-flex items-center justify-center"
-                              >
-                                Buy Now
-                              </button>
-                            </div>
+                            
                           </div>
                         </div>
                       ))}
