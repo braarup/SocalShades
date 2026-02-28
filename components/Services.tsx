@@ -1,6 +1,11 @@
+"use client"
+
 import Link from 'next/link'
+import { useState } from 'react'
 
 export default function Services() {
+  const [modalImage, setModalImage] = useState<string | null>(null)
+
   return (
     <section id="services" className="py-16 bg-bg">
       <div className="container mx-auto px-4">
@@ -48,25 +53,61 @@ export default function Services() {
           </div>
           
           <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="space-y-6">
               <div>
-                <div
-                  className="h-48 bg-cover bg-center rounded-lg"
-                  style={{ backgroundImage: "url('/Unorganized.png')" }}
-                />
-                <p className="text-muted text-sm mt-2">Before: cluttered, low‑visibility counter</p>
+                <button
+                  type="button"
+                  onClick={() => setModalImage('/Unorganized.png')}
+                  className="block w-full focus:outline-none"
+                >
+                  <div
+                    className="h-72 md:h-80 bg-cover bg-center rounded-lg border border-zinc-700 cursor-pointer"
+                    style={{ backgroundImage: "url('/Unorganized.png')" }}
+                  />
+                </button>
+                <p className="text-muted text-sm mt-2">Before: Unutilized counter opportunity</p>
               </div>
               <div>
-                <div
-                  className="h-48 bg-cover bg-center rounded-lg"
-                  style={{ backgroundImage: "url('/Organized.png')" }}
-                />
-                <p className="text-muted text-sm mt-2">After: organized display with focused sightlines</p>
+                <button
+                  type="button"
+                  onClick={() => setModalImage('/Organized.png')}
+                  className="block w-full focus:outline-none"
+                >
+                  <div
+                    className="h-72 md:h-80 bg-cover bg-center rounded-lg border border-zinc-700 cursor-pointer"
+                    style={{ backgroundImage: "url('/Organized.png')" }}
+                  />
+                </button>
+                <p className="text-muted text-sm mt-2">After: Revenue-generating sunglass rack display</p>
               </div>
             </div>
           </div>
         </div>
       </div>
+      {modalImage && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 px-4"
+          onClick={() => setModalImage(null)}
+        >
+          <div
+            className="relative max-w-4xl w-full"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              type="button"
+              onClick={() => setModalImage(null)}
+              className="absolute -top-3 -right-3 h-8 w-8 rounded-full bg-zinc-900 border border-zinc-700 text-sm text-white flex items-center justify-center hover:bg-zinc-800"
+            >
+              ×
+            </button>
+            <img
+              src={modalImage}
+              alt={modalImage === '/Unorganized.png' ? 'Before: Unutilized counter opportunity' : 'After: Revenue-generating sunglass rack display'}
+              className="w-full h-auto rounded-xl border border-zinc-700 shadow-2xl"
+            />
+          </div>
+        </div>
+      )}
     </section>
   )
 }
