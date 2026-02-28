@@ -49,7 +49,7 @@ export default function Services() {
             </div>
           </div>
           
-          <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
+          <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-4 md:p-5 max-w-xl w-full mx-auto">
             <div className="space-y-6">
               <div>
                 <button
@@ -60,7 +60,7 @@ export default function Services() {
                   <img
                     src="/Unorganized.png"
                     alt="Before: Unutilized counter opportunity"
-                    className="w-full h-auto rounded-lg border border-zinc-700 cursor-pointer"
+                    className="w-full max-h-64 md:max-h-72 object-contain rounded-lg border border-zinc-700 cursor-pointer"
                   />
                 </button>
                 <p className="text-muted text-sm mt-2">Before: Unutilized counter opportunity</p>
@@ -74,7 +74,7 @@ export default function Services() {
                   <img
                     src="/Organized.png"
                     alt="After: Revenue-generating sunglass rack display"
-                    className="w-full h-auto rounded-lg border border-zinc-700 cursor-pointer"
+                    className="w-full max-h-64 md:max-h-72 object-contain rounded-lg border border-zinc-700 cursor-pointer"
                   />
                 </button>
                 <p className="text-muted text-sm mt-2">After: Revenue-generating sunglass rack display</p>
