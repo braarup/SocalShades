@@ -19,7 +19,7 @@ export default function Footer() {
               Privacy
             </Link>
             <a
-              href="https://www.facebook.com/"
+              href="https://www.facebook.com/socalshades/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted hover:text-text transition-colors inline-flex items-center"
@@ -28,7 +28,7 @@ export default function Footer() {
               <Facebook className="w-5 h-5" />
             </a>
             <a
-              href="https://www.instagram.com/socalshades.co/#"
+              href="https://www.instagram.com/socalshades.co/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted hover:text-text transition-colors inline-flex items-center"
