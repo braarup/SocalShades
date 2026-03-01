@@ -99,12 +99,7 @@ export default function BeyondShades() {
                       alt={service.title}
                       width={640}
                       height={480}
-                      className={`w-full h-full ${
-                        service.title === 'Beyond Clean Collection' ||
-                        service.title === 'Lighters & Impulse'
-                          ? 'object-contain p-2'
-                          : 'object-cover'
-                      }`}
+                      className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="flex flex-col justify-center pr-1 sm:pr-3 flex-1">
