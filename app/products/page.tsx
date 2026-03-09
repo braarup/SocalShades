@@ -5,7 +5,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import RedirectConfirmModal from '@/components/RedirectConfirmModal'
-import PromoModal from '@/components/PromoModal'
 
 const standardStyles = [
   {
@@ -721,7 +720,6 @@ export default function ProductsPage() {
           setRedirectUrl(null)
         }}
       />
-      <PromoModal />
     </main>
   )
 }
